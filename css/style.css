@@ -1,20 +1,25 @@
-/* ── Granid — style.css ── */
+/* ── Granid — style.css — Dark Premium ── */
 
 :root {
-  --color-bg: #fafafa;
-  --color-surface: #ffffff;
-  --color-text: #1a1a1a;
-  --color-text-secondary: #5a5a5a;
-  --color-granite: #2d2d2d;
-  --color-granite-light: #4a4a4a;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
-  --color-border: #e5e5e5;
-  --color-border-light: #f0f0f0;
-  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --color-bg: #0a0e1a;
+  --color-bg-light: #0f1424;
+  --color-surface: rgba(255, 255, 255, 0.05);
+  --color-surface-hover: rgba(255, 255, 255, 0.08);
+  --color-text: #e8eaf0;
+  --color-text-secondary: #8b90a0;
+  --color-accent: #3b82f6;
+  --color-accent-hover: #2563eb;
+  --color-accent-glow: rgba(59, 130, 246, 0.15);
+  --color-red: #dc2626;
+  --color-red-soft: rgba(220, 38, 38, 0.15);
+  --color-border: rgba(255, 255, 255, 0.1);
+  --color-border-light: rgba(255, 255, 255, 0.06);
+  --color-glass: rgba(255, 255, 255, 0.04);
+  --color-glass-border: rgba(255, 255, 255, 0.08);
+  --font-sans: 'Plus Jakarta Sans', 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --max-width: 1120px;
-  --radius: 8px;
-  --radius-lg: 12px;
+  --radius: 10px;
+  --radius-lg: 16px;
 }
 
 *, *::before, *::after {
@@ -41,11 +46,12 @@ body {
 
 h1, h2, h3, h4 {
   font-weight: 600;
-  line-height: 1.2;
+  line-height: 1.15;
   letter-spacing: -0.02em;
+  color: #fff;
 }
 
-h1 { font-size: 3rem; }
+h1 { font-size: 3.25rem; }
 h2 { font-size: 2rem; }
 h3 { font-size: 1.25rem; }
 
@@ -68,7 +74,7 @@ a {
 }
 
 section {
-  padding: 6rem 0;
+  padding: 5rem 0;
 }
 
 /* ── Navigation ── */
@@ -79,9 +85,9 @@ nav {
   left: 0;
   right: 0;
   z-index: 100;
-  background: rgba(250, 250, 250, 0.85);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: rgba(10, 14, 26, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--color-border-light);
 }
 
@@ -93,10 +99,13 @@ nav .container {
 }
 
 .nav-logo {
-  font-size: 1.25rem;
-  font-weight: 600;
-  color: var(--color-granite);
-  letter-spacing: -0.03em;
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo img {
+  height: 48px;
+  width: auto;
 }
 
 .nav-links {
@@ -113,26 +122,40 @@ nav .container {
 }
 
 .nav-links a:hover {
-  color: var(--color-text);
+  color: #fff;
+}
+
+.nav-cta {
+  background: var(--color-accent);
+  color: #fff !important;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  font-size: 0.875rem;
+  transition: all 0.2s;
+}
+
+.nav-cta:hover {
+  background: var(--color-accent-hover);
 }
 
 .nav-lang {
   display: flex;
-  gap: 0.5rem;
+  gap: 0.375rem;
 }
 
 .nav-lang a {
   font-size: 0.75rem;
   color: var(--color-text-secondary);
-  padding: 0.25rem 0.5rem;
+  padding: 0.2rem 0.5rem;
   border-radius: 4px;
   transition: all 0.2s;
 }
 
 .nav-lang a:hover,
 .nav-lang a.active {
-  color: var(--color-text);
-  background: var(--color-border-light);
+  color: #fff;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Mobile menu */
@@ -148,7 +171,7 @@ nav .container {
   display: block;
   width: 20px;
   height: 2px;
-  background: var(--color-text);
+  background: #fff;
   margin: 4px 0;
   transition: all 0.3s;
 }
@@ -156,18 +179,36 @@ nav .container {
 /* ── Hero ── */
 
 .hero {
-  padding: 10rem 0 6rem;
-  text-align: center;
+  padding: 10rem 0 4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -20%;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hero .container {
+  position: relative;
 }
 
 .hero h1 {
   margin-bottom: 1.5rem;
+  max-width: 640px;
 }
 
 .hero p {
-  margin: 0 auto 2.5rem;
+  margin-bottom: 2.5rem;
   font-size: 1.125rem;
-  max-width: 560px;
+  max-width: 520px;
+  line-height: 1.7;
 }
 
 .hero .btn {
@@ -199,12 +240,13 @@ nav .container {
 }
 
 .btn-primary {
-  background: var(--color-granite);
+  background: var(--color-accent);
   color: #fff;
 }
 
 .btn-primary:hover {
-  background: var(--color-granite-light);
+  background: var(--color-accent-hover);
+  box-shadow: 0 0 24px var(--color-accent-glow);
 }
 
 .btn-outline {
@@ -214,13 +256,57 @@ nav .container {
 }
 
 .btn-outline:hover {
-  border-color: var(--color-text);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #fff;
+}
+
+/* ── Highlights (3-col under hero) ── */
+
+.highlights {
+  padding: 0 0 5rem;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.highlights-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.highlight-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.highlight-icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-glass-border);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-red);
+  font-size: 1.25rem;
+}
+
+.highlight-card h3 {
+  font-size: 0.9375rem;
+  margin-bottom: 0.25rem;
+}
+
+.highlight-card p {
+  font-size: 0.8125rem;
+  line-height: 1.5;
 }
 
 /* ── Problem / Solution ── */
 
 .problem {
-  background: var(--color-surface);
+  background: var(--color-bg-light);
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
 }
@@ -252,18 +338,29 @@ nav .container {
 
 .feature-card {
   text-align: left;
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  transition: background 0.2s;
+}
+
+.feature-card:hover {
+  background: var(--color-surface-hover);
 }
 
 .feature-icon {
   width: 40px;
   height: 40px;
-  background: var(--color-border-light);
+  background: var(--color-surface);
+  border: 1px solid var(--color-glass-border);
   border-radius: var(--radius);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
   font-size: 1.25rem;
+  color: var(--color-red);
 }
 
 .feature-card h3 {
@@ -272,14 +369,14 @@ nav .container {
 }
 
 .feature-card p {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   line-height: 1.6;
 }
 
 /* ── Pricing ── */
 
 .pricing {
-  background: var(--color-surface);
+  background: var(--color-bg-light);
   border-top: 1px solid var(--color-border-light);
   border-bottom: 1px solid var(--color-border-light);
 }
@@ -304,17 +401,25 @@ nav .container {
 }
 
 .pricing-card {
-  background: var(--color-bg);
-  border: 1px solid var(--color-border);
+  background: var(--color-glass);
+  border: 1px solid var(--color-glass-border);
   border-radius: var(--radius-lg);
   padding: 2rem;
   display: flex;
   flex-direction: column;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transition: border-color 0.2s;
+}
+
+.pricing-card:hover {
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
 .pricing-card.featured {
-  border-color: var(--color-granite);
+  border-color: var(--color-accent);
   position: relative;
+  background: rgba(59, 130, 246, 0.04);
 }
 
 .pricing-card.featured::before {
@@ -322,7 +427,7 @@ nav .container {
   position: absolute;
   top: -0.75rem;
   left: 2rem;
-  background: var(--color-granite);
+  background: var(--color-accent);
   color: #fff;
   font-size: 0.6875rem;
   font-weight: 500;
@@ -337,36 +442,22 @@ nav .container {
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: var(--color-text-secondary);
+  color: var(--color-accent);
   margin-bottom: 0.5rem;
 }
 
 .pricing-card h3 {
   font-size: 1.125rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.75rem;
 }
 
-.pricing-price {
-  margin-bottom: 0.25rem;
-}
-
-.pricing-price .amount {
-  font-size: 2rem;
-  font-weight: 600;
-  color: var(--color-text);
-}
-
-.pricing-price .period {
-  font-size: 0.875rem;
-  color: var(--color-text-secondary);
-}
-
-.pricing-setup {
+.pricing-subtitle {
   font-size: 0.8125rem;
   color: var(--color-text-secondary);
   margin-bottom: 1.5rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid var(--color-border-light);
+  max-width: none;
 }
 
 .pricing-features {
@@ -379,15 +470,20 @@ nav .container {
   font-size: 0.875rem;
   color: var(--color-text-secondary);
   padding: 0.375rem 0;
-  padding-left: 1.25rem;
+  padding-left: 1.5rem;
   position: relative;
 }
 
 .pricing-features li::before {
-  content: "–";
+  content: "";
   position: absolute;
   left: 0;
-  color: var(--color-text-secondary);
+  top: 0.7rem;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  opacity: 0.6;
 }
 
 .pricing-card .btn {
@@ -434,15 +530,21 @@ nav .container {
   border-radius: var(--radius);
   font-family: var(--font-sans);
   font-size: 0.875rem;
-  color: var(--color-text);
-  background: var(--color-surface);
+  color: #fff;
+  background: var(--color-glass);
   transition: border-color 0.2s;
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: var(--color-granite);
+  border-color: var(--color-accent);
+  box-shadow: 0 0 0 3px var(--color-accent-glow);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-secondary);
 }
 
 .form-group textarea {
@@ -487,10 +589,11 @@ footer .container {
 .footer-right a {
   color: var(--color-text-secondary);
   margin-left: 1.5rem;
+  transition: color 0.2s;
 }
 
 .footer-right a:hover {
-  color: var(--color-text);
+  color: #fff;
 }
 
 /* ── Thank you page ── */
@@ -516,15 +619,20 @@ footer .container {
 /* ── Responsive ── */
 
 @media (max-width: 768px) {
-  h1 { font-size: 2rem; }
+  h1 { font-size: 2.25rem; }
   h2 { font-size: 1.5rem; }
-  section { padding: 4rem 0; }
+  section { padding: 3.5rem 0; }
 
-  .hero { padding: 7rem 0 4rem; }
+  .hero { padding: 7rem 0 3rem; }
+
+  .highlights-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .pricing-grid {
