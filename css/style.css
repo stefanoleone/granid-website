@@ -656,6 +656,36 @@ footer .container {
   font-weight: 600;
 }
 
+.selling-point {
+  background: rgba(59, 130, 246, 0.05);
+  border-top: 1px solid rgba(59, 130, 246, 0.2);
+  border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+}
+
+.selling-point .container {
+  text-align: center;
+  max-width: 720px;
+}
+
+.selling-point h2 {
+  color: var(--color-accent);
+  margin-bottom: 1.25rem;
+}
+
+.selling-point p {
+  margin: 0 auto 1rem;
+  font-size: 1rem;
+}
+
+.selling-point p:last-child {
+  margin-bottom: 0;
+}
+
+.selling-point strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
 .cross-link {
   text-align: center;
 }
