@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matériel pour les abonnements payants — Granid</title>
+  <meta name="description" content="Les abonnements payants de Granid tournent sur un Mac Mini M4 Pro (64 Go) installé dans vos locaux. Toute l'inférence, les embeddings et le stockage des documents restent en local — aucune donnée client ne quitte les locaux.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/fr/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/fr/#solution">Produit</a></li>
+        <li><a href="/fr/#problem">Sécurité</a></li>
+        <li><a href="/fr/#products">Plans</a></li>
+        <li class="nav-lang">
+          <a href="/hardware/production/">EN</a>
+          <a href="/de/hardware/production/">DE</a>
+          <a href="/fr/hardware/production/" class="active">FR</a>
+          <a href="/it/hardware/production/">IT</a>
+        </li>
+        <!-- TODO GWEB-7/8: switch href to /fr/buy/<tier> when checkout flow lands -->
+        <li><a href="/fr/#products" class="nav-cta">Acheter une licence</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="hero hero-compact">
+    <div class="container">
+      <span class="hero-tagline">Matériel — Production</span>
+      <h1>Mac Mini M4 Pro<br>dans vos locaux.</h1>
+      <p>Les abonnements payants tournent sur un Mac Mini M4 Pro dédié avec 64 Go de mémoire unifiée, installé dans vos locaux. Toute l'inférence et tous les embeddings restent en local — aucune donnée client ne quitte les locaux.</p>
+      <!-- TODO GWEB-7/8: switch href to /fr/buy/<tier> when checkout flow lands -->
+      <a href="/fr/#products" class="btn btn-primary">Voir les tarifs</a>
+    </div>
+  </section>
+
+  <section class="highlights">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="22" x2="16" y2="22"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
+          </div>
+          <div>
+            <h3>Mac Mini M4 Pro</h3>
+            <p>Le poste de travail pro le plus efficient d'Apple. Silencieux, basse consommation, tient sur n'importe quel bureau.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
+          </div>
+          <div>
+            <h3>64 Go de mémoire unifiée</h3>
+            <p>Réserve pour le modèle d'embeddings, le modèle de langage, le vector store et l'application Legal Intelligence, tous tournant simultanément.</p>
+          </div>
+        </div>
+        <div class="highlight-card">
+          <div class="highlight-icon">
+            <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
+          </div>
+          <div>
+            <h3>Apple Silicon, macOS 14+</h3>
+            <p>Requis pour l'architecture à mémoire unifiée. Sonoma ou ultérieur.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="solution">
+    <div class="container">
+      <h2>Pourquoi tout tourne sur votre Mac</h2>
+      <p>La génération d'embeddings, l'inférence du modèle de langage et le vector store tournent tous sur le Mac Mini. L'application Legal Intelligence lit depuis un index de métadonnées SQLite local. L'analyse des documents se fait en mémoire. Aucun aller-retour vers un fournisseur cloud — pour aucune donnée, jamais.</p>
+    </div>
+  </section>
+
+  <section class="selling-point">
+    <div class="container">
+      <h2>Vos données restent dans vos locaux</h2>
+      <p>C'est la promesse architecturale du Granid payant : <strong>aucun document client, requête ou embedding ne quitte jamais vos locaux.</strong> Conforme à la nLPD et à l'art. 321 CP by design.</p>
+      <p>Nous livrons et configurons le Mac Mini dans le cadre de l'installation. Après l'installation, l'appareil est entièrement sous votre contrôle — posez-le sur une étagère, branchez-le au LAN, et il tourne.</p>
+    </div>
+  </section>
+
+  <section class="cross-link">
+    <div class="container">
+      <h2>Vous voulez d'abord essayer ?</h2>
+      <p>L'essai de 2 semaines tourne sur tout Mac à processeur Apple Silicon avec 8 Go de RAM. Pas besoin d'acheter du matériel de production pour évaluer.</p>
+      <a href="/fr/hardware/trial/" class="btn btn-outline">Voir la fiche matériel d'essai</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">&copy; 2026 Granid. Zurich, Suisse.</div>
+      <div class="footer-right">
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
