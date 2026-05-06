@@ -437,6 +437,54 @@ nav .container {
   text-transform: uppercase;
 }
 
+.trial-banner {
+  background: rgba(59, 130, 246, 0.06);
+  border: 1px solid rgba(59, 130, 246, 0.18);
+  border-radius: var(--radius-lg);
+  padding: 1rem 1.5rem;
+  margin: 0 auto 2.5rem;
+  max-width: 720px;
+  text-align: center;
+}
+
+.trial-banner p {
+  margin: 0;
+  font-size: 0.9375rem;
+  color: var(--color-text);
+  max-width: none;
+}
+
+.trial-banner a {
+  font-weight: 500;
+}
+
+.pricing-seats {
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+  margin: 0 0 1rem;
+  padding: 0;
+  max-width: none;
+}
+
+.pricing-price {
+  font-size: 1.875rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 1.25rem;
+  line-height: 1.25;
+}
+
+.pricing-price strong {
+  font-weight: 600;
+}
+
+.pricing-price span {
+  display: inline-block;
+  font-size: 0.875rem;
+  font-weight: 400;
+  color: var(--color-text-secondary);
+}
+
 .pricing-tier {
   font-size: 0.75rem;
   font-weight: 500;
