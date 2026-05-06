@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Granid — On-Premise KI für Schweizer Rechts- und Treuhandprofis</title>
-  <meta name="description" content="Die KI, die Ihr Büro nie verlässt. On-Premise-Intelligenz für Schweizer Anwälte und Treuhänder. Datensouveränität by Design.">
+  <title>Legal Intelligence by Granid — Schweizer Recht-KI on-premise</title>
+  <meta name="description" content="Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate aus Schweizer Rechtskorpora — lokal auf einem Mac Mini in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -29,17 +29,19 @@
           <a href="/fr/">FR</a>
           <a href="/it/">IT</a>
         </li>
-        <li><a href="#contact" class="nav-cta">Demo anfordern</a></li>
+        <!-- TODO GWEB-9: switch href to /de/trial when trial form lands -->
+        <li><a href="#contact" class="nav-cta">Trial starten</a></li>
       </ul>
     </div>
   </nav>
 
   <section class="hero">
     <div class="container">
-      <span class="hero-tagline">On-Premise AI Solutions</span>
+      <span class="hero-tagline">Legal Intelligence by Granid</span>
       <h1>Die KI, die Ihr Büro<br>nie verlässt.</h1>
-      <p>Volle Konformität mit dem Schweizer Datenschutzgesetz (nDSG, in Kraft seit 1. September 2023) und Art. 321 StGB. Ihre Daten bleiben in Ihrem Gebäude. Immer.</p>
-      <a href="#contact" class="btn btn-primary">Demo anfordern</a>
+      <p>Cross-Document Q&amp;A, Fristen-Extraktion und verifizierte Zitate aus dem Schweizer Rechtskorpus — lokal auf einem Mac Mini in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.</p>
+      <!-- TODO GWEB-9: switch href to /de/trial when trial form lands -->
+      <a href="#contact" class="btn btn-primary">2 Wochen kostenlos testen</a>
     </div>
   </section>
 
@@ -86,8 +88,8 @@
 
   <section class="solution" id="solution">
     <div class="container">
-      <h2>KI, die vor Ort bleibt</h2>
-      <p>Granid wird direkt in Ihrem Büro installiert. Ein dediziertes Gerät mit KI, die Schweizer Recht in allen vier Landessprachen versteht. Ihre Daten bleiben in Ihrem Gebäude. Immer.</p>
+      <h2>Wie Legal Intelligence funktioniert</h2>
+      <p>Legal Intelligence by Granid wird auf einem Mac Mini in Ihrem Büro installiert. Das System versteht Schweizer Recht in allen vier Landessprachen, extrahiert Fristen aus Ihren Mandaten und verifiziert jede Rechtsreferenz anhand des Quellmaterials. Ihre Daten bleiben in Ihrem Gebäude. Immer.</p>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">
@@ -125,12 +127,18 @@
     <div class="container">
       <h2>Drei Pläne, ein Prinzip: Ihre Daten bleiben bei Ihnen.</h2>
       <p>Jeder Plan beinhaltet einen dedizierten <a href="/de/hardware/production/">Mac Mini M4 Pro (64 GB)</a>, installiert in Ihrem Büro.</p>
+      <!-- TODO GWEB-9: switch /trial CTA to real /de/trial path when trial form lands -->
+      <div class="trial-banner">
+        <p>Granid 2 Wochen kostenlos testen — läuft auf Ihrem eigenen Mac. <a href="/de/#contact">Trial starten</a> · <a href="/de/hardware/trial/">Hardware-Spec</a></p>
+      </div>
       <div class="pricing-grid">
 
         <div class="pricing-card">
           <div class="pricing-tier">Essential</div>
           <h3>Einzelanwälte &amp; Mikro-Kanzleien</h3>
-          <p class="pricing-subtitle">1–3 Anwälte. Passive Intelligenz: Sie fragen, das System antwortet.</p>
+          <p class="pricing-seats">1 Fachperson</p>
+          <div class="pricing-price"><strong>CHF 5'900</strong> Einrichtung<br><span>+ CHF 990 / Jahr</span></div>
+          <p class="pricing-subtitle">Passive Intelligenz: Sie fragen, das System antwortet.</p>
           <ul class="pricing-features">
             <li>Cross-Document Q&amp;A über alle Mandate</li>
             <li>Mandantenstatus-Zusammenfassungen auf Abruf</li>
@@ -140,13 +148,16 @@
             <li>Lokale Authentifizierung (Admin-Panel, SQLite, bcrypt, nur LAN)</li>
             <li>Dedizierter Mac Mini M4 Pro 64 GB, Remote-Setup</li>
           </ul>
-          <a href="#contact" class="btn btn-outline">Kontakt aufnehmen</a>
+          <!-- TODO GWEB-12: switch href to /de/buy/essential when checkout flow lands -->
+          <a href="#contact" class="btn btn-outline">Jetzt kaufen</a>
         </div>
 
         <div class="pricing-card featured" data-badge="Beliebteste Wahl">
           <div class="pricing-tier">Professional</div>
           <h3>Mittelgrosse Kanzleien</h3>
-          <p class="pricing-subtitle">3–10 Anwälte. Von passiver zu aktiver Intelligenz: Konnektoren indizieren nicht nur — sie handeln.</p>
+          <p class="pricing-seats">Bis zu 4 Fachpersonen</p>
+          <div class="pricing-price"><strong>CHF 12'500</strong> Einrichtung<br><span>+ CHF 2'400 / Jahr</span></div>
+          <p class="pricing-subtitle">Von passiver zu aktiver Intelligenz: Konnektoren indizieren nicht nur — sie handeln.</p>
           <ul class="pricing-features">
             <li>Alles aus Essential</li>
             <li>SSO / OIDC (Entra ID, LDAP) mit Admin-Fallback</li>
@@ -160,13 +171,16 @@
             <li>Zugang zu OpenCaseLaw (956K Entscheide)</li>
             <li>On-Site-Setup halber Tag</li>
           </ul>
-          <a href="#contact" class="btn btn-primary">Kontakt aufnehmen</a>
+          <!-- TODO GWEB-12: switch href to /de/buy/professional when checkout flow lands -->
+          <a href="#contact" class="btn btn-primary">Jetzt kaufen</a>
         </div>
 
         <div class="pricing-card">
           <div class="pricing-tier">Enterprise</div>
           <h3>Grosse Kanzleien</h3>
-          <p class="pricing-subtitle">10–30 Anwälte. Volle aktive Intelligenz mit sicherem Fernzugriff und Dokumentenerstellung.</p>
+          <p class="pricing-seats">Bis zu 15 Fachpersonen</p>
+          <div class="pricing-price"><strong>CHF 24'000</strong> Einrichtung<br><span>+ CHF 4'800 / Jahr</span></div>
+          <p class="pricing-subtitle">Volle aktive Intelligenz mit sicherem Fernzugriff und Dokumentenerstellung.</p>
           <ul class="pricing-features">
             <li>Alles aus Professional</li>
             <li>Sicherer Fernzugriff (HTTPS + MFA oder WireGuard/Tailscale)</li>
@@ -181,6 +195,7 @@
             <li>Ganztägiges On-Site-Setup + Team-Schulung</li>
             <li>SLA 4h Reaktionszeit, dedizierter Account Manager, vierteljährliche Reviews</li>
           </ul>
+          <!-- TODO GWEB-14: switch href to /de/contact-enterprise when enterprise inquiry form lands -->
           <a href="#contact" class="btn btn-outline">Kontakt aufnehmen</a>
         </div>
 
@@ -190,7 +205,7 @@
 
   <section class="contact" id="contact">
     <div class="container">
-      <h2>Demo anfordern</h2>
+      <h2>Kontakt aufnehmen</h2>
       <p>Erzählen Sie uns von Ihrer Kanzlei. Wir melden uns innerhalb von 24 Stunden.</p>
       <form class="contact-form" action="https://formsubmit.co/stefano@granid.ch" method="POST">
         <input type="hidden" name="_captcha" value="false">
@@ -213,6 +228,17 @@
         </div>
         <button type="submit" class="btn btn-primary">Senden</button>
       </form>
+    </div>
+  </section>
+
+  <section class="suite">
+    <div class="container">
+      <p class="suite-label">Bald verfügbar in der Granid suite</p>
+      <ul>
+        <li>Meeting Intelligence</li>
+        <li>Accounting Intelligence</li>
+        <li>Compliance Intelligence</li>
+      </ul>
     </div>
   </section>
 
