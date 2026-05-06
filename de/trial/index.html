@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2-Wochen-Trial starten — Legal Intelligence by Granid</title>
+  <meta name="description" content="Kostenloser 2-wöchiger Trial von Legal Intelligence by Granid. Läuft auf jedem Apple-Silicon-Mac mit 8 GB RAM. nDSG- und Art. 321 StGB-konform.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/de/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menü" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/de/#solution">Produkt</a></li>
+        <li><a href="/de/#problem">Sicherheit</a></li>
+        <li><a href="/de/#products">Pläne</a></li>
+        <li><a href="/de/hardware/production/">Hardware</a></li>
+        <li class="nav-lang">
+          <a href="/trial/">EN</a>
+          <a href="/de/trial/" class="active">DE</a>
+          <a href="/fr/trial/">FR</a>
+          <a href="/it/trial/">IT</a>
+        </li>
+        <li><a href="/de/trial/" class="nav-cta">Trial starten</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="trial-page">
+    <div class="container">
+      <span class="hero-tagline">Trial-Anmeldung</span>
+      <h1>Starten Sie Ihren 2-Wochen-Trial</h1>
+      <p class="trial-intro">2 Wochen kostenlos. Läuft auf jedem Apple-Silicon-Mac mit 8 GB RAM. <a href="/de/hardware/trial/">Hardware-Details</a>.</p>
+
+      <form id="trial-form" class="trial-form" novalidate>
+        <input type="hidden" name="locale" value="de">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first_name">Vorname</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <div class="form-error" data-error-for="first_name"></div>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Nachname</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <div class="form-error" data-error-for="last_name"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Geschäftliche E-Mail</label>
+          <input type="email" id="email" name="email" required>
+          <div class="form-hint">Verwenden Sie Ihre Kanzlei-E-Mail. Persönliche Adressen (gmail.com, hotmail.com usw.) sind nicht zulässig.</div>
+          <div class="form-error" data-error-for="email"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="website">Kanzlei-Website</label>
+          <input type="url" id="website" name="website" placeholder="https://..." required>
+          <div class="form-hint">Nur HTTPS.</div>
+          <div class="form-error" data-error-for="website"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_address">Kanzlei-Adresse</label>
+          <input type="text" id="firm_address" name="firm_address" required>
+          <div class="form-error" data-error-for="firm_address"></div>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Kanzlei-Grösse</legend>
+          <div class="form-radio-group">
+            <label><input type="radio" name="company_size" value="1" required>1</label>
+            <label><input type="radio" name="company_size" value="2-4">2–4</label>
+            <label><input type="radio" name="company_size" value="5-15">5–15</label>
+            <label><input type="radio" name="company_size" value="16+">16+</label>
+          </div>
+          <div class="form-error" data-error-for="company_size"></div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Interner IT-Support</legend>
+          <div class="form-radio-group">
+            <label><input type="radio" name="has_it_support" value="true" required>Ja</label>
+            <label><input type="radio" name="has_it_support" value="false">Nein</label>
+          </div>
+          <div class="form-error" data-error-for="has_it_support"></div>
+        </fieldset>
+
+        <div class="form-group form-checkbox">
+          <label>
+            <input type="checkbox" name="data_privacy_acknowledged" required>
+            <span>Ich verstehe, dass meine Kanzlei während der 2-wöchigen Testphase ausschliesslich <strong>nicht-sensible oder anonymisierte Daten</strong> verwendet und dass Dokumente und Anfragen von Granid-gehosteten Remote-Diensten verarbeitet werden. <a href="/de/hardware/trial/">Mehr zur Trial-Datensicherheit</a>.</span>
+          </label>
+          <div class="form-error" data-error-for="data_privacy_acknowledged"></div>
+        </div>
+
+        <div class="form-error-global" id="trial-error-global"></div>
+        <button type="submit" class="btn btn-primary">Trial starten</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">&copy; 2026 Granid. Zürich, Schweiz.</div>
+      <div class="footer-right">
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <!-- TODO GWEB-10: replace this stub with /js/trial.js (CRM submit handler + error mapping) -->
+  <script>document.getElementById('trial-form').addEventListener('submit', e => e.preventDefault());</script>
+</body>
+</html>

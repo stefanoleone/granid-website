@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start your 2-week trial — Legal Intelligence by Granid</title>
+  <meta name="description" content="Free 2-week trial of Legal Intelligence by Granid. Runs on any Apple Silicon Mac with 8 GB RAM. Compliant with nDSG and Art. 321 StGB.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#solution">Product</a></li>
+        <li><a href="/#problem">Security</a></li>
+        <li><a href="/#products">Plans</a></li>
+        <li><a href="/hardware/production/">Hardware</a></li>
+        <li class="nav-lang">
+          <a href="/trial/" class="active">EN</a>
+          <a href="/de/trial/">DE</a>
+          <a href="/fr/trial/">FR</a>
+          <a href="/it/trial/">IT</a>
+        </li>
+        <li><a href="/trial/" class="nav-cta">Start your trial</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="trial-page">
+    <div class="container">
+      <span class="hero-tagline">Trial signup</span>
+      <h1>Start your 2-week trial</h1>
+      <p class="trial-intro">Free for 2 weeks. Runs on any Apple Silicon Mac with 8 GB RAM. <a href="/hardware/trial/">See hardware details</a>.</p>
+
+      <form id="trial-form" class="trial-form" novalidate>
+        <input type="hidden" name="locale" value="en">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first_name">First name</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <div class="form-error" data-error-for="first_name"></div>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <div class="form-error" data-error-for="last_name"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Company email</label>
+          <input type="email" id="email" name="email" required>
+          <div class="form-hint">Use your firm's email. Personal addresses (gmail.com, hotmail.com, etc.) are not eligible.</div>
+          <div class="form-error" data-error-for="email"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="website">Firm website</label>
+          <input type="url" id="website" name="website" placeholder="https://..." required>
+          <div class="form-hint">HTTPS only.</div>
+          <div class="form-error" data-error-for="website"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_address">Firm address</label>
+          <input type="text" id="firm_address" name="firm_address" required>
+          <div class="form-error" data-error-for="firm_address"></div>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Firm size</legend>
+          <div class="form-radio-group">
+            <label><input type="radio" name="company_size" value="1" required>1</label>
+            <label><input type="radio" name="company_size" value="2-4">2–4</label>
+            <label><input type="radio" name="company_size" value="5-15">5–15</label>
+            <label><input type="radio" name="company_size" value="16+">16+</label>
+          </div>
+          <div class="form-error" data-error-for="company_size"></div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Internal IT support</legend>
+          <div class="form-radio-group">
+            <label><input type="radio" name="has_it_support" value="true" required>Yes</label>
+            <label><input type="radio" name="has_it_support" value="false">No</label>
+          </div>
+          <div class="form-error" data-error-for="has_it_support"></div>
+        </fieldset>
+
+        <div class="form-group form-checkbox">
+          <label>
+            <input type="checkbox" name="data_privacy_acknowledged" required>
+            <span>I understand that during the 2-week trial period my firm will use only <strong>non-sensitive or anonymized data</strong>, and that documents and queries will be processed by Granid-hosted remote services. <a href="/hardware/trial/">More on trial data privacy</a>.</span>
+          </label>
+          <div class="form-error" data-error-for="data_privacy_acknowledged"></div>
+        </div>
+
+        <div class="form-error-global" id="trial-error-global"></div>
+        <button type="submit" class="btn btn-primary">Start your trial</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">&copy; 2026 Granid. Zurich, Switzerland.</div>
+      <div class="footer-right">
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <!-- TODO GWEB-10: replace this stub with /js/trial.js (CRM submit handler + error mapping) -->
+  <script>document.getElementById('trial-form').addEventListener('submit', e => e.preventDefault());</script>
+</body>
+</html>
