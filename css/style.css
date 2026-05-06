@@ -788,6 +788,15 @@ fieldset.form-group legend {
   }
 }
 
+.trial-sent .container {
+  text-align: center;
+}
+
+.trial-sent .trial-intro {
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* ── Thank you page ── */
 
 .thankyou {
