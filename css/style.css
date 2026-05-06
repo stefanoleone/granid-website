@@ -616,6 +616,46 @@ footer .container {
   margin: 0 auto 2rem;
 }
 
+/* ── Granid suite (coming soon strip) ── */
+
+.suite {
+  padding: 3rem 0;
+  border-top: 1px solid var(--color-border-light);
+}
+
+.suite .container {
+  text-align: center;
+}
+
+.suite-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  margin: 0 auto 1rem;
+}
+
+.suite ul {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.suite li {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+}
+
+@media (max-width: 480px) {
+  .suite ul {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
+
 /* ── Hardware spec pages ── */
 
 .hero-compact {
