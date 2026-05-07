@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talk to us about Enterprise — Legal Intelligence by Granid</title>
+  <meta name="description" content="Enterprise supports up to 15 professionals with dedicated on-site setup, SLA, and a named account manager. Get in touch with the Legal Intelligence by Granid team.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#solution">Product</a></li>
+        <li><a href="/#problem">Security</a></li>
+        <li><a href="/#products">Plans</a></li>
+        <li><a href="/hardware/production/">Hardware</a></li>
+        <li class="nav-lang">
+          <a href="/contact-enterprise/" class="active">EN</a>
+          <a href="/de/contact-enterprise/">DE</a>
+          <a href="/fr/contact-enterprise/">FR</a>
+          <a href="/it/contact-enterprise/">IT</a>
+        </li>
+        <li><a href="/trial/" class="nav-cta">Start your trial</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="trial-page">
+    <div class="container">
+      <span class="hero-tagline">Enterprise inquiry</span>
+      <h1>Talk to us about Enterprise</h1>
+      <p class="trial-intro">Enterprise supports up to 15 professionals with dedicated on-site setup, an SLA, and a named account manager. Tell us about your firm — we will be in touch within one business day.</p>
+
+      <form id="enterprise-form" class="trial-form" novalidate>
+        <input type="hidden" name="locale" value="en">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first_name">First name</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <div class="form-error" data-error-for="first_name"></div>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Last name</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <div class="form-error" data-error-for="last_name"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" required>
+          <div class="form-error" data-error-for="email"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_name">Firm name</label>
+          <input type="text" id="firm_name" name="firm_name" required>
+          <div class="form-error" data-error-for="firm_name"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_address">Firm address</label>
+          <input type="text" id="firm_address" name="firm_address" required>
+          <div class="form-error" data-error-for="firm_address"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_website">Firm website</label>
+          <input type="url" id="firm_website" name="firm_website" placeholder="https://..." required>
+          <div class="form-hint">HTTPS only.</div>
+          <div class="form-error" data-error-for="firm_website"></div>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Firm size</legend>
+          <div class="form-radio-group">
+            <label><input type="radio" name="company_size" value="5-15" required>5–15</label>
+            <label><input type="radio" name="company_size" value="16+">16+</label>
+          </div>
+          <div class="form-error" data-error-for="company_size"></div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="estimated_seats">Estimated seats</label>
+          <input type="number" id="estimated_seats" name="estimated_seats" min="1" step="1" required>
+          <div class="form-hint">How many lawyers and secretaries will use Legal Intelligence.</div>
+          <div class="form-error" data-error-for="estimated_seats"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Your message <span class="optional">(optional)</span></label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <div class="form-error" data-error-for="message"></div>
+        </div>
+
+        <div class="form-error-global" id="enterprise-error-global"></div>
+        <button type="submit" class="btn btn-primary">Send inquiry</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">&copy; 2026 Granid. Zurich, Switzerland.</div>
+      <div class="footer-right">
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <!-- TODO GWEB-15: replace this stub with /js/enterprise.js (CRM submit handler) -->
+  <script>document.getElementById('enterprise-form').addEventListener('submit', e => e.preventDefault());</script>
+</body>
+</html>
