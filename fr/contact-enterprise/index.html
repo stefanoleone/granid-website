@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parlons d'Enterprise — Legal Intelligence by Granid</title>
+  <meta name="description" content="Enterprise prend en charge jusqu'à 15 professionnels avec installation sur site dédiée, SLA et account manager nommé. Contactez l'équipe Legal Intelligence by Granid.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/fr/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/fr/#solution">Produit</a></li>
+        <li><a href="/fr/#problem">Sécurité</a></li>
+        <li><a href="/fr/#products">Plans</a></li>
+        <li><a href="/fr/hardware/production/">Matériel</a></li>
+        <li class="nav-lang">
+          <a href="/contact-enterprise/">EN</a>
+          <a href="/de/contact-enterprise/">DE</a>
+          <a href="/fr/contact-enterprise/" class="active">FR</a>
+          <a href="/it/contact-enterprise/">IT</a>
+        </li>
+        <li><a href="/fr/trial/" class="nav-cta">Démarrer l'essai</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="trial-page">
+    <div class="container">
+      <span class="hero-tagline">Demande Enterprise</span>
+      <h1>Parlons d'Enterprise</h1>
+      <p class="trial-intro">Enterprise prend en charge jusqu'à 15 professionnels avec installation sur site dédiée, un SLA et un account manager nommé. Parlez-nous de votre étude — nous reviendrons vers vous dans un jour ouvré.</p>
+
+      <form id="enterprise-form" class="trial-form" novalidate>
+        <input type="hidden" name="locale" value="fr">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first_name">Prénom</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <div class="form-error" data-error-for="first_name"></div>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Nom</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <div class="form-error" data-error-for="last_name"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+          <div class="form-error" data-error-for="email"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_name">Nom de l'étude</label>
+          <input type="text" id="firm_name" name="firm_name" required>
+          <div class="form-error" data-error-for="firm_name"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_address">Adresse de l'étude</label>
+          <input type="text" id="firm_address" name="firm_address" required>
+          <div class="form-error" data-error-for="firm_address"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_website">Site web de l'étude</label>
+          <input type="url" id="firm_website" name="firm_website" placeholder="https://..." required>
+          <div class="form-hint">HTTPS uniquement.</div>
+          <div class="form-error" data-error-for="firm_website"></div>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Taille de l'étude</legend>
+          <div class="form-radio-group">
+            <label><input type="radio" name="company_size" value="5-15" required>5–15</label>
+            <label><input type="radio" name="company_size" value="16+">16+</label>
+          </div>
+          <div class="form-error" data-error-for="company_size"></div>
+        </fieldset>
+
+        <div class="form-group">
+          <label for="estimated_seats">Nombre estimé de licences</label>
+          <input type="number" id="estimated_seats" name="estimated_seats" min="1" step="1" required>
+          <div class="form-hint">Combien d'avocats et de secrétaires utiliseront Legal Intelligence.</div>
+          <div class="form-error" data-error-for="estimated_seats"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Votre message <span class="optional">(facultatif)</span></label>
+          <textarea id="message" name="message" rows="4"></textarea>
+          <div class="form-error" data-error-for="message"></div>
+        </div>
+
+        <div class="form-error-global" id="enterprise-error-global"></div>
+        <button type="submit" class="btn btn-primary">Envoyer la demande</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">&copy; 2026 Granid. Zurich, Suisse.</div>
+      <div class="footer-right">
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/enterprise.js"></script>
+</body>
+</html>
