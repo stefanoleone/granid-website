@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Avvia una prova di 2 settimane — Legal Intelligence by Granid</title>
+  <meta name="description" content="Prova gratuita di 2 settimane di Legal Intelligence by Granid. Gira su qualsiasi Mac con Apple Silicon e 8 GB di RAM. Conforme alla nLPD e all'art. 321 CP.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/it/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/it/#solution">Prodotto</a></li>
+        <li><a href="/it/#problem">Sicurezza</a></li>
+        <li><a href="/it/#products">Piani</a></li>
+        <li><a href="/it/hardware/production/">Hardware</a></li>
+        <li class="nav-lang">
+          <a href="/trial/">EN</a>
+          <a href="/de/trial/">DE</a>
+          <a href="/fr/trial/">FR</a>
+          <a href="/it/trial/" class="active">IT</a>
+        </li>
+        <li><a href="/it/trial/" class="nav-cta">Inizia la prova</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="trial-page">
+    <div class="container">
+      <span class="hero-tagline">Iscrizione alla prova</span>
+      <h1>Avvia la tua prova di 2 settimane</h1>
+      <p class="trial-intro">Gratis per 2 settimane. Gira su qualsiasi Mac con Apple Silicon e 8 GB di RAM. <a href="/it/hardware/trial/">Dettagli hardware</a>.</p>
+
+      <form id="trial-form" class="trial-form" novalidate>
+        <input type="hidden" name="locale" value="it">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first_name">Nome</label>
+            <input type="text" id="first_name" name="first_name" required>
+            <div class="form-error" data-error-for="first_name"></div>
+          </div>
+          <div class="form-group">
+            <label for="last_name">Cognome</label>
+            <input type="text" id="last_name" name="last_name" required>
+            <div class="form-error" data-error-for="last_name"></div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email aziendale</label>
+          <input type="email" id="email" name="email" required>
+          <div class="form-hint">Usa l'email del tuo studio. Indirizzi personali (gmail.com, hotmail.com, ecc.) non sono ammessi.</div>
+          <div class="form-error" data-error-for="email"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="website">Sito web dello studio</label>
+          <input type="url" id="website" name="website" placeholder="https://..." required>
+          <div class="form-hint">Solo HTTPS.</div>
+          <div class="form-error" data-error-for="website"></div>
+        </div>
+
+        <div class="form-group">
+          <label for="firm_address">Indirizzo dello studio</label>
+          <input type="text" id="firm_address" name="firm_address" required>
+          <div class="form-error" data-error-for="firm_address"></div>
+        </div>
+
+        <fieldset class="form-group">
+          <legend>Dimensione dello studio</legend>
+          <div class="form-radio-group">
+            <label><input type="radio" name="company_size" value="1" required>1</label>
+            <label><input type="radio" name="company_size" value="2-4">2–4</label>
+            <label><input type="radio" name="company_size" value="5-15">5–15</label>
+            <label><input type="radio" name="company_size" value="16+">16+</label>
+          </div>
+          <div class="form-error" data-error-for="company_size"></div>
+        </fieldset>
+
+        <fieldset class="form-group">
+          <legend>Supporto IT interno</legend>
+          <div class="form-radio-group">
+            <label><input type="radio" name="has_it_support" value="true" required>Sì</label>
+            <label><input type="radio" name="has_it_support" value="false">No</label>
+          </div>
+          <div class="form-error" data-error-for="has_it_support"></div>
+        </fieldset>
+
+        <div class="form-group form-checkbox">
+          <label>
+            <input type="checkbox" name="data_privacy_acknowledged" required>
+            <span>Capisco che durante il periodo di prova di 2 settimane il mio studio utilizzerà esclusivamente <strong>dati non sensibili o anonimizzati</strong>, e che i documenti e le query saranno elaborati da servizi remoti gestiti da Granid. <a href="/it/hardware/trial/">Maggiori informazioni sulla privacy della prova</a>.</span>
+          </label>
+          <div class="form-error" data-error-for="data_privacy_acknowledged"></div>
+        </div>
+
+        <div class="form-error-global" id="trial-error-global"></div>
+        <button type="submit" class="btn btn-primary">Inizia la prova</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">&copy; 2026 Granid. Zurigo, Svizzera.</div>
+      <div class="footer-right">
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/trial.js"></script>
+</body>
+</html>
