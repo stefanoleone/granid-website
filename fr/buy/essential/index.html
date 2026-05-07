@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Paiement — Essential — Legal Intelligence by Granid</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/fr/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/fr/#solution">Produit</a></li>
+        <li><a href="/fr/#problem">Sécurité</a></li>
+        <li><a href="/fr/#products">Plans</a></li>
+        <li><a href="/fr/hardware/production/">Matériel</a></li>
+        <li class="nav-lang">
+          <a href="/buy/essential/">EN</a>
+          <a href="/de/buy/essential/">DE</a>
+          <a href="/fr/buy/essential/" class="active">FR</a>
+          <a href="/it/buy/essential/">IT</a>
+        </li>
+        <li><a href="/fr/trial/" class="nav-cta">Démarrer l'essai</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="checkout-page">
+    <div class="container">
+      <div class="checkout-grid">
+        <aside class="checkout-summary">
+          <span class="hero-tagline">Récapitulatif</span>
+          <h2>Essential</h2>
+          <p class="checkout-tier-desc">1 professionnel · Mac Mini M4 Pro 64 Go</p>
+          <div class="checkout-line">
+            <span>À l'installation</span>
+            <span>CHF 5'900</span>
+          </div>
+          <div class="checkout-line">
+            <span>Abonnement annuel</span>
+            <span>CHF 990 / an</span>
+          </div>
+          <div class="checkout-line checkout-total">
+            <span>Total aujourd'hui</span>
+            <span><strong>CHF 6'890</strong></span>
+          </div>
+          <p class="checkout-note">L'abonnement annuel commence après la première année.</p>
+        </aside>
+
+        <div class="checkout-form-wrapper">
+          <h1>Détails de l'étude</h1>
+          <p class="checkout-intro">Parlez-nous de votre étude. Nous livrons et configurons le Mac Mini dans le cadre de l'installation.</p>
+          <form id="checkout-form" class="trial-form" novalidate>
+            <input type="hidden" name="tier" value="essential">
+            <input type="hidden" name="seats" value="1">
+            <input type="hidden" name="locale" value="fr">
+
+            <div class="form-group">
+              <label for="firm_name">Nom de l'étude</label>
+              <input type="text" id="firm_name" name="firm_name" required>
+              <div class="form-error" data-error-for="firm_name"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="firm_address">Adresse de l'étude</label>
+              <input type="text" id="firm_address" name="firm_address" required>
+              <div class="form-error" data-error-for="firm_address"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="firm_website">Site web de l'étude</label>
+              <input type="url" id="firm_website" name="firm_website" placeholder="https://..." required>
+              <div class="form-hint">HTTPS uniquement.</div>
+              <div class="form-error" data-error-for="firm_website"></div>
+            </div>
+
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input type="email" id="email" name="email" required>
+              <div class="form-error" data-error-for="email"></div>
+            </div>
+
+            <div class="form-error-global" id="checkout-error-global"></div>
+            <button type="submit" class="btn btn-primary btn-full">Continuer au paiement</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">&copy; 2026 Granid. Zurich, Suisse.</div>
+      <div class="footer-right">
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/checkout.js"></script>
+</body>
+</html>
