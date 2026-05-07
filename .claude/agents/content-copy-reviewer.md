@@ -90,11 +90,25 @@ Flag any:
 - Currency: `CHF` not `Fr.` or `CHF.`
 - Phone: international format `+41 XX XXX XX XX`
 - Date: `dd.mm.yyyy` for legal contexts; `1. September 2023` style is also accepted in DE
-- Do not invent Anglicisms in DE/FR/IT admin verbs (`gebrandet`, `re-brandé`, `ri-brandizzato` are bad — use native noun-phrase forms)
+- Do not invent Anglicisms in DE/FR/IT admin verbs (`gebrandet`, `re-brandé`, `ri-brandizzato` are bad; use native noun-phrase forms)
+
+### 7. Punctuation
+
+- **Never use em dash (`—`, U+2014) in user-visible copy.** It reads as a stylistic tic to a senior-partner audience and dilutes the calm, factual register the site is targeting. Every em dash you find is a finding.
+- **En dash (`–`, U+2013) is allowed for numeric ranges only**: `5–15 professionals`, `M1–M4`, `1–3 weeks`. Anywhere else, treat it the same as em dash and replace it.
+- **Hyphen (`-`, U+002D) stays as is** for compound words and word-internal punctuation.
+
+Replacement guidance for em dash, in priority order:
+1. **Comma**: when the dashed clause is a parenthetical or aside that flows with the sentence. `Granid runs locally — no data leaves the office.` becomes `Granid runs locally, with no data leaving the office.`
+2. **Colon**: when the second clause is a definition, expansion, or list. `One promise — your data stays in the building.` becomes `One promise: your data stays in the building.`
+3. **Parentheses**: when the dashed clause is genuinely an aside that could be skipped. `Apple Silicon (M1, M2, M3, M4) — Intel is not supported.` becomes `Apple Silicon (M1, M2, M3, or M4). Intel is not supported.`
+4. **Sentence break**: when the dashed clause is a separate thought that earns its own sentence. Often the best choice for compliance lines, e.g., `nothing leaves the office — for any data, ever.` becomes `Nothing leaves the office. Not for any data, ever.`
+
+Pick the replacement that reads tightest. If a replacement makes the prose run-on, split into two sentences.
 
 ## Review process
 
-1. **Find scope**: list every file in the change with user-facing strings — `*.html`, JS `I18N` blocks, `<meta>` tags, attributes
+1. **Find scope**: list every file in the change with user-facing strings (`*.html`, JS `I18N` blocks, `<meta>` tags, attributes)
 2. **Extract strings**: build a flat list grouped by UI location (hero / nav / pricing card / form labels / form errors / CTAs / footer / suite strip)
 3. **Run the jargon grep** mentally over every string. Flag any hard-list term.
 4. **Run the brand-token grep**: ensure no translated variants exist
@@ -102,7 +116,8 @@ Flag any:
 6. **Check register**: Sie / vous / Lei in all three non-English languages; no `tu`
 7. **Check tone**: no marketing-loud adjectives, no alarm, no fear-selling
 8. **Check Swiss conventions**: prices, currency, dates, separators
-9. **Produce findings** with severity and exact replacement text ready to paste
+9. **Run the em-dash grep** (`grep -nE '[—–]' <files>`): every em dash is a finding; en dashes are findings unless they sit inside a numeric range
+10. **Produce findings** with severity and exact replacement text ready to paste
 
 ## Output format
 
