@@ -30,8 +30,7 @@
           <a href="/fr/">FR</a>
           <a href="/it/">IT</a>
         </li>
-        <!-- TODO GWEB-9: switch href to /trial when trial form lands -->
-        <li><a href="#contact" class="nav-cta">Start your trial</a></li>
+        <li><a href="/trial/" class="nav-cta">Start your trial</a></li>
       </ul>
     </div>
   </nav>
@@ -42,8 +41,7 @@
       <span class="hero-tagline">Legal Intelligence by Granid</span>
       <h1>The AI that never leaves<br>your office.</h1>
       <p>Cross-document Q&amp;A, deadline extraction, and verified citations across the Swiss legal corpus — running locally on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.</p>
-      <!-- TODO GWEB-9: switch href to /trial when trial form lands -->
-      <a href="#contact" class="btn btn-primary">Try free for 2 weeks</a>
+      <a href="/trial/" class="btn btn-primary">Try free for 2 weeks</a>
     </div>
   </section>
 
@@ -133,9 +131,8 @@
     <div class="container">
       <h2>Three plans, one principle: your data stays with you.</h2>
       <p>Each plan includes a dedicated <a href="/hardware/production/">Mac Mini M4 Pro (64 GB)</a> installed in your office.</p>
-      <!-- TODO GWEB-9: switch /trial CTA to real /trial path when trial form lands -->
       <div class="trial-banner">
-        <p>Try Granid free for 2 weeks — runs on your own Mac. <a href="/#contact">Start the trial</a> · <a href="/hardware/trial/">Hardware spec</a></p>
+        <p>Try Granid free for 2 weeks — runs on your own Mac. <a href="/trial/">Start the trial</a> · <a href="/hardware/trial/">Hardware spec</a></p>
       </div>
       <div class="pricing-grid">
 
@@ -155,8 +152,7 @@
             <li>Local authentication (admin panel, SQLite, bcrypt, LAN-only)</li>
             <li>Dedicated Mac Mini M4 Pro 64 GB, remote setup</li>
           </ul>
-          <!-- TODO GWEB-12: switch href to /buy/essential when checkout flow lands -->
-          <a href="#contact" class="btn btn-outline">Buy now</a>
+          <a href="/buy/essential/" class="btn btn-outline">Buy now</a>
         </div>
 
         <!-- Professional -->
@@ -179,8 +175,7 @@
             <li>Access to OpenCaseLaw (956K decisions)</li>
             <li>On-site setup (half day)</li>
           </ul>
-          <!-- TODO GWEB-12: switch href to /buy/professional when checkout flow lands -->
-          <a href="#contact" class="btn btn-primary">Buy now</a>
+          <a href="/buy/professional/" class="btn btn-primary">Buy now</a>
         </div>
 
         <!-- Enterprise -->
@@ -204,40 +199,10 @@
             <li>Full-day on-site setup + team training</li>
             <li>SLA 4h response, dedicated account manager, quarterly review</li>
           </ul>
-          <!-- TODO GWEB-14: switch href to /contact-enterprise when enterprise inquiry form lands -->
-          <a href="#contact" class="btn btn-outline">Contact us</a>
+          <a href="/contact-enterprise/" class="btn btn-outline">Contact us</a>
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Get in touch</h2>
-      <p>Tell us about your firm. We will get back to you within 24 hours.</p>
-      <form class="contact-form" action="https://formsubmit.co/stefano@granid.ch" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://granid.ch/thanks.html">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="firm">Name of the firm</label>
-          <input type="text" id="firm" name="firm" required>
-        </div>
-        <div class="form-group">
-          <label for="size">Number of professionals <span class="optional">(optional)</span></label>
-          <input type="text" id="size" name="size">
-        </div>
-        <div class="form-group">
-          <label for="message">Message <span class="optional">(optional)</span></label>
-          <textarea id="message" name="message" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Send</button>
-      </form>
     </div>
   </section>
 

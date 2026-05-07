@@ -29,8 +29,7 @@
           <a href="/fr/" class="active">FR</a>
           <a href="/it/">IT</a>
         </li>
-        <!-- TODO GWEB-9: switch href to /fr/trial when trial form lands -->
-        <li><a href="#contact" class="nav-cta">Démarrer l'essai</a></li>
+        <li><a href="/fr/trial/" class="nav-cta">Démarrer l'essai</a></li>
       </ul>
     </div>
   </nav>
@@ -40,8 +39,7 @@
       <span class="hero-tagline">Legal Intelligence by Granid</span>
       <h1>L'IA qui ne quitte jamais<br>votre bureau.</h1>
       <p>Q&amp;R cross-documents, extraction des délais et citations vérifiées sur le corpus juridique suisse — en local sur un Mac Mini dans votre étude. Conforme à la nLPD et à l'art. 321 CP by design.</p>
-      <!-- TODO GWEB-9: switch href to /fr/trial when trial form lands -->
-      <a href="#contact" class="btn btn-primary">Essai gratuit 2 semaines</a>
+      <a href="/fr/trial/" class="btn btn-primary">Essai gratuit 2 semaines</a>
     </div>
   </section>
 
@@ -127,9 +125,8 @@
     <div class="container">
       <h2>Trois plans, un principe : vos données restent chez vous.</h2>
       <p>Chaque plan inclut un <a href="/fr/hardware/production/">Mac Mini M4 Pro dédié (64 Go)</a> installé dans vos locaux.</p>
-      <!-- TODO GWEB-9: switch /trial CTA to real /fr/trial path when trial form lands -->
       <div class="trial-banner">
-        <p>Essayez Granid gratuitement pendant 2 semaines — sur votre propre Mac. <a href="/fr/#contact">Démarrer l'essai</a> · <a href="/fr/hardware/trial/">Fiche matériel</a></p>
+        <p>Essayez Granid gratuitement pendant 2 semaines — sur votre propre Mac. <a href="/fr/trial/">Démarrer l'essai</a> · <a href="/fr/hardware/trial/">Fiche matériel</a></p>
       </div>
       <div class="pricing-grid">
 
@@ -148,8 +145,7 @@
             <li>Authentification locale (panneau admin, SQLite, bcrypt, LAN uniquement)</li>
             <li>Mac Mini M4 Pro 64 Go dédié, installation à distance</li>
           </ul>
-          <!-- TODO GWEB-12: switch href to /fr/buy/essential when checkout flow lands -->
-          <a href="#contact" class="btn btn-outline">Acheter</a>
+          <a href="/fr/buy/essential/" class="btn btn-outline">Acheter</a>
         </div>
 
         <div class="pricing-card featured" data-badge="Le plus populaire">
@@ -171,8 +167,7 @@
             <li>Accès à OpenCaseLaw (956K décisions)</li>
             <li>Installation sur site (demi-journée)</li>
           </ul>
-          <!-- TODO GWEB-12: switch href to /fr/buy/professional when checkout flow lands -->
-          <a href="#contact" class="btn btn-primary">Acheter</a>
+          <a href="/fr/buy/professional/" class="btn btn-primary">Acheter</a>
         </div>
 
         <div class="pricing-card">
@@ -195,39 +190,10 @@
             <li>Installation sur site journée complète + formation de l'équipe</li>
             <li>SLA 4h de réponse, account manager dédié, revue trimestrielle</li>
           </ul>
-          <!-- TODO GWEB-14: switch href to /fr/contact-enterprise when enterprise inquiry form lands -->
-          <a href="#contact" class="btn btn-outline">Nous contacter</a>
+          <a href="/fr/contact-enterprise/" class="btn btn-outline">Nous contacter</a>
         </div>
 
       </div>
-    </div>
-  </section>
-
-  <section class="contact" id="contact">
-    <div class="container">
-      <h2>Nous contacter</h2>
-      <p>Parlez-nous de votre étude. Nous vous répondons dans les 24 heures.</p>
-      <form class="contact-form" action="https://formsubmit.co/stefano@granid.ch" method="POST">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_next" value="https://granid.ch/fr/thanks.html">
-        <div class="form-group">
-          <label for="email">E-mail</label>
-          <input type="email" id="email" name="email" required>
-        </div>
-        <div class="form-group">
-          <label for="firm">Nom de l'étude</label>
-          <input type="text" id="firm" name="firm" required>
-        </div>
-        <div class="form-group">
-          <label for="size">Nombre de professionnels <span class="optional">(facultatif)</span></label>
-          <input type="text" id="size" name="size">
-        </div>
-        <div class="form-group">
-          <label for="message">Message <span class="optional">(facultatif)</span></label>
-          <textarea id="message" name="message" rows="4"></textarea>
-        </div>
-        <button type="submit" class="btn btn-primary">Envoyer</button>
-      </form>
     </div>
   </section>
 
