@@ -1,0 +1,1 @@
+<!-- This is the security-auditor's memory index. Add a single one-line entry for each memory file under .claude/agent-memory/security-auditor/. Do NOT write memory content here — only links + one-line hooks. -->
