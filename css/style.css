@@ -634,9 +634,12 @@ footer .container {
   color: var(--color-text-secondary);
 }
 
+.footer-right > * + * {
+  margin-left: 1.5rem;
+}
+
 .footer-right a {
   color: var(--color-text-secondary);
-  margin-left: 1.5rem;
   transition: color 0.2s;
 }
 
