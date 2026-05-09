@@ -37,8 +37,8 @@
       submitting: 'Envoi…'
     },
     it: {
-      website_invalid: 'Inserisci un URL HTTPS valido (per esempio https://example.ch).',
-      generic: 'Qualcosa è andato storto. Riprova o scrivi a stefano@granid.ch.',
+      website_invalid: 'Inserisca un URL HTTPS valido (per esempio https://example.ch).',
+      generic: 'Qualcosa è andato storto. Riprovi o scriva a stefano@granid.ch.',
       submitting: 'Invio in corso…'
     }
   };

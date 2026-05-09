@@ -53,11 +53,11 @@
       trialSentPath: '/fr/trial-sent/'
     },
     it: {
-      personal_email_domain: 'Usa un indirizzo email aziendale. I provider personali come gmail.com o hotmail.com non sono ammessi per la prova.',
-      already_trialed: 'Il tuo studio ha già usato la prova. Contatta sales@granid.ch per una licenza a pagamento.',
-      website_invalid: 'Inserisci un URL HTTPS valido (per esempio https://example.ch).',
-      privacy_not_acknowledged: 'Devi accettare l’informativa sulla privacy per continuare.',
-      generic: 'Qualcosa è andato storto. Riprova o scrivi a stefano@granid.ch.',
+      personal_email_domain: 'Usi un indirizzo email aziendale. I provider personali come gmail.com o hotmail.com non sono ammessi per la prova.',
+      already_trialed: 'Il Suo studio ha già usato la prova. Contatti sales@granid.ch per una licenza a pagamento.',
+      website_invalid: 'Inserisca un URL HTTPS valido (per esempio https://example.ch).',
+      privacy_not_acknowledged: 'Deve accettare l’informativa sulla privacy per continuare.',
+      generic: 'Qualcosa è andato storto. Riprovi o scriva a stefano@granid.ch.',
       submitting: 'Invio in corso…',
       trialSentPath: '/it/trial-sent/'
     }
