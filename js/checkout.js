@@ -35,7 +35,7 @@
     },
     it: {
       redirecting: 'Reindirizzamento al pagamento…',
-      website_invalid: 'Inserisci un URL HTTPS valido (per esempio https://example.ch).'
+      website_invalid: 'Inserisca un URL HTTPS valido (per esempio https://example.ch).'
     }
   };
 
