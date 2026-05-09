@@ -4,7 +4,7 @@
 
 - All code, comments, and dev-facing documentation in English.
 - The only exception is user-facing copy on the site itself, which exists in EN + DE + FR + IT under the localized subdirectories (`/`, `/de/`, `/fr/`, `/it/`).
-- Brand tokens (`Granid`, `Legal Intelligence`, `Meeting Intelligence`, `Accounting Intelligence`, `Compliance Intelligence`) are never translated.
+- Brand tokens (`Granid`, `Legal Intelligence`, `Meeting Intelligence`, `Accounting Intelligence`, `Compliance Intelligence`, `Edge Intelligence`) are never translated.
 
 ## Workflow
 

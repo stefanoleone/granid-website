@@ -30,7 +30,7 @@ Write the code. Constraints from `CLAUDE.md`:
 
 - Pure HTML / CSS / JS. No build step. No frameworks.
 - Every visible change ships in EN + DE + FR + IT in the same commit.
-- Brand tokens (`Granid`, `Legal Intelligence`, `Meeting Intelligence`, `Accounting Intelligence`, `Compliance Intelligence`) are never translated.
+- Brand tokens (`Granid`, `Legal Intelligence`, `Meeting Intelligence`, `Accounting Intelligence`, `Compliance Intelligence`, `Edge Intelligence`) are never translated.
 - Form schemas, tier names, seat caps, and CRM endpoint contracts come from `~/Lab/legalintelligence/ECOSYSTEM.md` — that doc wins over local CLAUDE.md.
 - Test locally on the dev server (`python3 -m http.server 4173` from the repo root) before considering a step done.
 

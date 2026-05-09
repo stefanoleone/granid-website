@@ -71,8 +71,9 @@ The following appear textually in English on every language page, including DE/F
 - `Meeting Intelligence`
 - `Accounting Intelligence`
 - `Compliance Intelligence`
+- `Edge Intelligence` (corporate descriptor, used in the footer brand line `Granid, Edge Intelligence. Switzerland.`)
 
-Variants like `Rechtsintelligenz`, `Intelligence Légale`, `Intelligenza Legale`, `Compliance-Intelligenz` are bug reports. Always grep for them when reviewing.
+Variants like `Rechtsintelligenz`, `Intelligence Légale`, `Intelligenza Legale`, `Compliance-Intelligenz`, `Edge-Intelligenz`, `Intelligence en périphérie`, `Intelligence locale`, `Intelligenza periferica` are bug reports. Always grep for them when reviewing.
 
 ### 5. Translation parity
 

@@ -37,7 +37,7 @@ Reserved brand tokens for planned future products (not on the active roadmap):
 - Accounting Intelligence by Granid
 - Compliance Intelligence by Granid
 
-All product brand names ("Granid", "Legal Intelligence", "Meeting Intelligence", "Accounting Intelligence", "Compliance Intelligence") are **never translated**, even on DE/FR/IT pages.
+All product brand names ("Granid", "Legal Intelligence", "Meeting Intelligence", "Accounting Intelligence", "Compliance Intelligence") and the corporate descriptor "Edge Intelligence" (used in the site footer) are **never translated**, even on DE/FR/IT pages.
 
 ## Competitor
 
