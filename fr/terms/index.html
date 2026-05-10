@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Conditions générales | Legal Intelligence by Granid</title>
+  <meta name="description" content="Conditions générales d'utilisation de Legal Intelligence by Granid : tarifs de licence, propriété du matériel, protection des données et droit suisse.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/fr/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/fr/#solution">Produit</a></li>
+        <li><a href="/fr/#problem">Sécurité</a></li>
+        <li><a href="/fr/#products">Plans</a></li>
+        <li><a href="/fr/hardware/production/">Matériel</a></li>
+        <li class="nav-lang">
+          <a href="/terms/">EN</a>
+          <a href="/de/terms/">DE</a>
+          <a href="/fr/terms/" class="active">FR</a>
+          <a href="/it/terms/">IT</a>
+        </li>
+        <li><a href="/fr/trial/" class="nav-cta">Démarrer l'essai</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="trial-page legal">
+    <div class="container">
+      <span class="hero-tagline">Mentions légales</span>
+      <h1>Conditions générales</h1>
+      <p class="trial-intro"><strong>Dernière mise à jour : 9 mai 2026.</strong> Il s'agit de la version 1, rédigée par Granid et soumise à la relecture d'un cabinet d'avocats suisse. Les modifications substantielles seront communiquées conformément à la clause 11.</p>
+
+      <p class="legal-preamble">Les présentes conditions générales (« Conditions ») régissent la relation entre Granid et le client. En soumettant le formulaire d'essai, en finalisant le paiement ou en acceptant un devis Enterprise, le client accepte les présentes Conditions.</p>
+
+      <h2>1. Parties et champ d'application</h2>
+      <p>« Granid » désigne l'entreprise individuelle suisse exploitée par Stefano Leone, dont le siège commercial se trouve à Zurich, en Suisse. « Client », « vous » ou « votre » désigne la personne physique ou morale qui acquiert ou utilise Legal Intelligence by Granid. Les présentes Conditions s'appliquent à tous les tarifs (Trial, Essential, Professional, Enterprise) ainsi qu'à tout matériel fourni ou recommandé par Granid en lien avec cette utilisation.</p>
+
+      <h2>2. Définitions</h2>
+      <dl class="legal-defs">
+        <dt>Granid</dt>
+        <dd>L'entreprise individuelle suisse exploitée par Stefano Leone, joignable à stefano@granid.ch.</dd>
+        <dt>Legal Intelligence</dt>
+        <dd>Le logiciel d'IA juridique sur site (on-premise) édité par Granid.</dd>
+        <dt>Matériel</dt>
+        <dd>Le Mac Mini d'Apple fourni par Granid pour les tarifs payants, ou le Mac Apple Silicon doté d'au moins 8 Go de RAM mis à disposition par le client pour le tarif d'essai.</dd>
+        <dt>Abonnement</dt>
+        <dd>La durée annuelle conférant le droit d'utiliser Legal Intelligence selon le tarif retenu.</dd>
+        <dt>Tarif</dt>
+        <dd>Le niveau de licence (Trial, Essential, Professional ou Enterprise) qui définit le nombre de sièges, la durée et le prix.</dd>
+        <dt>License JWT</dt>
+        <dd>Le jeton signé en Ed25519 que Granid émet pour autoriser l'utilisation de Legal Intelligence.</dd>
+      </dl>
+
+      <h2>3. Description du service</h2>
+      <p>Legal Intelligence est une plateforme d'IA juridique sur site. Pour les tarifs payants, l'ensemble du traitement documentaire, de l'indexation vectorielle et de l'inférence des grands modèles de langage s'exécute localement sur le Matériel du client. Aucune donnée de dossier client ne quitte les locaux du client. Le tarif Trial constitue la seule exception : pendant la période d'évaluation de deux semaines, la génération des embeddings et l'inférence sont acheminées vers le prestataire tiers OpenRouter (voir clause 8).</p>
+      <p>Un abonnement payant comprend la licence logicielle pour le tarif et la durée retenus, la livraison et l'installation sur site du Matériel, les mises à jour publiées pendant la durée active de l'abonnement, ainsi que le support par e-mail à stefano@granid.ch durant les heures ouvrables suisses.</p>
+
+      <h2>4. Concession de licence et tarifs</h2>
+      <p>Sous réserve du paiement des redevances applicables, Granid concède au client une licence non exclusive, non transmissible et non sous-licenciable d'utilisation de Legal Intelligence sur le Matériel, dans la limite du nombre de sièges et de la durée du tarif retenu.</p>
+      <table class="legal-table">
+        <thead>
+          <tr><th scope="col">Tarif</th><th scope="col">Sièges</th><th scope="col">Durée</th><th scope="col">Acquisition</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Trial</th><td>1</td><td>2 semaines (ferme)</td><td>Gratuit, libre-service via le formulaire d'essai</td></tr>
+          <tr><th scope="row">Essential</th><td>1</td><td>1 an</td><td>Libre-service via Stripe Checkout</td></tr>
+          <tr><th scope="row">Professional</th><td>jusqu'à 4</td><td>1 an</td><td>Libre-service via Stripe Checkout</td></tr>
+          <tr><th scope="row">Enterprise</th><td>jusqu'à 15</td><td>1 an</td><td>Demande commerciale, virement bancaire suisse</td></tr>
+        </tbody>
+      </table>
+      <p>Le nombre de sièges couvre l'ensemble des professionnels (avocats et secrétariat compris) du cabinet utilisant Legal Intelligence. Legal Intelligence applique le plafond de sièges à partir de la valeur <code>seats</code> du License JWT. Tout dépassement du plafond ou tout partage du License JWT avec des personnes étrangères au cabinet constitue une violation substantielle des présentes Conditions.</p>
+
+      <h2>5. Propriété du matériel et garantie</h2>
+      <p>Pour les tarifs payants, la propriété du Mac Mini est transférée au client dès réception du paiement intégral des frais d'installation. Le client bénéficie directement de la garantie limitée d'un an d'Apple ainsi que de toute extension AppleCare acquise séparément. Granid ne fournit pas de garantie matérielle distincte.</p>
+      <p>Pour le tarif Trial, le client utilise son propre Mac Apple Silicon doté d'au moins 8 Go de RAM. Granid n'assume aucune responsabilité quant à l'état, aux performances ou à la compatibilité du matériel fourni par le client.</p>
+
+      <h2>6. Durée de l'abonnement, renouvellement et résiliation</h2>
+      <p>L'abonnement annuel court à compter de la date d'émission du License JWT et dure un (1) an. À défaut de résiliation, il se renouvelle automatiquement pour des périodes successives d'un an, au tarif alors en vigueur.</p>
+      <p>Chaque partie peut résilier l'abonnement à l'échéance de la durée en cours en notifiant l'autre partie par écrit (un e-mail à stefano@granid.ch suffit) au moins trente (30) jours avant la date de renouvellement.</p>
+      <p>Granid peut résilier l'abonnement avec effet immédiat pour juste motif, notamment en cas de dépassement du plafond de sièges, de partage de la licence ou de retard de paiement supérieur à trente (30) jours. À la résiliation, le client doit cesser toute utilisation de Legal Intelligence ; le License JWT peut rester structurellement valide jusqu'à sa date <code>valid_until</code>, mais sa poursuite n'est plus autorisée.</p>
+
+      <h2>7. Politique de remboursement</h2>
+      <p>Les frais d'installation et la redevance d'abonnement de la première année ne sont pas remboursables une fois le Matériel livré et le License JWT émis, sous réserve des dispositions impératives du droit suisse de la consommation. La période d'essai de deux semaines est précisément destinée à permettre au client d'évaluer le produit avant tout engagement.</p>
+      <p>Si le Matériel présente un défaut substantiel à la livraison et qu'Apple ne parvient pas à y remédier sous garantie dans un délai de trente (30) jours, Granid procédera, au choix du client, soit au remplacement du Matériel, soit au remboursement des frais d'installation.</p>
+
+      <h2>8. Protection des données</h2>
+      <p>Granid s'engage à respecter le secret professionnel de l'avocat (art. 321 du Code pénal suisse) ainsi que la loi fédérale sur la protection des données (LPD / nLPD).</p>
+      <p><strong>Tarifs payants.</strong> L'ensemble des données du client (documents, requêtes, embeddings, sorties générées) est traité exclusivement sur le Matériel local du client. Granid ne reçoit, ne stocke, ne transmet et ne dispose d'aucun moyen technique d'accéder aux données de dossier du client. À ce titre, Granid n'est pas sous-traitant au sens de la LPD pour les données de dossier.</p>
+      <p><strong>Tarif Trial.</strong> Pendant la période d'essai de deux semaines, le contenu des documents et les requêtes sont transmis à et traités par le prestataire tiers OpenRouter pour la génération des embeddings et l'inférence des modèles de langage. Le client doit utiliser exclusivement des données non sensibles ou anonymisées pendant l'essai. Cette obligation constitue une condition expresse de l'essai gratuit et est confirmée à l'inscription via la case obligatoire de protection des données. Granid n'a aucun contrôle sur le traitement effectué par OpenRouter et fournit l'essai « en l'état » à des fins d'évaluation.</p>
+      <p><strong>Données prospects et clients.</strong> Granid conserve des données administratives (nom du cabinet, adresse, site web, coordonnées, données de facturation, journal d'émission du License JWT) sur son CRM à <code>crm.granid.ch</code>. Ces données sont traitées pour l'exécution du contrat, la facturation et le support client. Elles sont conservées pendant la durée de la relation commerciale et pendant les délais prescrits par le droit commercial et fiscal suisse.</p>
+
+      <h2>9. Exclusion de garantie et responsabilité</h2>
+      <p>Legal Intelligence est fourni « en l'état ». Dans toute la mesure permise par le droit suisse, Granid décline toute garantie implicite de qualité marchande, d'adéquation à un usage particulier et d'absence de contrefaçon.</p>
+      <p>Legal Intelligence est un outil d'assistance. Ses résultats peuvent être inexacts, incomplets ou dépassés. Le client conserve la responsabilité professionnelle de chaque opinion juridique, de chaque écriture et de chaque décision. Granid ne fournit aucun conseil juridique et n'est pas responsable des conséquences juridiques.</p>
+      <p>Dans toute la mesure permise par le droit suisse, la responsabilité totale de Granid au titre des présentes Conditions, ou en lien avec celles-ci, ne saurait excéder le total des redevances payées par le client à Granid au cours des douze (12) mois précédant le fait générateur. Granid n'est pas responsable des dommages indirects, accessoires, consécutifs ou punitifs, notamment la perte de bénéfices, la perte de données ou l'interruption d'activité.</p>
+
+      <h2>10. Confidentialité</h2>
+      <p>Chaque partie s'engage à conserver confidentielles les informations non publiques reçues de l'autre partie en lien avec les présentes Conditions. Granid traite en outre l'existence et l'identité des prospects en essai et des clients payants comme confidentielles ; elles ne seront divulguées qu'avec l'accord écrit préalable du client, sous réserve des obligations de divulgation prévues par la loi ou par une autorité compétente.</p>
+
+      <h2>11. Modification des présentes Conditions</h2>
+      <p>Granid peut mettre à jour les présentes Conditions de temps à autre. Toute modification substantielle sera communiquée au client par e-mail au moins trente (30) jours avant son entrée en vigueur. La poursuite de l'utilisation de Legal Intelligence après la date d'effet vaut acceptation des Conditions modifiées.</p>
+
+      <h2>12. Droit applicable et for</h2>
+      <p>Les présentes Conditions sont régies par le droit suisse, à l'exclusion de la Convention des Nations Unies sur les contrats de vente internationale de marchandises (CVIM) et des règles suisses de conflit de lois.</p>
+      <p>Le for exclusif pour tout litige né des présentes Conditions ou s'y rapportant est Zurich, en Suisse, sous réserve des dispositions impératives du droit suisse.</p>
+
+      <h2>13. Contact</h2>
+      <address class="legal-contact">
+        Granid<br>
+        Stefano Leone<br>
+        Zurich, Suisse<br>
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </address>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left" lang="en">Granid, Edge Intelligence. Switzerland.</div>
+      <div class="footer-right">
+        <a href="/fr/terms/">Conditions générales</a>
+        <a href="https://www.linkedin.com/company/granid" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
