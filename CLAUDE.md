@@ -181,6 +181,9 @@ granid-website/
   contact-enterprise/index.html                                 (EN — GWEB-14, GWEB-15)
   {de,fr,it}/contact-enterprise/                                 (GWEB-14)
 
+  terms/index.html                                              (EN T&C — GWEB-24)
+  {de,fr,it}/terms/                                              (GWEB-24)
+
   css/style.css, js/main.js, assets/
 ```
 
