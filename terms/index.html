@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions | Legal Intelligence by Granid</title>
+  <meta name="description" content="Terms and conditions governing the use of Legal Intelligence by Granid, including license tiers, hardware ownership, data protection, and Swiss governing law.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo"><img src="/assets/images/Granid_white.png" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/#solution">Product</a></li>
+        <li><a href="/#problem">Security</a></li>
+        <li><a href="/#products">Plans</a></li>
+        <li><a href="/hardware/production/">Hardware</a></li>
+        <li class="nav-lang">
+          <a href="/terms/" class="active">EN</a>
+          <a href="/de/terms/">DE</a>
+          <a href="/fr/terms/">FR</a>
+          <a href="/it/terms/">IT</a>
+        </li>
+        <li><a href="/trial/" class="nav-cta">Start your trial</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="trial-page legal">
+    <div class="container">
+      <span class="hero-tagline">Legal</span>
+      <h1>Terms and Conditions</h1>
+      <p class="trial-intro"><strong>Last updated: 9 May 2026.</strong> This is version 1, drafted by Granid pending review by Swiss counsel. Substantive changes will be communicated under Section 11.</p>
+
+      <p class="legal-preamble">These Terms and Conditions ("Terms") govern the relationship between Granid and the customer. By submitting the trial form, completing checkout, or accepting an enterprise quote, the customer agrees to these Terms.</p>
+
+      <h2>1. Parties and scope</h2>
+      <p>"Granid" refers to the Swiss sole proprietorship (Einzelunternehmen) operated by Stefano Leone, with its registered place of business in Zurich, Switzerland. "Customer", "you", or "your" refers to the natural or legal person who acquires or uses Legal Intelligence by Granid. These Terms apply to all tiers (trial, essential, professional, enterprise) and to all hardware supplied or recommended by Granid in connection with that use.</p>
+
+      <h2>2. Definitions</h2>
+      <dl class="legal-defs">
+        <dt>Granid</dt>
+        <dd>The Swiss sole proprietorship operated by Stefano Leone, contactable at stefano@granid.ch.</dd>
+        <dt>Legal Intelligence</dt>
+        <dd>The on-premise legal AI software product owned by Granid.</dd>
+        <dt>Hardware</dt>
+        <dd>The Apple-manufactured Mac Mini supplied by Granid for paid tiers, or the Apple Silicon Mac with at least 8 GB of RAM that the Customer provides for the trial tier.</dd>
+        <dt>Subscription</dt>
+        <dd>The annual term granting the Customer the right to use Legal Intelligence under the relevant tier.</dd>
+        <dt>Tier</dt>
+        <dd>The license level (trial, essential, professional, or enterprise) that defines seat caps, duration, and pricing.</dd>
+        <dt>License JWT</dt>
+        <dd>The Ed25519-signed token Granid issues to the Customer to authorize use of Legal Intelligence.</dd>
+      </dl>
+
+      <h2>3. Service description</h2>
+      <p>Legal Intelligence is an on-premise legal AI platform. For paid tiers, all document processing, vector indexing, and large language model inference run locally on the Customer's Hardware. No Customer matter data leaves the Customer's premises. The trial tier is the only exception: during the two-week evaluation period, embedding generation and inference are routed to a third-party provider (OpenRouter), as described in Section 8.</p>
+      <p>A paid Subscription includes the Legal Intelligence software license for the selected Tier and duration, delivery and on-site setup of the Hardware, software updates issued during the active Subscription, and email support at stefano@granid.ch during normal Swiss business hours.</p>
+
+      <h2>4. License grant and tiers</h2>
+      <p>Subject to payment of the applicable fees, Granid grants the Customer a non-exclusive, non-transferable, non-sublicensable license to use Legal Intelligence on the Hardware, for the seats and duration of the selected Tier.</p>
+      <table class="legal-table">
+        <thead>
+          <tr><th scope="col">Tier</th><th scope="col">Seats</th><th scope="col">Duration</th><th scope="col">Acquisition</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Trial</th><td>1</td><td>2 weeks (hard)</td><td>Free, self-service via the trial form</td></tr>
+          <tr><th scope="row">Essential</th><td>1</td><td>1 year</td><td>Self-service via Stripe Checkout</td></tr>
+          <tr><th scope="row">Professional</th><td>up to 4</td><td>1 year</td><td>Self-service via Stripe Checkout</td></tr>
+          <tr><th scope="row">Enterprise</th><td>up to 15</td><td>1 year</td><td>Sales-led inquiry, Swiss bank transfer</td></tr>
+        </tbody>
+      </table>
+      <p>The seat count covers all professionals (lawyers and secretaries combined) using Legal Intelligence within the Customer's firm. Legal Intelligence enforces the seat cap based on the License JWT's <code>seats</code> claim. Exceeding the cap, or sharing the License JWT with persons outside the Customer's firm, is a material breach of these Terms.</p>
+
+      <h2>5. Hardware ownership and warranty</h2>
+      <p>For paid tiers, title to the Mac Mini passes to the Customer upon receipt of full payment of the setup fee. The Customer holds Apple's standard one-year limited warranty directly with Apple, and any extended AppleCare coverage purchased separately. Granid does not provide a separate hardware warranty.</p>
+      <p>For the trial tier, the Customer uses their own Apple Silicon Mac with at least 8 GB of RAM. Granid bears no responsibility for the condition, performance, or compatibility of Customer-provided hardware.</p>
+
+      <h2>6. Subscription term, renewal, and termination</h2>
+      <p>The annual Subscription begins on the date of License JWT issuance and runs for one (1) year. Unless terminated, the Subscription renews automatically for successive one-year terms at the then-current price.</p>
+      <p>Either party may terminate the Subscription, effective at the end of the current term, by giving written notice (an email to stefano@granid.ch is sufficient) at least thirty (30) days before the renewal date.</p>
+      <p>Granid may terminate the Subscription with immediate effect for material breach, including seat-cap violations, license sharing, or non-payment more than thirty (30) days overdue. Upon termination, the Customer must cease all use of Legal Intelligence; the License JWT may remain structurally valid until its <code>valid_until</code> date, but its continued use is no longer authorized.</p>
+
+      <h2>7. Refund policy</h2>
+      <p>Setup fees and the first-year subscription fee are non-refundable once the Hardware has been delivered and the License JWT has been issued, except where mandatory Swiss consumer protection law provides otherwise. The two-week trial exists precisely so that the Customer can evaluate the product before committing.</p>
+      <p>If the Hardware is materially defective on arrival and Apple does not remedy the defect under warranty within thirty (30) days, Granid will, at the Customer's choice, replace the Hardware or refund the setup fee.</p>
+
+      <h2>8. Data protection</h2>
+      <p>Granid is committed to Swiss attorney-client privilege (Art. 321 of the Swiss Penal Code) and to the Swiss Federal Act on Data Protection (FADP / nDSG).</p>
+      <p><strong>Paid tiers.</strong> All Customer data (documents, queries, embeddings, generated outputs) is processed exclusively on the Customer's local Hardware. Granid does not receive, store, transmit, or have any technical means of accessing Customer matter data. Granid is therefore not a data processor under the FADP for the Customer's matter data.</p>
+      <p><strong>Trial tier.</strong> During the two-week trial, document content and queries are transmitted to and processed by the third-party provider OpenRouter for embedding generation and language model inference. The Customer must use only non-sensitive or anonymized data during the trial. This is an explicit condition of the free trial, acknowledged at sign-up via the mandatory data-privacy checkbox. Granid has no control over OpenRouter's processing and provides the trial "as is" for evaluation purposes.</p>
+      <p><strong>Lead and customer records.</strong> Granid stores administrative records (firm name, address, website, contact details, billing data, License JWT issuance log) on its CRM at <code>crm.granid.ch</code>. These records are processed for contract execution, billing, and customer support. They are retained for the duration of the commercial relationship plus any retention period required by Swiss commercial and tax law.</p>
+
+      <h2>9. Warranty disclaimer and liability</h2>
+      <p>Legal Intelligence is provided on an "as is" basis. To the maximum extent permitted by Swiss law, Granid disclaims all implied warranties of merchantability, fitness for a particular purpose, and non-infringement.</p>
+      <p>Legal Intelligence is an assistive tool. Its outputs may be inaccurate, incomplete, or out of date. The Customer remains professionally responsible for every legal opinion, filing, and decision. Granid does not provide legal advice and is not liable for legal outcomes.</p>
+      <p>To the maximum extent permitted by Swiss law, Granid's aggregate liability under or in connection with these Terms shall not exceed the total fees paid by the Customer to Granid in the twelve (12) months preceding the event giving rise to the claim. Granid shall not be liable for indirect, incidental, consequential, or punitive damages, including loss of profits, loss of data, or business interruption.</p>
+
+      <h2>10. Confidentiality</h2>
+      <p>Each party shall keep confidential any non-public information disclosed by the other party in connection with these Terms. Granid additionally treats the existence and identity of trial leads and paying Customers as confidential, and will not disclose them without the Customer's prior written consent, save where disclosure is required by Swiss law or by a competent authority.</p>
+
+      <h2>11. Changes to these Terms</h2>
+      <p>Granid may update these Terms from time to time. Material changes will be communicated to the Customer by email at least thirty (30) days before they take effect. Continued use of Legal Intelligence after the effective date of a change constitutes acceptance of the updated Terms.</p>
+
+      <h2>12. Governing law and jurisdiction</h2>
+      <p>These Terms are governed by Swiss law, excluding the United Nations Convention on Contracts for the International Sale of Goods (CISG) and Swiss conflict-of-laws rules.</p>
+      <p>The exclusive place of jurisdiction for any dispute arising out of or in connection with these Terms is Zurich, Switzerland, subject to mandatory provisions of Swiss law.</p>
+
+      <h2>13. Contact</h2>
+      <address class="legal-contact">
+        Granid<br>
+        Stefano Leone<br>
+        Zurich, Switzerland<br>
+        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+      </address>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">Granid, Edge Intelligence. Switzerland.</div>
+      <div class="footer-right">
+        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="https://www.linkedin.com/company/granid" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
