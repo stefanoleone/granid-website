@@ -43,10 +43,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/it/#solution">Prodotto</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Prodotti</button>
+          <ul class="submenu">
+            <li><a href="/it/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/it/#problem">Sicurezza</a></li>
         <li><a href="/it/#products">Piani</a></li>
         <li><a href="/it/hardware/production/">Hardware</a></li>
+        <li><a href="/it/contact-us/">Contatti</a></li>
         <li class="nav-lang">
           <a href="/terms/">EN</a>
           <a href="/de/terms/">DE</a>
@@ -72,7 +80,7 @@
       <h2>2. Definizioni</h2>
       <dl class="legal-defs">
         <dt>Granid</dt>
-        <dd>La ditta individuale svizzera di Stefano Leone, contattabile a stefano@granid.ch.</dd>
+        <dd>La ditta individuale svizzera di Stefano Leone, contattabile tramite la nostra <a href="/it/contact-us/">pagina dei contatti</a>.</dd>
         <dt>Legal Intelligence</dt>
         <dd>Il software di IA giuridica on-premise sviluppato da Granid.</dd>
         <dt>Hardware</dt>
@@ -87,7 +95,7 @@
 
       <h2>3. Descrizione del servizio</h2>
       <p>Legal Intelligence è una piattaforma di IA giuridica on-premise. Per le tariffe a pagamento, l'intera elaborazione documentale, l'indicizzazione vettoriale e l'inferenza dei modelli linguistici di grandi dimensioni avvengono localmente sull'Hardware del cliente. Nessun dato del fascicolo cliente lascia i locali del cliente. La tariffa Trial è l'unica eccezione: durante il periodo di valutazione di due settimane, la generazione degli embedding e l'inferenza vengono instradate al fornitore terzo OpenRouter (si veda il paragrafo 8).</p>
-      <p>Un abbonamento a pagamento comprende la licenza software per la tariffa e la durata scelte, la consegna e l'installazione in loco dell'Hardware, gli aggiornamenti software pubblicati durante la durata attiva dell'abbonamento e il supporto via e-mail all'indirizzo stefano@granid.ch durante il consueto orario d'ufficio svizzero.</p>
+      <p>Un abbonamento a pagamento comprende la licenza software per la tariffa e la durata scelte, la consegna e l'installazione in loco dell'Hardware, gli aggiornamenti software pubblicati durante la durata attiva dell'abbonamento e il supporto tramite la nostra <a href="/it/contact-us/">pagina dei contatti</a> durante il consueto orario d'ufficio svizzero.</p>
 
       <h2>4. Concessione della licenza e tariffe</h2>
       <p>Subordinatamente al pagamento dei corrispettivi previsti, Granid concede al cliente una licenza non esclusiva, non trasferibile e non sub-licenziabile per l'uso di Legal Intelligence sull'Hardware, limitatamente alle postazioni e alla durata della tariffa scelta.</p>
@@ -110,7 +118,7 @@
 
       <h2>6. Durata dell'abbonamento, rinnovo e disdetta</h2>
       <p>L'abbonamento annuale decorre dalla data di emissione del License JWT e ha durata di un (1) anno. In assenza di disdetta, si rinnova automaticamente per periodi successivi di un anno alla tariffa allora in vigore.</p>
-      <p>Ciascuna parte può disdire l'abbonamento con effetto al termine della durata in corso dandone comunicazione scritta all'altra parte (è sufficiente un'e-mail a stefano@granid.ch) almeno trenta (30) giorni prima della data di rinnovo.</p>
+      <p>Ciascuna parte può disdire l'abbonamento con effetto al termine della durata in corso dandone comunicazione scritta all'altra parte (è sufficiente un messaggio tramite la nostra <a href="/it/contact-us/">pagina dei contatti</a>) almeno trenta (30) giorni prima della data di rinnovo.</p>
       <p>Granid può disdire l'abbonamento con effetto immediato per giusta causa, in particolare in caso di superamento del limite di postazioni, condivisione della licenza o ritardo di pagamento superiore a trenta (30) giorni. Alla disdetta, il cliente deve cessare ogni utilizzo di Legal Intelligence; il License JWT può rimanere strutturalmente valido fino alla data <code>valid_until</code>, ma il suo ulteriore utilizzo non è più autorizzato.</p>
 
       <h2>7. Politica di rimborso</h2>
@@ -143,7 +151,7 @@
         Granid<br>
         Stefano Leone<br>
         Zurigo, Svizzera<br>
-        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+        <a href="/it/contact-us/">granid.ch/it/contact-us/</a>
       </address>
     </div>
   </section>

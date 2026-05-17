@@ -43,10 +43,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/fr/#solution">Produit</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Produits</button>
+          <ul class="submenu">
+            <li><a href="/fr/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/fr/#problem">Sécurité</a></li>
         <li><a href="/fr/#products">Plans</a></li>
         <li><a href="/fr/hardware/production/">Matériel</a></li>
+        <li><a href="/fr/contact-us/">Contact</a></li>
         <li class="nav-lang">
           <a href="/terms/">EN</a>
           <a href="/de/terms/">DE</a>
@@ -72,7 +80,7 @@
       <h2>2. Définitions</h2>
       <dl class="legal-defs">
         <dt>Granid</dt>
-        <dd>L'entreprise individuelle suisse exploitée par Stefano Leone, joignable à stefano@granid.ch.</dd>
+        <dd>L'entreprise individuelle suisse exploitée par Stefano Leone, joignable via notre <a href="/fr/contact-us/">page de contact</a>.</dd>
         <dt>Legal Intelligence</dt>
         <dd>Le logiciel d'IA juridique sur site (on-premise) édité par Granid.</dd>
         <dt>Matériel</dt>
@@ -87,7 +95,7 @@
 
       <h2>3. Description du service</h2>
       <p>Legal Intelligence est une plateforme d'IA juridique sur site. Pour les tarifs payants, l'ensemble du traitement documentaire, de l'indexation vectorielle et de l'inférence des grands modèles de langage s'exécute localement sur le Matériel du client. Aucune donnée de dossier client ne quitte les locaux du client. Le tarif Trial constitue la seule exception : pendant la période d'évaluation de deux semaines, la génération des embeddings et l'inférence sont acheminées vers le prestataire tiers OpenRouter (voir clause 8).</p>
-      <p>Un abonnement payant comprend la licence logicielle pour le tarif et la durée retenus, la livraison et l'installation sur site du Matériel, les mises à jour publiées pendant la durée active de l'abonnement, ainsi que le support par e-mail à stefano@granid.ch durant les heures ouvrables suisses.</p>
+      <p>Un abonnement payant comprend la licence logicielle pour le tarif et la durée retenus, la livraison et l'installation sur site du Matériel, les mises à jour publiées pendant la durée active de l'abonnement, ainsi que le support via notre <a href="/fr/contact-us/">page de contact</a> durant les heures ouvrables suisses.</p>
 
       <h2>4. Concession de licence et tarifs</h2>
       <p>Sous réserve du paiement des redevances applicables, Granid concède au client une licence non exclusive, non transmissible et non sous-licenciable d'utilisation de Legal Intelligence sur le Matériel, dans la limite du nombre de sièges et de la durée du tarif retenu.</p>
@@ -110,7 +118,7 @@
 
       <h2>6. Durée de l'abonnement, renouvellement et résiliation</h2>
       <p>L'abonnement annuel court à compter de la date d'émission du License JWT et dure un (1) an. À défaut de résiliation, il se renouvelle automatiquement pour des périodes successives d'un an, au tarif alors en vigueur.</p>
-      <p>Chaque partie peut résilier l'abonnement à l'échéance de la durée en cours en notifiant l'autre partie par écrit (un e-mail à stefano@granid.ch suffit) au moins trente (30) jours avant la date de renouvellement.</p>
+      <p>Chaque partie peut résilier l'abonnement à l'échéance de la durée en cours en notifiant l'autre partie par écrit (un message via notre <a href="/fr/contact-us/">page de contact</a> suffit) au moins trente (30) jours avant la date de renouvellement.</p>
       <p>Granid peut résilier l'abonnement avec effet immédiat pour juste motif, notamment en cas de dépassement du plafond de sièges, de partage de la licence ou de retard de paiement supérieur à trente (30) jours. À la résiliation, le client doit cesser toute utilisation de Legal Intelligence ; le License JWT peut rester structurellement valide jusqu'à sa date <code>valid_until</code>, mais sa poursuite n'est plus autorisée.</p>
 
       <h2>7. Politique de remboursement</h2>
@@ -143,7 +151,7 @@
         Granid<br>
         Stefano Leone<br>
         Zurich, Suisse<br>
-        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+        <a href="/fr/contact-us/">granid.ch/fr/contact-us/</a>
       </address>
     </div>
   </section>
