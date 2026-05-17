@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matériel pour les abonnements payants | Granid</title>
-  <meta name="description" content="Les abonnements payants de Granid tournent sur un Mac Mini M4 Pro (64 Go) installé dans vos locaux. Tout le traitement et le stockage des documents restent en local. Aucune donnée client ne quitte les locaux.">
+  <title>Matériel recommandé | Granid</title>
+  <meta name="description" content="Granid tourne sur un Mac qui vous appartient. Spécifications recommandées : Mac Mini Apple Silicon avec 64 Go de mémoire unifiée pour Essential et Professional ; Mac Studio pour Enterprise. Le matériel n'est inclus dans aucun plan.">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
   <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="IA juridique suisse, on-premise. Q&R cross-documents, extraction des délais et citations vérifiées sur un Mac Mini dans votre étude. Conforme à la nLPD et à l'art. 321 CP by design.">
+  <meta property="og:description" content="IA juridique suisse, on-premise. Q&R cross-documents, extraction des délais et citations vérifiées sur un Mac dans votre étude. Conforme à la nLPD et à l'art. 321 CP by design.">
   <meta property="og:url" content="https://granid.ch/fr/hardware/production/">
   <meta property="og:locale" content="fr_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
@@ -27,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="IA juridique suisse, on-premise. Q&R cross-documents, extraction des délais et citations vérifiées sur un Mac Mini dans votre étude. Conforme à la nLPD et à l'art. 321 CP by design.">
+  <meta name="twitter:description" content="IA juridique suisse, on-premise. Q&R cross-documents, extraction des délais et citations vérifiées sur un Mac dans votre étude. Conforme à la nLPD et à l'art. 321 CP by design.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,17 +43,24 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/fr/#solution">Produit</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Produits</button>
+          <ul class="submenu">
+            <li><a href="/fr/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/fr/#problem">Sécurité</a></li>
         <li><a href="/fr/#products">Plans</a></li>
         <li><a href="/fr/hardware/production/" class="active">Matériel</a></li>
+        <li><a href="/fr/contact-us/">Contact</a></li>
         <li class="nav-lang">
           <a href="/hardware/production/">EN</a>
           <a href="/de/hardware/production/">DE</a>
           <a href="/fr/hardware/production/" class="active">FR</a>
           <a href="/it/hardware/production/">IT</a>
         </li>
-        <!-- TODO GWEB-7/8: switch href to /fr/buy/<tier> when checkout flow lands -->
         <li><a href="/fr/#products" class="nav-cta">Acheter une licence</a></li>
       </ul>
     </div>
@@ -61,10 +68,9 @@
 
   <section class="hero hero-compact">
     <div class="container">
-      <span class="hero-tagline">Matériel : Production</span>
-      <h1>Mac Mini M4 Pro<br>dans vos locaux.</h1>
-      <p>Les abonnements payants tournent sur un Mac Mini M4 Pro dédié avec 64 Go de mémoire unifiée, installé dans vos locaux. Tout le traitement reste sur l'appareil. Aucune donnée client ne quitte les locaux.</p>
-      <!-- TODO GWEB-7/8: switch href to /fr/buy/<tier> when checkout flow lands -->
+      <span class="hero-tagline">Matériel recommandé</span>
+      <h1>Apportez votre propre Mac.<br>Nous recommandons les spécifications.</h1>
+      <p><strong>Le matériel n'est inclus dans aucun plan.</strong> Granid tourne sur un Mac qui vous appartient et reste dans vos locaux. Ci-dessous : les spécifications que nous recommandons pour que le logiciel tourne confortablement avec toutes les fonctionnalités activées.</p>
       <a href="/fr/#products" class="btn btn-primary">Voir les tarifs</a>
     </div>
   </section>
@@ -77,8 +83,8 @@
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="22" x2="16" y2="22"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
           </div>
           <div>
-            <h3>Mac Mini M4 Pro</h3>
-            <p>Le poste de travail pro le plus efficient d'Apple. Silencieux, basse consommation, tient sur n'importe quel bureau.</p>
+            <h3>Mac Mini (Essential, Professional)</h3>
+            <p>Apple Silicon, 64 Go de mémoire unifiée. Silencieux, basse consommation, tient sur n'importe quel bureau.</p>
           </div>
         </div>
         <div class="highlight-card">
@@ -86,8 +92,8 @@
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
           </div>
           <div>
-            <h3>64 Go de mémoire unifiée</h3>
-            <p>Réserve suffisante pour exécuter Legal Intelligence (compréhension des documents, génération des réponses et recherche) simultanément sur l'appareil.</p>
+            <h3>Mac Studio (Enterprise)</h3>
+            <p>Apple Silicon, 64 Go+ de mémoire unifiée. Recommandé lorsque plus de quatre professionnels partagent la même instance.</p>
           </div>
         </div>
         <div class="highlight-card">
@@ -95,8 +101,8 @@
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
           </div>
           <div>
-            <h3>Apple Silicon, macOS 14+</h3>
-            <p>Requis pour l'architecture à mémoire unifiée. Sonoma ou ultérieur.</p>
+            <h3>macOS 14 (Sonoma) ou ultérieur</h3>
+            <p>Requis pour que tout le traitement de Granid reste sur l'appareil.</p>
           </div>
         </div>
       </div>
@@ -105,23 +111,23 @@
 
   <section class="solution">
     <div class="container">
-      <h2>Pourquoi tout tourne sur votre Mac</h2>
-      <p>Chaque étape se déroule sur le Mac Mini installé dans vos locaux : les documents sont importés, compris, indexés et interrogés sans jamais contacter un service extérieur. Legal Intelligence lit depuis des index stockés sur l'appareil. Aucune donnée client n'est envoyée vers le cloud, jamais.</p>
+      <h2>Pourquoi 64 Go de mémoire unifiée</h2>
+      <p>Les plans payants gardent chaque composant de Granid sur votre Mac : la recherche dans les documents, la compréhension du langage et votre index documentaire. 64 Go est le plancher qui permet à tout cela de tourner aux côtés de macOS, votre navigateur et l'analyse documentaire sans ralentir. Moins et le système rame ; plus est du confort, pas une exigence.</p>
     </div>
   </section>
 
   <section class="selling-point">
     <div class="container">
       <h2>Vos données restent dans vos locaux</h2>
-      <p>C'est la promesse architecturale du Granid payant : <strong>aucun document client, aucune question posée et aucune donnée dérivée ne quitte jamais vos locaux.</strong> Conforme à la nLPD et à l'art. 321 CP by design.</p>
-      <p>Nous livrons et configurons le Mac Mini dans le cadre de l'installation. Après l'installation, l'appareil est entièrement sous votre contrôle : posez-le sur une étagère, branchez-le au LAN, et il tourne.</p>
+      <p>Chaque étape se déroule sur votre Mac : les documents sont importés, compris, indexés et interrogés sans jamais contacter un service extérieur. <strong>Aucun document client, aucune question posée et aucune donnée dérivée ne quitte jamais vos locaux.</strong> Conforme à la nLPD et à l'art. 321 CP by design.</p>
+      <p>Vous acquérez le Mac via le canal de votre choix : Apple, revendeur agréé ou reconditionné. Nous émettons la licence et vous envoyons le paquet d'installation ; vous l'exécutez sur le Mac.</p>
     </div>
   </section>
 
   <section class="cross-link">
     <div class="container">
       <h2>Vous voulez d'abord essayer ?</h2>
-      <p>L'essai de 2 semaines tourne sur tout Mac à processeur Apple Silicon avec 8 Go de RAM. Pas besoin d'acheter du matériel de production pour évaluer.</p>
+      <p>L'essai de 2 semaines tourne sur tout Mac à processeur Apple Silicon avec 8 Go de RAM. Pendant l'essai, le traitement lourd s'effectue sur un service hébergé par Granid, la barre matérielle est délibérément basse. Les plans payants tournent entièrement en local.</p>
       <a href="/fr/hardware/trial/" class="btn btn-outline">Voir la fiche matériel d'essai</a>
     </div>
   </section>

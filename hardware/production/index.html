@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Hardware for paid tiers | Granid</title>
-  <meta name="description" content="Granid paid tiers run on a Mac Mini M4 Pro (64 GB) installed in your office. All processing and document storage stay local. No customer data leaves the building.">
+  <title>Recommended hardware | Granid</title>
+  <meta name="description" content="Granid runs on a Mac you own. Recommended specs: Mac Mini Apple Silicon with 64 GB unified memory for Essential and Professional; Mac Studio for Enterprise. Hardware is not included in any tier.">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
   <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
   <meta property="og:url" content="https://granid.ch/hardware/production/">
   <meta property="og:locale" content="en_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
@@ -27,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,17 +43,24 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/#solution">Product</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Products</button>
+          <ul class="submenu">
+            <li><a href="/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/#problem">Security</a></li>
         <li><a href="/#products">Plans</a></li>
         <li><a href="/hardware/production/" class="active">Hardware</a></li>
+        <li><a href="/contact-us/">Contact</a></li>
         <li class="nav-lang">
           <a href="/hardware/production/" class="active">EN</a>
           <a href="/de/hardware/production/">DE</a>
           <a href="/fr/hardware/production/">FR</a>
           <a href="/it/hardware/production/">IT</a>
         </li>
-        <!-- TODO GWEB-7/8: switch href to /buy/<tier> when checkout flow lands -->
         <li><a href="/#products" class="nav-cta">Buy a license</a></li>
       </ul>
     </div>
@@ -61,10 +68,9 @@
 
   <section class="hero hero-compact">
     <div class="container">
-      <span class="hero-tagline">Hardware: Production</span>
-      <h1>Mac Mini M4 Pro<br>in your office.</h1>
-      <p>Paid tiers run on a dedicated Mac Mini M4 Pro with 64 GB of unified memory, installed in your office. All processing stays on the device. No customer data leaves the building.</p>
-      <!-- TODO GWEB-7/8: switch href to /buy/<tier> when checkout flow lands -->
+      <span class="hero-tagline">Recommended hardware</span>
+      <h1>Bring your own Mac.<br>We recommend the specs.</h1>
+      <p><strong>Hardware is not included in any tier.</strong> Granid runs on a Mac you own and keep in your office. Below: the specs we recommend so the software runs comfortably with all features enabled.</p>
       <a href="/#products" class="btn btn-primary">See pricing</a>
     </div>
   </section>
@@ -77,8 +83,8 @@
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="14" rx="2"/><line x1="8" y1="22" x2="16" y2="22"/><line x1="12" y1="18" x2="12" y2="22"/></svg>
           </div>
           <div>
-            <h3>Mac Mini M4 Pro</h3>
-            <p>Apple's most efficient pro desktop. Quiet, low power, fits on any desk.</p>
+            <h3>Mac Mini (Essential, Professional)</h3>
+            <p>Apple Silicon, 64 GB unified memory. Quiet, low power, fits on any desk.</p>
           </div>
         </div>
         <div class="highlight-card">
@@ -86,8 +92,8 @@
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><line x1="6" y1="10" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/><line x1="14" y1="10" x2="14" y2="14"/><line x1="18" y1="10" x2="18" y2="14"/></svg>
           </div>
           <div>
-            <h3>64 GB unified memory</h3>
-            <p>Enough headroom to run Legal Intelligence (document understanding, answer generation, and search) concurrently on the device.</p>
+            <h3>Mac Studio (Enterprise)</h3>
+            <p>Apple Silicon, 64 GB+ unified memory. Recommended when more than four professionals share the same instance.</p>
           </div>
         </div>
         <div class="highlight-card">
@@ -95,8 +101,8 @@
             <svg width="20" height="20" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/></svg>
           </div>
           <div>
-            <h3>Apple Silicon, macOS 14+</h3>
-            <p>Required for the unified-memory architecture. Sonoma or newer.</p>
+            <h3>macOS 14 (Sonoma) or newer</h3>
+            <p>Required to keep all of Granid's processing on the device.</p>
           </div>
         </div>
       </div>
@@ -105,23 +111,23 @@
 
   <section class="solution">
     <div class="container">
-      <h2>Why everything runs on your Mac</h2>
-      <p>Every step happens on the Mac Mini in your office: documents are imported, understood, indexed, and searched without ever contacting an outside service. Legal Intelligence reads from indexes stored on the device. No customer data is sent to any cloud, ever.</p>
+      <h2>Why 64 GB of unified memory</h2>
+      <p>Paid tiers keep every part of Granid on your Mac: document search, language understanding, and your document index. 64 GB is the floor that lets all of it run alongside macOS, your browser, and document parsing without slowing down. Less and the system crawls; more is comfort, not requirement.</p>
     </div>
   </section>
 
   <section class="selling-point">
     <div class="container">
       <h2>Your data stays in the building</h2>
-      <p>This is the architectural promise of paid Granid: <strong>no customer document, no question you ask, and no derived data ever leaves your office.</strong> nDSG and Art. 321 StGB compliant by design.</p>
-      <p>We deliver and configure the Mac Mini as part of setup. After installation the device is fully under your control: sit it on a shelf, plug it into your LAN, and it runs.</p>
+      <p>Every step happens on your Mac: documents are imported, understood, indexed, and searched without ever contacting an outside service. <strong>No customer document, no question you ask, and no derived data ever leaves your office.</strong> nDSG and Art. 321 StGB compliant by design.</p>
+      <p>You acquire the Mac through your usual channel: Apple, an authorised reseller, or refurbished. We provision the license and send you the install package; you run it on the Mac.</p>
     </div>
   </section>
 
   <section class="cross-link">
     <div class="container">
       <h2>Just want to try it first?</h2>
-      <p>The 2-week trial runs on any Mac with Apple Silicon and 8 GB of RAM. No need to buy production hardware to evaluate.</p>
+      <p>The 2-week trial runs on any Mac with Apple Silicon and 8 GB of RAM. During the trial, the heavy processing happens on a service hosted by Granid, so the hardware bar is deliberately low. Paid tiers run everything locally.</p>
       <a href="/hardware/trial/" class="btn btn-outline">See the trial hardware spec</a>
     </div>
   </section>

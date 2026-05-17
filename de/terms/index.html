@@ -43,10 +43,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/de/#solution">Produkt</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Produkte</button>
+          <ul class="submenu">
+            <li><a href="/de/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/de/#problem">Sicherheit</a></li>
         <li><a href="/de/#products">Pläne</a></li>
         <li><a href="/de/hardware/production/">Hardware</a></li>
+        <li><a href="/de/contact-us/">Kontakt</a></li>
         <li class="nav-lang">
           <a href="/terms/">EN</a>
           <a href="/de/terms/" class="active">DE</a>
@@ -72,7 +80,7 @@
       <h2>2. Begriffe</h2>
       <dl class="legal-defs">
         <dt>Granid</dt>
-        <dd>Das schweizerische Einzelunternehmen von Stefano Leone, erreichbar unter stefano@granid.ch.</dd>
+        <dd>Das schweizerische Einzelunternehmen von Stefano Leone, erreichbar über unsere <a href="/de/contact-us/">Kontaktseite</a>.</dd>
         <dt>Legal Intelligence</dt>
         <dd>Die On-Premise-Software für juristische KI von Granid.</dd>
         <dt>Hardware</dt>
@@ -87,7 +95,7 @@
 
       <h2>3. Leistungsbeschreibung</h2>
       <p>Legal Intelligence ist eine On-Premise-Plattform für juristische KI. In den kostenpflichtigen Tarifen erfolgen sämtliche Dokumentenverarbeitung, Vektorindexierung und Sprachmodell-Inferenz lokal auf der Hardware der Kundschaft. Mandatsdaten verlassen die Räumlichkeiten der Kundschaft nicht. Der Trial-Tarif ist die einzige Ausnahme: Während des zweiwöchigen Probezeitraums werden Embedding-Erzeugung und Inferenz an den Drittanbieter OpenRouter weitergeleitet (siehe Ziffer 8).</p>
-      <p>Ein kostenpflichtiges Abonnement umfasst die Software-Lizenz für den gewählten Tarif und die Vertragsdauer, Lieferung und Vor-Ort-Einrichtung der Hardware, Software-Updates während der laufenden Vertragsdauer sowie E-Mail-Support an stefano@granid.ch zu üblichen Schweizer Bürozeiten.</p>
+      <p>Ein kostenpflichtiges Abonnement umfasst die Software-Lizenz für den gewählten Tarif und die Vertragsdauer, Lieferung und Vor-Ort-Einrichtung der Hardware, Software-Updates während der laufenden Vertragsdauer sowie Support über unsere <a href="/de/contact-us/">Kontaktseite</a> zu üblichen Schweizer Bürozeiten.</p>
 
       <h2>4. Lizenz und Tarife</h2>
       <p>Vorbehaltlich der Bezahlung der entsprechenden Gebühren räumt Granid der Kundschaft eine nicht ausschliessliche, nicht übertragbare und nicht unterlizenzierbare Lizenz zur Nutzung von Legal Intelligence auf der Hardware ein, beschränkt auf die Sitzplätze und die Dauer des gewählten Tarifs.</p>
@@ -110,7 +118,7 @@
 
       <h2>6. Vertragsdauer, Verlängerung und Kündigung</h2>
       <p>Das Jahresabonnement beginnt mit der Ausstellung des Lizenz-JWT und läuft ein (1) Jahr. Wird es nicht gekündigt, verlängert es sich automatisch um jeweils ein weiteres Jahr zum dann gültigen Preis.</p>
-      <p>Jede Partei kann das Abonnement zum Ablauf der laufenden Vertragsdauer kündigen, sofern die Kündigung schriftlich (eine E-Mail an stefano@granid.ch genügt) mindestens dreissig (30) Tage vor dem Verlängerungsdatum erfolgt.</p>
+      <p>Jede Partei kann das Abonnement zum Ablauf der laufenden Vertragsdauer kündigen, sofern die Kündigung schriftlich (eine Nachricht über unsere <a href="/de/contact-us/">Kontaktseite</a> genügt) mindestens dreissig (30) Tage vor dem Verlängerungsdatum erfolgt.</p>
       <p>Granid kann das Abonnement aus wichtigem Grund mit sofortiger Wirkung kündigen, namentlich bei Überschreitung des Sitzplatzlimits, Weitergabe der Lizenz oder Zahlungsverzug von mehr als dreissig (30) Tagen. Mit der Kündigung hat die Kundschaft die Nutzung von Legal Intelligence einzustellen; das Lizenz-JWT bleibt bis zum <code>valid_until</code>-Datum strukturell gültig, seine Verwendung ist jedoch nicht mehr autorisiert.</p>
 
       <h2>7. Rückerstattungsregelung</h2>
@@ -143,7 +151,7 @@
         Granid<br>
         Stefano Leone<br>
         Zürich, Schweiz<br>
-        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+        <a href="/de/contact-us/">granid.ch/de/contact-us/</a>
       </address>
     </div>
   </section>

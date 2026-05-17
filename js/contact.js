@@ -1,17 +1,15 @@
-// Granid — enterprise inquiry submit handler (GWEB-15)
-// Posts to the CRM endpoint that handles the Enterprise sales pipeline.
+// Granid — generic contact-us submit handler.
 //
-// Endpoint path is provisional: per LEGALINT-171, the CRM team needs to
-// confirm whether enterprise inquiries get their own endpoint
-// (POST /api/v1/leads/enterprise) or share /api/v1/leads with a
-// `tier_interest: "enterprise"` discriminator. We are using the dedicated
-// path here. If the CRM team picks the shared-endpoint option, swap the
-// URL constant and add the discriminator to the body.
+// POSTs to the shared CRM leads endpoint with `tier_interest: "contact"`
+// as the discriminator, per ECOSYSTEM.md (LEGALINT-194 update). The CRM
+// endpoint contract is tracked in GCRM-N (follow-up). Until the CRM is
+// wired up, this form ships in "blocked-by-crm" mode: the network call
+// fails and the user sees the generic error message.
 
 (function () {
   'use strict';
 
-  var CRM_ENDPOINT = 'https://crm.granid.ch/api/v1/leads/enterprise';
+  var CRM_ENDPOINT = 'https://crm.granid.ch/api/v1/leads';
 
   var SUCCESS_PATHS = {
     en: '/contact-sent/',
@@ -22,34 +20,30 @@
 
   var I18N = {
     en: {
-      website_invalid: 'Please enter a valid HTTPS URL (for example, https://example.ch).',
-      generic: 'Something went wrong. Please try again or visit our contact page.',
+      generic: 'Something went wrong. Please try again.',
       submitting: 'Sending…'
     },
     de: {
-      website_invalid: 'Bitte geben Sie eine gültige HTTPS-URL ein (z. B. https://example.ch).',
-      generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder besuchen Sie unsere Kontaktseite.',
+      generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
       submitting: 'Wird gesendet…'
     },
     fr: {
-      website_invalid: 'Veuillez saisir une URL HTTPS valide (par exemple, https://example.ch).',
-      generic: 'Une erreur est survenue. Veuillez réessayer ou consulter notre page de contact.',
+      generic: 'Une erreur est survenue. Veuillez réessayer.',
       submitting: 'Envoi…'
     },
     it: {
-      website_invalid: 'Inserisca un URL HTTPS valido (per esempio https://example.ch).',
-      generic: 'Qualcosa è andato storto. Riprovi o visiti la pagina dei contatti.',
+      generic: 'Qualcosa è andato storto. Riprovi.',
       submitting: 'Invio in corso…'
     }
   };
 
-  var form = document.getElementById('enterprise-form');
+  var form = document.getElementById('contact-form');
   if (!form) return;
 
   var localeInput = form.querySelector('input[name="locale"]');
   var locale = (localeInput && localeInput.value) || 'en';
   var messages = I18N[locale] || I18N.en;
-  var globalErrorEl = document.getElementById('enterprise-error-global');
+  var globalErrorEl = document.getElementById('contact-error-global');
 
   function clearErrors() {
     if (globalErrorEl) {
@@ -67,16 +61,6 @@
     }
   }
 
-  function showFieldError(fieldName, msg) {
-    var errorEl = form.querySelector('[data-error-for="' + fieldName + '"]');
-    if (errorEl) {
-      errorEl.textContent = msg;
-      errorEl.classList.add('active');
-    }
-    var input = form.querySelector('[name="' + fieldName + '"]');
-    if (input) input.setAttribute('aria-invalid', 'true');
-  }
-
   function showGlobalError(msg) {
     if (!globalErrorEl) return;
     globalErrorEl.textContent = msg;
@@ -85,16 +69,12 @@
 
   function gatherFormData() {
     var fd = new FormData(form);
-    var seats = parseInt(fd.get('estimated_seats') || '0', 10);
     return {
+      tier_interest: 'contact',
       first_name: (fd.get('first_name') || '').trim(),
       last_name: (fd.get('last_name') || '').trim(),
       email: (fd.get('email') || '').trim(),
       firm_name: (fd.get('firm_name') || '').trim(),
-      firm_address: (fd.get('firm_address') || '').trim(),
-      firm_website: (fd.get('firm_website') || '').trim(),
-      company_size: fd.get('company_size') || '',
-      estimated_seats: isNaN(seats) ? 0 : seats,
       message: (fd.get('message') || '').trim(),
       locale: fd.get('locale') || 'en'
     };
@@ -133,13 +113,6 @@
       return;
     }
 
-    var data = gatherFormData();
-
-    if (data.firm_website && !/^https:\/\//i.test(data.firm_website)) {
-      showFieldError('firm_website', messages.website_invalid);
-      return;
-    }
-
-    submit(data, form.querySelector('button[type="submit"]'));
+    submit(gatherFormData(), form.querySelector('button[type="submit"]'));
   });
 })();

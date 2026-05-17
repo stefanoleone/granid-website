@@ -27,37 +27,37 @@
   var I18N = {
     en: {
       personal_email_domain: 'Please use a company email address. Personal email providers like gmail.com or hotmail.com are not eligible for the trial.',
-      already_trialed: 'Your firm has already redeemed a trial. Contact sales@granid.ch to discuss a paid license.',
-      website_invalid: 'Please enter a valid HTTPS URL (for example, https://example.ch).',
+      already_trialed: 'Your firm has already redeemed a trial. Visit our contact page to discuss a paid license.',
+      website_invalid: 'Please enter a valid website (for example, example.ch).',
       privacy_not_acknowledged: 'You must acknowledge the data-privacy notice to continue.',
-      generic: 'Something went wrong. Please try again or email stefano@granid.ch.',
+      generic: 'Something went wrong. Please try again or visit our contact page.',
       submitting: 'Sending…',
       trialSentPath: '/trial-sent/'
     },
     de: {
       personal_email_domain: 'Bitte verwenden Sie eine geschäftliche E-Mail-Adresse. Persönliche E-Mail-Anbieter wie gmail.com oder hotmail.com sind für den Trial nicht zulässig.',
-      already_trialed: 'Ihre Kanzlei hat den Trial bereits eingelöst. Kontaktieren Sie sales@granid.ch für eine bezahlte Lizenz.',
-      website_invalid: 'Bitte geben Sie eine gültige HTTPS-URL ein (z. B. https://example.ch).',
+      already_trialed: 'Ihre Kanzlei hat den Trial bereits eingelöst. Besuchen Sie unsere Kontaktseite für eine bezahlte Lizenz.',
+      website_invalid: 'Bitte geben Sie eine gültige Website ein (z. B. example.ch).',
       privacy_not_acknowledged: 'Sie müssen den Datenschutzhinweis bestätigen, um fortzufahren.',
-      generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder schreiben Sie an stefano@granid.ch.',
+      generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder besuchen Sie unsere Kontaktseite.',
       submitting: 'Wird gesendet…',
       trialSentPath: '/de/trial-sent/'
     },
     fr: {
       personal_email_domain: 'Veuillez utiliser une adresse e-mail professionnelle. Les fournisseurs personnels comme gmail.com ou hotmail.com ne sont pas éligibles pour l’essai.',
-      already_trialed: 'Votre étude a déjà bénéficié de l’essai. Contactez sales@granid.ch pour discuter d’une licence payante.',
-      website_invalid: 'Veuillez saisir une URL HTTPS valide (par exemple, https://example.ch).',
+      already_trialed: 'Votre étude a déjà bénéficié de l’essai. Consultez notre page de contact pour discuter d’une licence payante.',
+      website_invalid: 'Veuillez saisir un site web valide (par exemple, example.ch).',
       privacy_not_acknowledged: 'Vous devez accepter la notice de confidentialité pour continuer.',
-      generic: 'Une erreur est survenue. Veuillez réessayer ou écrire à stefano@granid.ch.',
+      generic: 'Une erreur est survenue. Veuillez réessayer ou consulter notre page de contact.',
       submitting: 'Envoi…',
       trialSentPath: '/fr/trial-sent/'
     },
     it: {
       personal_email_domain: 'Usi un indirizzo email aziendale. I provider personali come gmail.com o hotmail.com non sono ammessi per la prova.',
-      already_trialed: 'Il Suo studio ha già usato la prova. Contatti sales@granid.ch per una licenza a pagamento.',
-      website_invalid: 'Inserisca un URL HTTPS valido (per esempio https://example.ch).',
+      already_trialed: 'Il Suo studio ha già usato la prova. Visiti la pagina dei contatti per una licenza a pagamento.',
+      website_invalid: 'Inserisca un sito web valido (per esempio, example.ch).',
       privacy_not_acknowledged: 'Deve accettare l’informativa sulla privacy per continuare.',
-      generic: 'Qualcosa è andato storto. Riprovi o scriva a stefano@granid.ch.',
+      generic: 'Qualcosa è andato storto. Riprovi o visiti la pagina dei contatti.',
       submitting: 'Invio in corso…',
       trialSentPath: '/it/trial-sent/'
     }
@@ -125,7 +125,7 @@
       first_name: (fd.get('first_name') || '').trim(),
       last_name: (fd.get('last_name') || '').trim(),
       email: (fd.get('email') || '').trim(),
-      website: (fd.get('website') || '').trim(),
+      website: normalizeUrl((fd.get('website') || '').trim()),
       firm_address: (fd.get('firm_address') || '').trim(),
       company_size: fd.get('company_size') || '',
       has_it_support: fd.get('has_it_support') === 'true',
@@ -134,9 +134,16 @@
     };
   }
 
+  function normalizeUrl(value) {
+    if (!value) return value;
+    // Strip any existing scheme so we always end up with https://
+    var stripped = value.replace(/^[a-z][a-z0-9+.-]*:\/*/i, '');
+    return 'https://' + stripped;
+  }
+
   function clientValidate(data) {
     var firstError = null;
-    if (data.website && !/^https:\/\//i.test(data.website)) {
+    if (data.website && !/^https:\/\/[^\s.]+\.[^\s]+$/i.test(data.website)) {
       showFieldError('website', messages.website_invalid);
       firstError = firstError || 'website';
     }
