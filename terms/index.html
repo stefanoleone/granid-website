@@ -43,10 +43,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/#solution">Product</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Products</button>
+          <ul class="submenu">
+            <li><a href="/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/#problem">Security</a></li>
         <li><a href="/#products">Plans</a></li>
         <li><a href="/hardware/production/">Hardware</a></li>
+        <li><a href="/contact-us/">Contact</a></li>
         <li class="nav-lang">
           <a href="/terms/" class="active">EN</a>
           <a href="/de/terms/">DE</a>
@@ -72,7 +80,7 @@
       <h2>2. Definitions</h2>
       <dl class="legal-defs">
         <dt>Granid</dt>
-        <dd>The Swiss sole proprietorship operated by Stefano Leone, contactable at stefano@granid.ch.</dd>
+        <dd>The Swiss sole proprietorship operated by Stefano Leone, contactable through our <a href="/contact-us/">contact page</a>.</dd>
         <dt>Legal Intelligence</dt>
         <dd>The on-premise legal AI software product owned by Granid.</dd>
         <dt>Hardware</dt>
@@ -87,7 +95,7 @@
 
       <h2>3. Service description</h2>
       <p>Legal Intelligence is an on-premise legal AI platform. For paid tiers, all document processing, vector indexing, and large language model inference run locally on the Customer's Hardware. No Customer matter data leaves the Customer's premises. The trial tier is the only exception: during the two-week evaluation period, embedding generation and inference are routed to a third-party provider (OpenRouter), as described in Section 8.</p>
-      <p>A paid Subscription includes the Legal Intelligence software license for the selected Tier and duration, delivery and on-site setup of the Hardware, software updates issued during the active Subscription, and email support at stefano@granid.ch during normal Swiss business hours.</p>
+      <p>A paid Subscription includes the Legal Intelligence software license for the selected Tier and duration, delivery and on-site setup of the Hardware, software updates issued during the active Subscription, and support through our <a href="/contact-us/">contact page</a> during normal Swiss business hours.</p>
 
       <h2>4. License grant and tiers</h2>
       <p>Subject to payment of the applicable fees, Granid grants the Customer a non-exclusive, non-transferable, non-sublicensable license to use Legal Intelligence on the Hardware, for the seats and duration of the selected Tier.</p>
@@ -110,7 +118,7 @@
 
       <h2>6. Subscription term, renewal, and termination</h2>
       <p>The annual Subscription begins on the date of License JWT issuance and runs for one (1) year. Unless terminated, the Subscription renews automatically for successive one-year terms at the then-current price.</p>
-      <p>Either party may terminate the Subscription, effective at the end of the current term, by giving written notice (an email to stefano@granid.ch is sufficient) at least thirty (30) days before the renewal date.</p>
+      <p>Either party may terminate the Subscription, effective at the end of the current term, by giving written notice (a message via our <a href="/contact-us/">contact page</a> is sufficient) at least thirty (30) days before the renewal date.</p>
       <p>Granid may terminate the Subscription with immediate effect for material breach, including seat-cap violations, license sharing, or non-payment more than thirty (30) days overdue. Upon termination, the Customer must cease all use of Legal Intelligence; the License JWT may remain structurally valid until its <code>valid_until</code> date, but its continued use is no longer authorized.</p>
 
       <h2>7. Refund policy</h2>
@@ -143,7 +151,7 @@
         Granid<br>
         Stefano Leone<br>
         Zurich, Switzerland<br>
-        <a href="mailto:stefano@granid.ch">stefano@granid.ch</a>
+        <a href="/contact-us/">granid.ch/contact-us/</a>
       </address>
     </div>
   </section>
