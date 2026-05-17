@@ -470,7 +470,9 @@ nav .container {
   font-size: 1.875rem;
   font-weight: 600;
   color: #fff;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-border-light);
   line-height: 1.25;
 }
 
@@ -511,7 +513,6 @@ nav .container {
 .pricing-features {
   list-style: none;
   margin-bottom: 2rem;
-  flex: 1;
 }
 
 .pricing-features li {
@@ -537,6 +538,7 @@ nav .container {
 .pricing-card .btn {
   width: 100%;
   text-align: center;
+  margin-top: auto;
 }
 
 /* ── Contact ── */
