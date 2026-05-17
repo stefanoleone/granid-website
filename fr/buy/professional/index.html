@@ -25,10 +25,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/fr/#solution">Produit</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Produits</button>
+          <ul class="submenu">
+            <li><a href="/fr/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/fr/#problem">Sécurité</a></li>
         <li><a href="/fr/#products">Plans</a></li>
         <li><a href="/fr/hardware/production/">Matériel</a></li>
+        <li><a href="/fr/contact-us/">Contact</a></li>
         <li class="nav-lang">
           <a href="/buy/professional/">EN</a>
           <a href="/de/buy/professional/">DE</a>
@@ -46,25 +54,17 @@
         <aside class="checkout-summary">
           <span class="hero-tagline">Récapitulatif</span>
           <h2>Professional</h2>
-          <p class="checkout-tier-desc">Jusqu'à 4 professionnels · Mac Mini M4 Pro 64 Go</p>
-          <div class="checkout-line">
-            <span>À l'installation</span>
-            <span>CHF 12'500</span>
-          </div>
-          <div class="checkout-line">
-            <span>Abonnement annuel</span>
-            <span>CHF 2'400 / an</span>
-          </div>
+          <p class="checkout-tier-desc">Jusqu'à 4 professionnels · Legal Intelligence + Voice Intelligence · tourne sur votre propre Mac</p>
           <div class="checkout-line checkout-total">
             <span>Total aujourd'hui</span>
-            <span><strong>CHF 14'900</strong></span>
+            <span><strong>CHF 2'990</strong> / an · hors TVA</span>
           </div>
-          <p class="checkout-note">L'abonnement annuel commence après la première année.</p>
+          <p class="checkout-note">Premier débit à l'inscription ; renouvellement annuel. Le matériel n'est pas inclus. Voir les <a href="/fr/hardware/production/">spécifications recommandées</a>.</p>
         </aside>
 
         <div class="checkout-form-wrapper">
           <h1>Détails de l'étude</h1>
-          <p class="checkout-intro">Parlez-nous de votre étude. Nous livrons et configurons le Mac Mini dans le cadre de l'installation.</p>
+          <p class="checkout-intro">Parlez-nous de votre étude. Nous émettons votre licence et vous envoyons le paquet d'installation ; vous l'exécutez sur votre propre Mac.</p>
           <form id="checkout-form" class="trial-form" novalidate>
             <input type="hidden" name="tier" value="professional">
             <input type="hidden" name="seats" value="4">

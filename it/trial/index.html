@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
   <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="AI giuridica svizzera, on-premise. Q&A cross-document, estrazione delle scadenze e citazioni verificate su un Mac Mini nel Suo studio. Conforme alla nLPD e all'art. 321 CP by design.">
+  <meta property="og:description" content="AI giuridica svizzera, on-premise. Q&A cross-document, estrazione delle scadenze e citazioni verificate su un Mac nel Suo studio. Conforme alla nLPD e all'art. 321 CP by design.">
   <meta property="og:url" content="https://granid.ch/it/trial/">
   <meta property="og:locale" content="it_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
@@ -27,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="AI giuridica svizzera, on-premise. Q&A cross-document, estrazione delle scadenze e citazioni verificate su un Mac Mini nel Suo studio. Conforme alla nLPD e all'art. 321 CP by design.">
+  <meta name="twitter:description" content="AI giuridica svizzera, on-premise. Q&A cross-document, estrazione delle scadenze e citazioni verificate su un Mac nel Suo studio. Conforme alla nLPD e all'art. 321 CP by design.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,10 +43,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/it/#solution">Prodotto</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Prodotti</button>
+          <ul class="submenu">
+            <li><a href="/it/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/it/#problem">Sicurezza</a></li>
         <li><a href="/it/#products">Piani</a></li>
         <li><a href="/it/hardware/production/">Hardware</a></li>
+        <li><a href="/it/contact-us/">Contatti</a></li>
         <li class="nav-lang">
           <a href="/trial/">EN</a>
           <a href="/de/trial/">DE</a>
@@ -89,8 +97,7 @@
 
         <div class="form-group">
           <label for="website">Sito web dello studio</label>
-          <input type="url" id="website" name="website" placeholder="https://..." required>
-          <div class="form-hint">Solo HTTPS.</div>
+          <input type="text" id="website" name="website" placeholder="example.ch" required>
           <div class="form-error" data-error-for="website"></div>
         </div>
 

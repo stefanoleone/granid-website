@@ -25,10 +25,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/#solution">Product</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Products</button>
+          <ul class="submenu">
+            <li><a href="/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/#problem">Security</a></li>
         <li><a href="/#products">Plans</a></li>
         <li><a href="/hardware/production/">Hardware</a></li>
+        <li><a href="/contact-us/">Contact</a></li>
         <li class="nav-lang">
           <a href="/buy/essential/" class="active">EN</a>
           <a href="/de/buy/essential/">DE</a>
@@ -46,25 +54,17 @@
         <aside class="checkout-summary">
           <span class="hero-tagline">Order summary</span>
           <h2>Essential</h2>
-          <p class="checkout-tier-desc">1 professional · Mac Mini M4 Pro 64 GB</p>
-          <div class="checkout-line">
-            <span>Setup</span>
-            <span>CHF 5'900</span>
-          </div>
-          <div class="checkout-line">
-            <span>Annual subscription</span>
-            <span>CHF 990 / year</span>
-          </div>
+          <p class="checkout-tier-desc">1 professional · Legal Intelligence · runs on your own Mac</p>
           <div class="checkout-line checkout-total">
             <span>Total today</span>
-            <span><strong>CHF 6'890</strong></span>
+            <span><strong>CHF 990</strong> / year · excl. VAT</span>
           </div>
-          <p class="checkout-note">Recurring annual fee starts after the first year.</p>
+          <p class="checkout-note">First charge on signup; renews annually. Hardware is not included. See <a href="/hardware/production/">recommended specs</a>.</p>
         </aside>
 
         <div class="checkout-form-wrapper">
           <h1>Firm details</h1>
-          <p class="checkout-intro">Tell us about your firm. We deliver and configure the Mac Mini as part of setup.</p>
+          <p class="checkout-intro">Tell us about your firm. We provision your license and send you the install package; you run it on your own Mac.</p>
           <form id="checkout-form" class="trial-form" novalidate>
             <input type="hidden" name="tier" value="essential">
             <input type="hidden" name="seats" value="1">

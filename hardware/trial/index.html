@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Hardware for the trial | Granid</title>
-  <meta name="description" content="Granid runs on any Apple Silicon Mac with 8 GB RAM during the 2-week trial. Mac Mini M4 Pro is required only for paid tiers.">
+  <meta name="description" content="Granid runs on any Apple Silicon Mac with 8 GB RAM during the 2-week trial. Paid tiers recommend a Mac Mini with 64 GB unified memory.">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
   <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
   <meta property="og:url" content="https://granid.ch/hardware/trial/">
   <meta property="og:locale" content="en_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
@@ -27,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,10 +43,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="/#solution">Product</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Products</button>
+          <ul class="submenu">
+            <li><a href="/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="/#problem">Security</a></li>
         <li><a href="/#products">Plans</a></li>
         <li><a href="/hardware/production/">Hardware</a></li>
+        <li><a href="/contact-us/">Contact</a></li>
         <li class="nav-lang">
           <a href="/hardware/trial/" class="active">EN</a>
           <a href="/de/hardware/trial/">DE</a>
@@ -62,7 +70,7 @@
     <div class="container">
       <span class="hero-tagline">Hardware: Trial</span>
       <h1>Run Granid on your<br>existing Mac.</h1>
-      <p>During the 2-week trial you don't need new hardware. Granid runs on any modern Apple Silicon Mac. The Mac Mini M4 Pro is required only when you move to a paid tier.</p>
+      <p>During the 2-week trial you don't need new hardware. Granid runs on any modern Apple Silicon Mac. Paid tiers recommend more capable specs. See the <a href="/hardware/production/">recommended hardware</a> page.</p>
       <a href="/trial/" class="btn btn-primary">Start your trial</a>
     </div>
   </section>
@@ -104,7 +112,7 @@
   <section class="solution">
     <div class="container">
       <h2>Why a lightweight Mac is enough</h2>
-      <p>During the trial, the Granid app on your Mac handles only document import and basic indexing. The heavier processing (understanding your documents and generating answers) runs on a remote service operated by Granid. This is what lets you evaluate the product without buying production hardware.</p>
+      <p>During the trial, the Granid app on your Mac handles only document import and basic indexing. The heavier processing (understanding your documents and generating answers) runs on a remote service operated by Granid. This is what lets you evaluate the product without upgrading to the recommended paid-tier hardware.</p>
     </div>
   </section>
 
@@ -112,15 +120,15 @@
     <div class="container">
       <h2>Important: trial data leaves your office</h2>
       <p>During the 2-week trial, the documents and questions you submit are processed on a remote service operated by Granid. This means the data leaves your Mac during the trial. This is the opposite of the paid product, where nothing leaves your office. Please use only <strong>non-sensitive or anonymised data</strong> during the trial.</p>
-      <p>Paid tiers run fully local on a Mac Mini M4 Pro installed in your office. No customer data leaves the building.</p>
+      <p>Paid tiers run fully local on a Mac (Mini or Studio, Apple Silicon, 64 GB+) that stays in your office. No customer data leaves the building.</p>
     </div>
   </section>
 
   <section class="cross-link">
     <div class="container">
       <h2>Ready for production?</h2>
-      <p>Paid tiers run on a dedicated Mac Mini M4 Pro (64 GB) installed in your office. All processing stays on the device. Nothing leaves the building.</p>
-      <a href="/hardware/production/" class="btn btn-outline">See the production hardware spec</a>
+      <p>Paid tiers run on a Mac you own (Apple Silicon, 64 GB of unified memory). Everything runs on the device. Nothing leaves the building.</p>
+      <a href="/hardware/production/" class="btn btn-outline">See the recommended hardware</a>
     </div>
   </section>
 

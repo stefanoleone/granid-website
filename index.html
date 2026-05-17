@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legal Intelligence by Granid | Swiss legal AI on-premise</title>
-  <meta name="description" content="Cross-document Q&A, deadline extraction, and verified citations across Swiss legal corpora, running locally on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta name="description" content="Cross-document Q&A, deadline extraction, and verified citations across Swiss legal corpora, running locally on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
   <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
   <meta property="og:url" content="https://granid.ch/">
   <meta property="og:locale" content="en_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
@@ -27,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -44,10 +44,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#solution">Product</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Products</button>
+          <ul class="submenu">
+            <li><a href="/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="#problem">Security</a></li>
         <li><a href="#products">Plans</a></li>
         <li><a href="/hardware/production/">Hardware</a></li>
+        <li><a href="/contact-us/">Contact</a></li>
         <li class="nav-lang">
           <a href="/" class="active">EN</a>
           <a href="/de/">DE</a>
@@ -64,7 +72,7 @@
     <div class="container">
       <span class="hero-tagline">Legal Intelligence by Granid</span>
       <h1>The AI that never leaves<br>your office.</h1>
-      <p>Cross-document Q&amp;A, deadline extraction, and verified citations across the Swiss legal corpus. Running locally on a Mac Mini in your firm. nDSG and Art. 321 StGB compliant by design.</p>
+      <p>Cross-document Q&amp;A, deadline extraction, and verified citations across the Swiss legal corpus. Running locally on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.</p>
       <a href="/trial/" class="btn btn-primary">Try free for 2 weeks</a>
     </div>
   </section>
@@ -154,7 +162,7 @@
   <section class="pricing" id="products">
     <div class="container">
       <h2>Three plans, one principle: your data stays with you.</h2>
-      <p>Each plan includes a dedicated <a href="/hardware/production/">Mac Mini M4 Pro (64 GB)</a> installed in your office.</p>
+      <p>The software runs on a Mac you own. Hardware is not included. See <a href="/hardware/production/">recommended specs</a>.</p>
       <div class="trial-banner">
         <p>Try Granid free for 2 weeks. Runs on your own Mac. <a href="/trial/">Start the trial</a> · <a href="/hardware/trial/">Hardware spec</a></p>
       </div>
@@ -165,16 +173,9 @@
           <div class="pricing-tier">Essential</div>
           <h3>Solo practitioners &amp; micro firms</h3>
           <p class="pricing-seats">1 professional</p>
-          <div class="pricing-price"><strong>CHF 5'900</strong> setup<br><span>+ CHF 990 / year</span></div>
-          <p class="pricing-subtitle">Passive intelligence: you ask, the system answers.</p>
+          <div class="pricing-price"><strong>CHF 990</strong> / year<br><span>excl. VAT</span></div>
           <ul class="pricing-features">
-            <li>Cross-document Q&amp;A across all matters</li>
-            <li>Client status summaries on demand</li>
-            <li>Deadline &amp; Fristen extraction with urgency dashboard</li>
-            <li>Manual upload via web UI (PDF, DOCX, scans)</li>
-            <li>MCP connectors (email, file system, calendar) for passive indexing</li>
-            <li>Local authentication (admin panel, SQLite, bcrypt, LAN-only)</li>
-            <li>Dedicated Mac Mini M4 Pro 64 GB, remote setup</li>
+            <li>Legal Intelligence: tabular document review</li>
           </ul>
           <a href="/buy/essential/" class="btn btn-outline">Buy now</a>
         </div>
@@ -184,20 +185,10 @@
           <div class="pricing-tier">Professional</div>
           <h3>Mid-size firms</h3>
           <p class="pricing-seats">Up to 4 professionals</p>
-          <div class="pricing-price"><strong>CHF 12'500</strong> setup<br><span>+ CHF 2'400 / year</span></div>
-          <p class="pricing-subtitle">From passive to active intelligence: connectors don't just index, they act.</p>
+          <div class="pricing-price"><strong>CHF 2'990</strong> / year<br><span>excl. VAT</span></div>
           <ul class="pricing-features">
             <li>Everything in Essential</li>
-            <li>SSO / OIDC (Entra ID, LDAP) with admin fallback</li>
-            <li>Active email triage, classification &amp; routing by matter</li>
-            <li>File system watcher: auto-ingest + OCR on drop</li>
-            <li>Contract clause analyzer &amp; deviation alerts</li>
-            <li>Opposing party analysis &amp; counsel tracker</li>
-            <li>Matter triage &amp; conflict check</li>
-            <li>Fristen / calendar cross-reference</li>
-            <li>Morning briefing digest at 07:30: new docs, deadlines, urgent emails</li>
-            <li>Access to OpenCaseLaw (956K decisions)</li>
-            <li>On-site setup (half day)</li>
+            <li>Voice Intelligence: on-device legal dictation with custom vocabulary</li>
           </ul>
           <a href="/buy/professional/" class="btn btn-primary">Buy now</a>
         </div>
@@ -206,22 +197,11 @@
         <div class="pricing-card">
           <div class="pricing-tier">Enterprise</div>
           <h3>Large firms</h3>
-          <p class="pricing-seats">Up to 15 professionals</p>
-          <div class="pricing-price"><strong>CHF 24'000</strong> setup<br><span>+ CHF 4'800 / year</span></div>
-          <p class="pricing-subtitle">Full active intelligence with secure remote access and document generation.</p>
+          <p class="pricing-seats">Custom seat count</p>
+          <div class="pricing-price"><strong>Contact us</strong><br><span>tailored quote</span></div>
           <ul class="pricing-features">
             <li>Everything in Professional</li>
-            <li>Secure remote access (HTTPS + MFA or WireGuard/Tailscale)</li>
-            <li>Full audit log of all remote queries</li>
-            <li>First-draft generation (briefs, motions, letters)</li>
-            <li>Legal research assistant on BGE/ATF</li>
-            <li>Time entry suggestions &amp; billing integration (Vertec/WinJur)</li>
-            <li>Custom prompt templates per practice area</li>
-            <li>Calendar MCP with active intelligence</li>
-            <li>Local video calls with multilingual meeting notes, branded with your firm logo</li>
-            <li>Mac Mini M4 Pro 64 GB + hot spare, auto-backup to firm NAS</li>
-            <li>Full-day on-site setup + team training</li>
-            <li>SLA 4h response, dedicated account manager, quarterly review</li>
+            <li>Meeting Intelligence <em>(coming soon)</em></li>
           </ul>
           <a href="/contact-enterprise/" class="btn btn-outline">Contact us</a>
         </div>

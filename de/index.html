@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legal Intelligence by Granid | Schweizer Recht-KI on-premise</title>
-  <meta name="description" content="Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate aus Schweizer Rechtskorpora, lokal auf einem Mac Mini in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
+  <meta name="description" content="Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate aus Schweizer Rechtskorpora, lokal auf einem Mac in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
   <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="Schweizer Recht-KI, on-premise. Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate auf einem Mac Mini in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
+  <meta property="og:description" content="Schweizer Recht-KI, on-premise. Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate auf einem Mac in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
   <meta property="og:url" content="https://granid.ch/de/">
   <meta property="og:locale" content="de_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
@@ -27,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="Schweizer Recht-KI, on-premise. Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate auf einem Mac Mini in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
+  <meta name="twitter:description" content="Schweizer Recht-KI, on-premise. Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate auf einem Mac in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -43,10 +43,18 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="#solution">Produkt</a></li>
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Produkte</button>
+          <ul class="submenu">
+            <li><a href="/de/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
         <li><a href="#problem">Sicherheit</a></li>
         <li><a href="#products">Pläne</a></li>
         <li><a href="/de/hardware/production/">Hardware</a></li>
+        <li><a href="/de/contact-us/">Kontakt</a></li>
         <li class="nav-lang">
           <a href="/">EN</a>
           <a href="/de/" class="active">DE</a>
@@ -62,7 +70,7 @@
     <div class="container">
       <span class="hero-tagline">Legal Intelligence by Granid</span>
       <h1>Die KI, die Ihr Büro<br>nie verlässt.</h1>
-      <p>Cross-Document Q&amp;A, Fristen-Extraktion und verifizierte Zitate aus dem Schweizer Rechtskorpus. Lokal auf einem Mac Mini in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.</p>
+      <p>Cross-Document Q&amp;A, Fristen-Extraktion und verifizierte Zitate aus dem Schweizer Rechtskorpus. Lokal auf einem Mac in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.</p>
       <a href="/de/trial/" class="btn btn-primary">2 Wochen kostenlos testen</a>
     </div>
   </section>
@@ -148,7 +156,7 @@
   <section class="pricing" id="products">
     <div class="container">
       <h2>Drei Pläne, ein Prinzip: Ihre Daten bleiben bei Ihnen.</h2>
-      <p>Jeder Plan beinhaltet einen dedizierten <a href="/de/hardware/production/">Mac Mini M4 Pro (64 GB)</a>, installiert in Ihrem Büro.</p>
+      <p>Die Software läuft auf einem Mac, der Ihnen gehört. Hardware ist nicht enthalten. Siehe <a href="/de/hardware/production/">empfohlene Spezifikationen</a>.</p>
       <div class="trial-banner">
         <p>Granid 2 Wochen kostenlos testen. Läuft auf Ihrem eigenen Mac. <a href="/de/trial/">Trial starten</a> · <a href="/de/hardware/trial/">Hardware-Spec</a></p>
       </div>
@@ -158,16 +166,9 @@
           <div class="pricing-tier">Essential</div>
           <h3>Einzelanwälte &amp; Mikro-Kanzleien</h3>
           <p class="pricing-seats">1 Fachperson</p>
-          <div class="pricing-price"><strong>CHF 5'900</strong> Einrichtung<br><span>+ CHF 990 / Jahr</span></div>
-          <p class="pricing-subtitle">Passive Intelligenz: Sie fragen, das System antwortet.</p>
+          <div class="pricing-price"><strong>CHF 990</strong> / Jahr<br><span>exkl. MWST</span></div>
           <ul class="pricing-features">
-            <li>Cross-Document Q&amp;A über alle Mandate</li>
-            <li>Mandantenstatus-Zusammenfassungen auf Abruf</li>
-            <li>Fristen-Extraktion mit Dringlichkeits-Dashboard</li>
-            <li>Manueller Upload via Web-UI (PDF, DOCX, Scans)</li>
-            <li>MCP-Konnektoren (E-Mail, Dateisystem, Kalender) für passive Indizierung</li>
-            <li>Lokale Authentifizierung (Admin-Panel, SQLite, bcrypt, nur LAN)</li>
-            <li>Dedizierter Mac Mini M4 Pro 64 GB, Remote-Setup</li>
+            <li>Legal Intelligence: tabellarische Dokumenten-Review</li>
           </ul>
           <a href="/de/buy/essential/" class="btn btn-outline">Jetzt kaufen</a>
         </div>
@@ -176,20 +177,10 @@
           <div class="pricing-tier">Professional</div>
           <h3>Mittelgrosse Kanzleien</h3>
           <p class="pricing-seats">Bis zu 4 Fachpersonen</p>
-          <div class="pricing-price"><strong>CHF 12'500</strong> Einrichtung<br><span>+ CHF 2'400 / Jahr</span></div>
-          <p class="pricing-subtitle">Von passiver zu aktiver Intelligenz: Konnektoren indizieren nicht nur, sie handeln.</p>
+          <div class="pricing-price"><strong>CHF 2'990</strong> / Jahr<br><span>exkl. MWST</span></div>
           <ul class="pricing-features">
             <li>Alles aus Essential</li>
-            <li>SSO / OIDC (Entra ID, LDAP) mit Admin-Fallback</li>
-            <li>Aktive E-Mail-Triage, Klassifizierung &amp; Routing nach Mandat</li>
-            <li>Dateisystem-Watcher: Auto-Ingest + OCR beim Ablegen</li>
-            <li>Vertragsklausel-Analyse &amp; Abweichungs-Alerts</li>
-            <li>Gegenpartei-Analyse &amp; Anwaltstracking</li>
-            <li>Mandats-Triage &amp; Conflict Check</li>
-            <li>Fristen-/Kalender-Abgleich</li>
-            <li>Morning Briefing Digest um 07:30: neue Dokumente, Fristen, dringende E-Mails</li>
-            <li>Zugang zu OpenCaseLaw (956K Entscheide)</li>
-            <li>On-Site-Setup halber Tag</li>
+            <li>Voice Intelligence: lokale juristische Diktierfunktion mit individuellem Vokabular</li>
           </ul>
           <a href="/de/buy/professional/" class="btn btn-primary">Jetzt kaufen</a>
         </div>
@@ -197,22 +188,11 @@
         <div class="pricing-card">
           <div class="pricing-tier">Enterprise</div>
           <h3>Grosse Kanzleien</h3>
-          <p class="pricing-seats">Bis zu 15 Fachpersonen</p>
-          <div class="pricing-price"><strong>CHF 24'000</strong> Einrichtung<br><span>+ CHF 4'800 / Jahr</span></div>
-          <p class="pricing-subtitle">Volle aktive Intelligenz mit sicherem Fernzugriff und Dokumentenerstellung.</p>
+          <p class="pricing-seats">Individuelle Anzahl Plätze</p>
+          <div class="pricing-price"><strong>Kontakt aufnehmen</strong><br><span>massgeschneidertes Angebot</span></div>
           <ul class="pricing-features">
             <li>Alles aus Professional</li>
-            <li>Sicherer Fernzugriff (HTTPS + MFA oder WireGuard/Tailscale)</li>
-            <li>Vollständiges Audit-Log aller Remote-Abfragen</li>
-            <li>First-Draft-Generierung (Schriftsätze, Eingaben, Briefe)</li>
-            <li>Rechtsrecherche-Assistent für BGE/ATF</li>
-            <li>Time-Entry-Vorschläge &amp; Abrechnungsintegration (Vertec/WinJur)</li>
-            <li>Individuelle Prompt-Templates nach Rechtsgebiet</li>
-            <li>Kalender-MCP mit aktiver Intelligenz</li>
-            <li>Lokale Videoanrufe mit mehrsprachigen Meeting-Notes, mit Kanzlei-Logo gebrandet</li>
-            <li>Mac Mini M4 Pro 64 GB + Hot Spare, automatisches Backup auf Kanzlei-NAS</li>
-            <li>Ganztägiges On-Site-Setup + Team-Schulung</li>
-            <li>SLA 4h Reaktionszeit, dedizierter Account Manager, vierteljährliche Reviews</li>
+            <li>Meeting Intelligence <em>(bald verfügbar)</em></li>
           </ul>
           <a href="/de/contact-enterprise/" class="btn btn-outline">Kontakt aufnehmen</a>
         </div>

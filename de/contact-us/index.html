@@ -3,31 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sprechen Sie mit uns über Enterprise | Legal Intelligence by Granid</title>
-  <meta name="description" content="Enterprise unterstützt eine individuelle Anzahl Plätze und enthält Meeting Intelligence (bald verfügbar) zusätzlich zu Legal Intelligence und Voice Intelligence. Kontaktieren Sie das Legal-Intelligence-by-Granid-Team.">
-  <!-- Favicon -->
+  <title>Kontakt | Granid</title>
+  <meta name="description" content="Schreiben Sie an Granid für Fragen zu Legal Intelligence, Voice Intelligence, Hardware-Spezifikationen oder anderem.">
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
-  <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="Schweizer Recht-KI, on-premise. Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate auf einem Mac in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
-  <meta property="og:url" content="https://granid.ch/de/contact-enterprise/">
+  <meta property="og:title" content="Kontakt Granid">
+  <meta property="og:description" content="Schreiben Sie an Granid für Fragen zu Legal Intelligence, Voice Intelligence, Hardware-Spezifikationen oder anderem.">
+  <meta property="og:url" content="https://granid.ch/de/contact-us/">
   <meta property="og:locale" content="de_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Granid Edge Intelligence">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="Schweizer Recht-KI, on-premise. Cross-Document Q&A, Fristen-Extraktion und verifizierte Zitate auf einem Mac in Ihrer Kanzlei. nDSG- und Art. 321 StGB-konform by Design.">
+  <meta name="twitter:title" content="Kontakt Granid">
+  <meta name="twitter:description" content="Schreiben Sie an Granid für Fragen zu Legal Intelligence, Voice Intelligence, Hardware-Spezifikationen oder anderem.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,12 +51,12 @@
         <li><a href="/de/#problem">Sicherheit</a></li>
         <li><a href="/de/#products">Pläne</a></li>
         <li><a href="/de/hardware/production/">Hardware</a></li>
-        <li><a href="/de/contact-us/">Kontakt</a></li>
+        <li><a href="/de/contact-us/" class="active">Kontakt</a></li>
         <li class="nav-lang">
-          <a href="/contact-enterprise/">EN</a>
-          <a href="/de/contact-enterprise/" class="active">DE</a>
-          <a href="/fr/contact-enterprise/">FR</a>
-          <a href="/it/contact-enterprise/">IT</a>
+          <a href="/contact-us/">EN</a>
+          <a href="/de/contact-us/" class="active">DE</a>
+          <a href="/fr/contact-us/">FR</a>
+          <a href="/it/contact-us/">IT</a>
         </li>
         <li><a href="/de/trial/" class="nav-cta">Trial starten</a></li>
       </ul>
@@ -68,11 +65,11 @@
 
   <section class="trial-page">
     <div class="container">
-      <span class="hero-tagline">Enterprise-Anfrage</span>
-      <h1>Sprechen Sie mit uns über Enterprise</h1>
-      <p class="trial-intro">Enterprise skaliert über vier Fachpersonen hinaus mit einer individuellen Anzahl Plätze und ergänzt Meeting Intelligence <em>(bald verfügbar)</em> zusätzlich zu Legal Intelligence und Voice Intelligence. Erzählen Sie uns von Ihrer Kanzlei. Wir melden uns innerhalb eines Werktages.</p>
+      <span class="hero-tagline">Kontakt</span>
+      <h1>Schreiben Sie uns.</h1>
+      <p class="trial-intro">Fragen zu Legal Intelligence, Voice Intelligence, Hardware-Spezifikationen oder den spezifischen Anforderungen Ihrer Kanzlei. Wir antworten innerhalb eines Werktages.</p>
 
-      <form id="enterprise-form" class="trial-form" novalidate>
+      <form id="contact-form" class="trial-form" novalidate>
         <input type="hidden" name="locale" value="de">
 
         <div class="form-row">
@@ -95,48 +92,19 @@
         </div>
 
         <div class="form-group">
-          <label for="firm_name">Kanzlei-Name</label>
-          <input type="text" id="firm_name" name="firm_name" required>
+          <label for="firm_name">Kanzlei-Name <span class="optional">(optional)</span></label>
+          <input type="text" id="firm_name" name="firm_name">
           <div class="form-error" data-error-for="firm_name"></div>
         </div>
 
         <div class="form-group">
-          <label for="firm_address">Kanzlei-Adresse</label>
-          <input type="text" id="firm_address" name="firm_address" required>
-          <div class="form-error" data-error-for="firm_address"></div>
-        </div>
-
-        <div class="form-group">
-          <label for="firm_website">Kanzlei-Website</label>
-          <input type="url" id="firm_website" name="firm_website" placeholder="https://..." required>
-          <div class="form-hint">Nur HTTPS.</div>
-          <div class="form-error" data-error-for="firm_website"></div>
-        </div>
-
-        <fieldset class="form-group">
-          <legend>Kanzlei-Grösse</legend>
-          <div class="form-radio-group">
-            <label><input type="radio" name="company_size" value="5-15" required>5–15</label>
-            <label><input type="radio" name="company_size" value="16+">16+</label>
-          </div>
-          <div class="form-error" data-error-for="company_size"></div>
-        </fieldset>
-
-        <div class="form-group">
-          <label for="estimated_seats">Geschätzte Anzahl Plätze</label>
-          <input type="number" id="estimated_seats" name="estimated_seats" min="1" step="1" required>
-          <div class="form-hint">Wie viele Anwälte und Sekretariate werden Legal Intelligence nutzen.</div>
-          <div class="form-error" data-error-for="estimated_seats"></div>
-        </div>
-
-        <div class="form-group">
-          <label for="message">Ihre Nachricht <span class="optional">(optional)</span></label>
-          <textarea id="message" name="message" rows="4"></textarea>
+          <label for="message">Ihre Nachricht</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
           <div class="form-error" data-error-for="message"></div>
         </div>
 
-        <div class="form-error-global" id="enterprise-error-global"></div>
-        <button type="submit" class="btn btn-primary">Anfrage senden</button>
+        <div class="form-error-global" id="contact-error-global"></div>
+        <button type="submit" class="btn btn-primary">Nachricht senden</button>
       </form>
     </div>
   </section>
@@ -152,6 +120,6 @@
   </footer>
 
   <script src="/js/main.js"></script>
-  <script src="/js/enterprise.js"></script>
+  <script src="/js/contact.js"></script>
 </body>
 </html>

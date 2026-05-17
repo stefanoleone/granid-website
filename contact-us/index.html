@@ -3,31 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Start your 2-week trial | Legal Intelligence by Granid</title>
-  <meta name="description" content="Free 2-week trial of Legal Intelligence by Granid. Runs on any Apple Silicon Mac with 8 GB RAM. Compliant with nDSG and Art. 321 StGB.">
-  <!-- Favicon -->
+  <title>Contact us | Granid</title>
+  <meta name="description" content="Get in touch with Granid about Legal Intelligence, Voice Intelligence, hardware specs, or anything else.">
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
-  <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
-  <meta property="og:url" content="https://granid.ch/trial/">
+  <meta property="og:title" content="Contact Granid">
+  <meta property="og:description" content="Get in touch with Granid about Legal Intelligence, Voice Intelligence, hardware specs, or anything else.">
+  <meta property="og:url" content="https://granid.ch/contact-us/">
   <meta property="og:locale" content="en_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Granid Edge Intelligence">
 
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta name="twitter:title" content="Contact Granid">
+  <meta name="twitter:description" content="Get in touch with Granid about Legal Intelligence, Voice Intelligence, hardware specs, or anything else.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -54,12 +51,12 @@
         <li><a href="/#problem">Security</a></li>
         <li><a href="/#products">Plans</a></li>
         <li><a href="/hardware/production/">Hardware</a></li>
-        <li><a href="/contact-us/">Contact</a></li>
+        <li><a href="/contact-us/" class="active">Contact</a></li>
         <li class="nav-lang">
-          <a href="/trial/" class="active">EN</a>
-          <a href="/de/trial/">DE</a>
-          <a href="/fr/trial/">FR</a>
-          <a href="/it/trial/">IT</a>
+          <a href="/contact-us/" class="active">EN</a>
+          <a href="/de/contact-us/">DE</a>
+          <a href="/fr/contact-us/">FR</a>
+          <a href="/it/contact-us/">IT</a>
         </li>
         <li><a href="/trial/" class="nav-cta">Start your trial</a></li>
       </ul>
@@ -68,11 +65,11 @@
 
   <section class="trial-page">
     <div class="container">
-      <span class="hero-tagline">Trial signup</span>
-      <h1>Start your 2-week trial</h1>
-      <p class="trial-intro">Free for 2 weeks. Runs on any Apple Silicon Mac with 8 GB RAM. <a href="/hardware/trial/">See hardware details</a>.</p>
+      <span class="hero-tagline">Contact us</span>
+      <h1>Get in touch.</h1>
+      <p class="trial-intro">Questions about Legal Intelligence, Voice Intelligence, hardware specs, or your firm's specific needs. We reply within one business day.</p>
 
-      <form id="trial-form" class="trial-form" novalidate>
+      <form id="contact-form" class="trial-form" novalidate>
         <input type="hidden" name="locale" value="en">
 
         <div class="form-row">
@@ -89,54 +86,25 @@
         </div>
 
         <div class="form-group">
-          <label for="email">Company email</label>
+          <label for="email">Email</label>
           <input type="email" id="email" name="email" required>
-          <div class="form-hint">Use your firm's email. Personal addresses (gmail.com, hotmail.com, etc.) are not eligible.</div>
           <div class="form-error" data-error-for="email"></div>
         </div>
 
         <div class="form-group">
-          <label for="website">Firm website</label>
-          <input type="text" id="website" name="website" placeholder="example.ch" required>
-          <div class="form-error" data-error-for="website"></div>
+          <label for="firm_name">Firm name <span class="optional">(optional)</span></label>
+          <input type="text" id="firm_name" name="firm_name">
+          <div class="form-error" data-error-for="firm_name"></div>
         </div>
 
         <div class="form-group">
-          <label for="firm_address">Firm address</label>
-          <input type="text" id="firm_address" name="firm_address" required>
-          <div class="form-error" data-error-for="firm_address"></div>
+          <label for="message">Your message</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
+          <div class="form-error" data-error-for="message"></div>
         </div>
 
-        <fieldset class="form-group">
-          <legend>Firm size</legend>
-          <div class="form-radio-group">
-            <label><input type="radio" name="company_size" value="1" required>1</label>
-            <label><input type="radio" name="company_size" value="2-4">2–4</label>
-            <label><input type="radio" name="company_size" value="5-15">5–15</label>
-            <label><input type="radio" name="company_size" value="16+">16+</label>
-          </div>
-          <div class="form-error" data-error-for="company_size"></div>
-        </fieldset>
-
-        <fieldset class="form-group">
-          <legend>Internal IT support</legend>
-          <div class="form-radio-group">
-            <label><input type="radio" name="has_it_support" value="true" required>Yes</label>
-            <label><input type="radio" name="has_it_support" value="false">No</label>
-          </div>
-          <div class="form-error" data-error-for="has_it_support"></div>
-        </fieldset>
-
-        <div class="form-group form-checkbox">
-          <label>
-            <input type="checkbox" name="data_privacy_acknowledged" required>
-            <span>I understand that during the 2-week trial period my firm will use only <strong>non-sensitive or anonymized data</strong>, and that documents and queries will be processed by Granid-hosted remote services. <a href="/hardware/trial/">More on trial data privacy</a>.</span>
-          </label>
-          <div class="form-error" data-error-for="data_privacy_acknowledged"></div>
-        </div>
-
-        <div class="form-error-global" id="trial-error-global"></div>
-        <button type="submit" class="btn btn-primary">Start your trial</button>
+        <div class="form-error-global" id="contact-error-global"></div>
+        <button type="submit" class="btn btn-primary">Send message</button>
       </form>
     </div>
   </section>
@@ -152,6 +120,6 @@
   </footer>
 
   <script src="/js/main.js"></script>
-  <script src="/js/trial.js"></script>
+  <script src="/js/contact.js"></script>
 </body>
 </html>

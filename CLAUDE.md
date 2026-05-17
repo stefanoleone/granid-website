@@ -16,7 +16,7 @@ Plane projects: `LEGALINT`, `GCRM`, `GWEB`. Cross-repo work for ECOSYSTEM.md ali
 
 ## Company
 
-Granid is an on-premise AI platform for Swiss legal and accounting professionals. The core value proposition is local data sovereignty: hardware (Mac Mini M4 Pro, 64GB unified memory) deployed in the client's office, ensuring client data never leaves the building. This directly addresses Swiss attorney-client privilege obligations (Anwaltsgeheimnis, Art. 321 StGB, nDSG/FADP).
+Granid is an on-premise AI platform for Swiss legal and accounting professionals. The core value proposition is local data sovereignty: the software runs on a Mac (Apple Silicon, 64 GB unified memory) the client owns and keeps in the firm's office, ensuring client data never leaves the building. This directly addresses Swiss attorney-client privilege obligations (Anwaltsgeheimnis, Art. 321 StGB, nDSG/FADP). Hardware is **not** bundled with any tier — see "Tiers, pricing, acquisition" below.
 
 - Company name: Granid (derived from "granite" — solid, Swiss, indestructible)
 - Domain: granid.ch (registered on Infomaniak)
@@ -27,17 +27,20 @@ Granid is an on-premise AI platform for Swiss legal and accounting professionals
 
 ## Products
 
-Per ECOSYSTEM.md, Granid currently ships a single product:
+Granid currently ships:
 
-- **Legal Intelligence by Granid** — on-premise legal AI for Swiss law firms.
+- **Legal Intelligence by Granid** — on-premise legal AI for Swiss law firms (flagship: tabular document review).
+- **Voice Intelligence by Granid** — on-device legal dictation with personal vocabulary. Integrated into Legal Intelligence from the **Professional** tier upwards. Tracked in the Plane project `VOICEINT`.
 
-Reserved brand tokens for planned future products (not on the active roadmap):
+Reserved brand tokens for products on the roadmap but not yet shipping:
 
-- Meeting Intelligence by Granid
+- Meeting Intelligence by Granid — coming soon, included with **Enterprise**.
 - Accounting Intelligence by Granid
 - Compliance Intelligence by Granid
 
-All product brand names ("Granid", "Legal Intelligence", "Meeting Intelligence", "Accounting Intelligence", "Compliance Intelligence") and the corporate descriptor "Edge Intelligence" (used in the site footer) are **never translated**, even on DE/FR/IT pages.
+All product brand names ("Granid", "Legal Intelligence", "Voice Intelligence", "Meeting Intelligence", "Accounting Intelligence", "Compliance Intelligence") and the corporate descriptor "Edge Intelligence" (used in the site footer) are **never translated**, even on DE/FR/IT pages.
+
+**Naming note.** `legalintelligence/business/pricing.md` and `ECOSYSTEM.md` still use the provisional token "Talk Intelligence". The site uses the definitive "Voice Intelligence" — alignment in the legalintelligence repo is tracked as `LEGALINT-193`.
 
 ## Competitor
 
@@ -70,20 +73,30 @@ A clean sans-serif. Inter, Geist, or similar. Two weights maximum (regular + sem
 
 ### Tiers, pricing, acquisition
 
-Per ECOSYSTEM.md "License tiers". **Tier strings, seat caps, and acquisition path are normative cross-repo** — they must match the JWT `tier` claim consumed by Legal Intelligence and the CTAs rendered by this site.
+Commercial source of truth: **`~/Lab/legalintelligence/business/pricing.md`** (introduced by LEGALINT-192). JWT `tier` claim and seat enforcement contract: **`ECOSYSTEM.md` § License tiers**. The table below mirrors `business/pricing.md` — keep it in sync.
 
-| Tier | Seats (lawyers + secretaries combined) | Acquisition | Hardware | Pricing |
-|------|----------------------------------------|-------------|----------|---------|
+| Tier | Seats | Acquisition | Recommended hardware (BYO) | Pricing (excl. VAT) |
+|------|-------|-------------|----------------------------|---------------------|
 | **trial** | 1 professional | Self-service via `/trial` form → CRM activation flow | Any Mac with Apple Silicon, ≥ 8 GB RAM (lightweight; embeddings + LLM run on Granid-hosted OpenRouter) | Free, 2 weeks hard |
-| **essential** | 1 professional | Self-service via `/buy/essential` → Stripe Checkout *(currently simulated, real Stripe deferred — see GWEB-12)* | Mac Mini M4 Pro 64 GB (fully local) | CHF 5,900 setup + CHF 990 / year |
-| **professional** | up to 4 professionals (any mix) | Self-service via `/buy/professional` → Stripe Checkout *(simulated)* | Mac Mini M4 Pro 64 GB | CHF 12,500 setup + CHF 2,400 / year |
-| **enterprise** | up to 15 professionals | Sales-led inquiry via `/contact-enterprise` form | Mac Mini M4 Pro 64 GB | CHF 24,000 setup + CHF 4,800 / year |
+| **essential** | 1 professional | Self-service via `/buy/essential` → Stripe Checkout *(currently simulated, real Stripe deferred — see GWEB-12)* | Mac Mini Apple Silicon, 64 GB unified RAM | CHF 990 / year |
+| **professional** | up to 4 professionals | Self-service via `/buy/professional` → Stripe Checkout *(simulated)* | Mac Mini Apple Silicon, 64 GB unified RAM | CHF 2 990 / year |
+| **enterprise** | Custom (default 15, operator-overridable) | Sales-led inquiry via `/contact-enterprise` form | Mac Studio Apple Silicon, 64 GB+ unified RAM | Contact us |
 
-Acquisition row for Essential/Professional reflects the 2026-05-05 decision to use self-service Stripe Checkout instead of sales-led inquiry. ECOSYSTEM.md update tracked in `LEGALINT-171`.
+**Hardware is not included in any tier.** Customers acquire their own Mac and install the software on it. `/hardware/production` is a *recommended specs* page, not a sales page.
 
-Hardware spec pages are the single source of truth, linked from CRM emails — URLs must stay stable:
+Features (cumulative — each tier inherits from the tier above):
+
+| Feature | Essential | Professional | Enterprise |
+|---------|-----------|--------------|------------|
+| Legal Intelligence (tabular document review, Swiss legal corpus, verified citations) | ✓ | ✓ | ✓ |
+| Voice Intelligence (on-device legal dictation with custom vocabulary) | — | ✓ | ✓ |
+| Meeting Intelligence *(coming soon)* | — | — | ✓ |
+
+**Pricing display contract** (per `business/pricing.md`): every paid price card and CTA on the site **must** carry the "excl. VAT" qualifier (Swiss VAT 8.1% standard rate as of 2026-05-15).
+
+Hardware spec pages are linked from CRM emails — URLs must stay stable:
 - `/hardware/trial` (trial spec, lightweight Apple Silicon)
-- `/hardware/production` (paid spec, Mac Mini M4 Pro 64 GB)
+- `/hardware/production` (paid recommended specs: Mac Mini for Essential/Professional, Mac Studio for Enterprise)
 
 ### Forms
 
