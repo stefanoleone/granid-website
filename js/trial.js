@@ -5,7 +5,12 @@
 (function () {
   'use strict';
 
-  var CRM_ENDPOINT = 'https://crm.granid.ch/api/v1/leads';
+  // Local CRM override: when serving from localhost during dev, point at the
+  // local CRM (FastAPI on :8000) so the form is testable end-to-end.
+  var CRM_ENDPOINT =
+    (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+      ? 'http://127.0.0.1:8000/api/v1/leads'
+      : 'https://crm.granid.ch/api/v1/leads';
 
   // Soft client-side blocklist for personal email domains. The CRM is the
   // authoritative gate (see ECOSYSTEM.md error code `personal_email_domain`);
@@ -122,8 +127,10 @@
   function gatherFormData() {
     var fd = new FormData(form);
     return {
+      tier_interest: 'trial',
       first_name: (fd.get('first_name') || '').trim(),
       last_name: (fd.get('last_name') || '').trim(),
+      firm_name: (fd.get('firm_name') || '').trim(),
       email: (fd.get('email') || '').trim(),
       website: normalizeUrl((fd.get('website') || '').trim()),
       firm_address: (fd.get('firm_address') || '').trim(),
