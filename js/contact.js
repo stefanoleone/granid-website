@@ -9,7 +9,12 @@
 (function () {
   'use strict';
 
-  var CRM_ENDPOINT = 'https://crm.granid.ch/api/v1/leads';
+  // Local CRM override: when serving from localhost during dev, point at the
+  // local CRM (FastAPI on :8000) so the form is testable end-to-end.
+  var CRM_ENDPOINT =
+    (location.hostname === 'localhost' || location.hostname === '127.0.0.1')
+      ? 'http://127.0.0.1:8000/api/v1/leads'
+      : 'https://crm.granid.ch/api/v1/leads';
 
   var SUCCESS_PATHS = {
     en: '/contact-sent/',
