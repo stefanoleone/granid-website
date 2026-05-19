@@ -1,0 +1,3 @@
+[submodule "vendor/granid-ds"]
+	path = vendor/granid-ds
+	url = https://github.com/stefanoleone/granid-designsystem.git
