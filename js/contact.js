@@ -25,18 +25,22 @@
 
   var I18N = {
     en: {
+      rate_limited: 'Too many submissions. Please try again in a few minutes.',
       generic: 'Something went wrong. Please try again.',
       submitting: 'Sending…'
     },
     de: {
+      rate_limited: 'Zu viele Anfragen. Bitte versuchen Sie es in einigen Minuten erneut.',
       generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.',
       submitting: 'Wird gesendet…'
     },
     fr: {
+      rate_limited: 'Trop de tentatives. Veuillez réessayer dans quelques minutes.',
       generic: 'Une erreur est survenue. Veuillez réessayer.',
       submitting: 'Envoi…'
     },
     it: {
+      rate_limited: 'Troppi tentativi. Riprovi tra qualche minuto.',
       generic: 'Qualcosa è andato storto. Riprovi.',
       submitting: 'Invio in corso…'
     }
@@ -99,9 +103,17 @@
         window.location.href = SUCCESS_PATHS[locale] || SUCCESS_PATHS.en;
         return;
       }
-      showGlobalError(messages.generic);
-      btn.disabled = false;
-      btn.textContent = originalText;
+      return res.json().then(function (body) {
+        return body && body.error_code;
+      }, function () { return null; }).then(function (errorCode) {
+        if (errorCode && messages[errorCode]) {
+          showGlobalError(messages[errorCode]);
+        } else {
+          showGlobalError(messages.generic);
+        }
+        btn.disabled = false;
+        btn.textContent = originalText;
+      });
     }).catch(function () {
       showGlobalError(messages.generic);
       btn.disabled = false;

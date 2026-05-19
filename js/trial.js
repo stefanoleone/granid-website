@@ -33,6 +33,7 @@
     en: {
       personal_email_domain: 'Please use a company email address. Personal email providers like gmail.com or hotmail.com are not eligible for the trial.',
       already_trialed: 'Your firm has already redeemed a trial. Visit our contact page to discuss a paid license.',
+      resubmission_locked: 'A trial request is already pending for your firm. Please check your inbox for the activation link before requesting again.',
       website_invalid: 'Please enter a valid website (for example, example.ch).',
       privacy_not_acknowledged: 'You must acknowledge the data-privacy notice to continue.',
       generic: 'Something went wrong. Please try again or visit our contact page.',
@@ -42,6 +43,7 @@
     de: {
       personal_email_domain: 'Bitte verwenden Sie eine geschäftliche E-Mail-Adresse. Persönliche E-Mail-Anbieter wie gmail.com oder hotmail.com sind für den Trial nicht zulässig.',
       already_trialed: 'Ihre Kanzlei hat den Trial bereits eingelöst. Besuchen Sie unsere Kontaktseite für eine bezahlte Lizenz.',
+      resubmission_locked: 'Eine Trial-Anfrage für Ihre Kanzlei ist bereits ausstehend. Bitte prüfen Sie Ihren Posteingang auf den Aktivierungslink, bevor Sie erneut anfragen.',
       website_invalid: 'Bitte geben Sie eine gültige Website ein (z. B. example.ch).',
       privacy_not_acknowledged: 'Sie müssen den Datenschutzhinweis bestätigen, um fortzufahren.',
       generic: 'Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut oder besuchen Sie unsere Kontaktseite.',
@@ -51,6 +53,7 @@
     fr: {
       personal_email_domain: 'Veuillez utiliser une adresse e-mail professionnelle. Les fournisseurs personnels comme gmail.com ou hotmail.com ne sont pas éligibles pour l’essai.',
       already_trialed: 'Votre étude a déjà bénéficié de l’essai. Consultez notre page de contact pour discuter d’une licence payante.',
+      resubmission_locked: 'Une demande d’essai est déjà en attente pour votre étude. Veuillez vérifier votre boîte de réception pour le lien d’activation avant de soumettre à nouveau.',
       website_invalid: 'Veuillez saisir un site web valide (par exemple, example.ch).',
       privacy_not_acknowledged: 'Vous devez accepter la notice de confidentialité pour continuer.',
       generic: 'Une erreur est survenue. Veuillez réessayer ou consulter notre page de contact.',
@@ -60,6 +63,7 @@
     it: {
       personal_email_domain: 'Usi un indirizzo email aziendale. I provider personali come gmail.com o hotmail.com non sono ammessi per la prova.',
       already_trialed: 'Il Suo studio ha già usato la prova. Visiti la pagina dei contatti per una licenza a pagamento.',
+      resubmission_locked: 'Una richiesta di prova è già in attesa per il Suo studio. Controlli la Sua casella di posta per il link di attivazione prima di inviare di nuovo.',
       website_invalid: 'Inserisca un sito web valido (per esempio, example.ch).',
       privacy_not_acknowledged: 'Deve accettare l’informativa sulla privacy per continuare.',
       generic: 'Qualcosa è andato storto. Riprovi o visiti la pagina dei contatti.',
@@ -180,7 +184,7 @@
         return;
       }
       return res.json().then(function (body) {
-        return body && body.error;
+        return body && body.error_code;
       }, function () { return null; }).then(function (errorCode) {
         if (errorCode && messages[errorCode]) {
           var field = ERROR_CODE_FIELD[errorCode];
