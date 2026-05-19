@@ -1,0 +1,21 @@
+/* Granid Design System — canonical cascade for the marketing site.
+   Pinned via the submodule at vendor/granid-ds. See:
+   vendor/granid-ds/docs/integration-guides/granid-website.md
+   Do NOT import patterns/product.css or the assets/granid-ds.css aggregator. */
+
+/* Layer 1+2 — tokens (load first) */
+@import url("../vendor/granid-ds/tokens/01-primitives.css");
+@import url("../vendor/granid-ds/tokens/02-semantic.css");
+
+/* Base reset + editorial utilities */
+@import url("../vendor/granid-ds/base/reset.css");
+@import url("../vendor/granid-ds/primitives/editorial.css");
+
+/* Components — only the ones consumed by the marketing site */
+@import url("../vendor/granid-ds/components/buttons.css");
+@import url("../vendor/granid-ds/components/forms.css");
+@import url("../vendor/granid-ds/components/feedback.css");
+@import url("../vendor/granid-ds/components/surfaces.css");
+
+/* Marketing pattern — opt-in. Primary asset for this consumer. */
+@import url("../vendor/granid-ds/patterns/marketing.css");
