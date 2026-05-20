@@ -224,27 +224,34 @@ nav .container {
   transition: all 0.3s;
 }
 
-/* ── Hero ── */
+/* ── Hero: the homepage uses DS .mk-hero (vendor/granid-ds/patterns/marketing.css).
+   The .hero / .hero h1 / .hero p / .hero .btn rules below remain because
+   /hardware/* pages use class="hero hero-compact" — they will migrate in
+   GWEB-44. Same for .hero-tagline which is used as the page eyebrow on
+   ~50 non-homepage pages (hardware, terms, trial, contact, products, buy). ── */
+
+/* Mobile collapse for the DS .mk-hero (DS pattern ships no media query). */
+@media (max-width: 768px) {
+  .mk-hero {
+    grid-template-columns: 1fr;
+    padding: 5rem 1.5rem 3rem;
+    gap: 32px;
+  }
+  .mk-hero h1 {
+    font-size: 2.5rem;
+  }
+  .mk-hero .figure {
+    border-left: none;
+    border-top: 1px solid var(--line);
+    padding: 16px 0 0;
+  }
+  .mk-hero .figure .stat {
+    font-size: 48px;
+  }
+}
 
 .hero {
   padding: 10rem 0 4rem;
-  position: relative;
-  overflow: hidden;
-}
-
-.hero::before {
-  content: "";
-  position: absolute;
-  top: -40%;
-  right: -20%;
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, color-mix(in oklch, var(--accent) 8%, transparent) 0%, transparent 70%);
-  pointer-events: none;
-}
-
-.hero .container {
-  position: relative;
 }
 
 .hero h1 {
@@ -923,10 +930,6 @@ fieldset.field legend {
 
 .hero-compact {
   padding: 8rem 0 3rem;
-}
-
-.hero-compact::before {
-  display: none;
 }
 
 .disclaimer {
