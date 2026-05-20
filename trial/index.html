@@ -77,65 +77,65 @@
         <input type="hidden" name="locale" value="en">
 
         <div class="form-row">
-          <div class="form-group">
+          <div class="field">
             <label for="first_name">First name</label>
-            <input type="text" id="first_name" name="first_name" required>
+            <input class="input" type="text" id="first_name" name="first_name" required>
             <div class="form-error" data-error-for="first_name"></div>
           </div>
-          <div class="form-group">
+          <div class="field">
             <label for="last_name">Last name</label>
-            <input type="text" id="last_name" name="last_name" required>
+            <input class="input" type="text" id="last_name" name="last_name" required>
             <div class="form-error" data-error-for="last_name"></div>
           </div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="firm_name">Firm name</label>
-          <input type="text" id="firm_name" name="firm_name" maxlength="200" required>
+          <input class="input" type="text" id="firm_name" name="firm_name" maxlength="200" required>
           <div class="form-error" data-error-for="firm_name"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="email">Company email</label>
-          <input type="email" id="email" name="email" required>
+          <input class="input" type="email" id="email" name="email" required>
           <div class="form-hint">Use your firm's email. Personal addresses (gmail.com, hotmail.com, etc.) are not eligible.</div>
           <div class="form-error" data-error-for="email"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="website">Firm website</label>
-          <input type="text" id="website" name="website" placeholder="example.ch" required>
+          <input class="input" type="text" id="website" name="website" placeholder="example.ch" required>
           <div class="form-error" data-error-for="website"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="firm_address">Firm address</label>
-          <input type="text" id="firm_address" name="firm_address" required>
+          <input class="input" type="text" id="firm_address" name="firm_address" required>
           <div class="form-error" data-error-for="firm_address"></div>
         </div>
 
-        <fieldset class="form-group">
+        <fieldset class="field">
           <legend>Firm size</legend>
           <div class="form-radio-group">
-            <label><input type="radio" name="company_size" value="1" required>1</label>
-            <label><input type="radio" name="company_size" value="2-4">2–4</label>
-            <label><input type="radio" name="company_size" value="5-15">5–15</label>
-            <label><input type="radio" name="company_size" value="16+">16+</label>
+            <label class="radio"><input type="radio" name="company_size" value="1" required>1</label>
+            <label class="radio"><input type="radio" name="company_size" value="2-4">2–4</label>
+            <label class="radio"><input type="radio" name="company_size" value="5-15">5–15</label>
+            <label class="radio"><input type="radio" name="company_size" value="16+">16+</label>
           </div>
           <div class="form-error" data-error-for="company_size"></div>
         </fieldset>
 
-        <fieldset class="form-group">
+        <fieldset class="field">
           <legend>Internal IT support</legend>
           <div class="form-radio-group">
-            <label><input type="radio" name="has_it_support" value="true" required>Yes</label>
-            <label><input type="radio" name="has_it_support" value="false">No</label>
+            <label class="radio"><input type="radio" name="has_it_support" value="true" required>Yes</label>
+            <label class="radio"><input type="radio" name="has_it_support" value="false">No</label>
           </div>
           <div class="form-error" data-error-for="has_it_support"></div>
         </fieldset>
 
-        <div class="form-group form-checkbox">
-          <label>
+        <div class="field">
+          <label class="check">
             <input type="checkbox" name="data_privacy_acknowledged" required>
             <span>I understand that during the 2-week trial period my firm will use only <strong>non-sensitive or anonymized data</strong>, and that documents and queries will be processed by Granid-hosted remote services. <a href="/hardware/trial/">More on trial data privacy</a>.</span>
           </label>

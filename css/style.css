@@ -577,61 +577,14 @@ nav .container {
   margin: 0 auto 2.5rem;
 }
 
-.contact-form {
-  text-align: left;
-}
+/* ── Form layout: see vendor/granid-ds/components/forms.css for .field
+   .input .check .radio (DS owns the atoms). The rules below are
+   website-specific extensions: 2-col field row, inline error chrome,
+   global error banner, "(optional)" label hint, fieldset reset. ── */
 
-.form-group {
-  margin-bottom: 1.25rem;
-}
-
-.form-group label {
-  display: block;
-  font-size: 0.8125rem;
-  font-weight: 500;
-  margin-bottom: 0.375rem;
-  color: var(--ink);
-}
-
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 0.625rem 0.75rem;
-  border: 1px solid var(--line-strong);
-  border-radius: var(--r-lg);
-  font-family: var(--font-sans);
-  font-size: 0.875rem;
-  color: var(--ink);
-  background: var(--surface);
-  transition: border-color 0.2s;
-}
-
-.form-group input:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent) 25%, transparent);
-}
-
-.form-group input::placeholder,
-.form-group textarea::placeholder {
-  color: var(--muted);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
-.form-group .optional {
+.field .optional {
   font-weight: 400;
   color: var(--muted);
-}
-
-.contact-form .btn {
-  width: 100%;
-  text-align: center;
-  margin-top: 0.5rem;
 }
 
 /* ── Footer ── */
@@ -703,14 +656,14 @@ footer .container {
   gap: 1.25rem;
 }
 
-fieldset.form-group {
+fieldset.field {
   margin: 0;
   border: none;
   padding: 0;
   min-width: 0;
 }
 
-fieldset.form-group legend {
+fieldset.field legend {
   display: block;
   font-size: 0.8125rem;
   font-weight: 500;
@@ -718,58 +671,46 @@ fieldset.form-group legend {
   color: var(--ink);
 }
 
+/* Layout wrapper for grouped radios — DS .radio styles each option,
+   this just lays them out horizontally with wrap. */
 .form-radio-group {
   display: flex;
   gap: 0.625rem;
   flex-wrap: wrap;
 }
 
-.form-radio-group label {
-  font-size: 0.875rem;
-  color: var(--muted);
-  cursor: pointer;
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.5rem 0.875rem;
+/* Restore pill-style tap targets around DS .radio inside a radio group.
+   DS .radio on its own is ~20px tall, below WCAG 2.5.8 (24x24 min).
+   Padding+border bring each option to ~36px and recreate the affordance
+   the website had before the migration. */
+.form-radio-group .radio {
+  padding: 8px 12px;
   border: 1px solid var(--line-strong);
   border-radius: var(--r-lg);
-  background: var(--surface);
-  transition: border-color 0.2s, color 0.2s;
+  background: var(--paper);
+  transition: border-color 0.2s, background 0.2s;
 }
-
-.form-radio-group label:hover {
+.form-radio-group .radio:hover {
   border-color: var(--line-hover);
-  color: var(--ink);
+  background: var(--surface);
 }
 
-.form-radio-group input[type="radio"] {
-  accent-color: var(--accent);
+/* DS .check/.radio set appearance:none with no :focus-visible ring.
+   Add one so keyboard users can see where focus is. Track upstream in GDS. */
+.check input:focus-visible,
+.radio input:focus-visible {
+  outline: 2px solid var(--line-focus);
+  outline-offset: 2px;
 }
 
-.form-checkbox label {
-  display: flex;
-  gap: 0.75rem;
+/* The privacy-acknowledgement .check label is a multi-line paragraph;
+   anchor the box to the first line. DS .check defaults to align-items:
+   center which floats the box mid-paragraph. */
+.field > .check {
   align-items: flex-start;
-  cursor: pointer;
 }
-
-.form-checkbox input[type="checkbox"] {
-  margin-top: 0.25rem;
-  accent-color: var(--accent);
-  flex-shrink: 0;
-  width: 1rem;
-  height: 1rem;
-}
-
-.form-checkbox span {
-  font-size: 0.875rem;
-  color: var(--muted);
-  line-height: 1.55;
-}
-
-.form-checkbox a {
-  color: var(--accent);
+.field > .check input {
+  margin-top: 2px;
 }
 
 .form-hint {
@@ -803,10 +744,6 @@ fieldset.form-group legend {
   display: block;
 }
 
-.form-group input.error,
-.form-group input[aria-invalid="true"] {
-  border-color: var(--danger);
-}
 
 @media (max-width: 600px) {
   .form-row {
