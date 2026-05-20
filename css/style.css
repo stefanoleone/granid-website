@@ -103,18 +103,12 @@ nav .container {
   color: var(--ink);
 }
 
-.nav-cta {
-  background: var(--accent);
-  color: var(--on-danger) !important;
-  padding: 0.5rem 1.25rem;
-  border-radius: var(--r-lg);
-  font-weight: 500;
-  font-size: 0.875rem;
-  transition: all 0.2s;
-}
-
-.nav-cta:hover {
-  background: var(--danger-hover);
+/* DS .btn sets color via var(--on-ink); without this override the
+   .nav-links a rule above wins on specificity and the nav CTA reads
+   as muted-gray on a dark button. */
+.nav-links a.btn,
+.nav-links a.btn:hover {
+  color: var(--on-ink);
 }
 
 .nav-lang {
@@ -279,39 +273,14 @@ nav .container {
   margin-bottom: 1rem;
 }
 
-/* ── Buttons ── */
+/* ── Buttons: see vendor/granid-ds/components/buttons.css for .btn .btn--sec
+   .btn--ghost .btn--danger .btn--sm .btn--lg. The .btn--full modifier below
+   is a website-specific full-width extension (used on form submits and
+   pricing-card CTAs) — not part of the DS. ── */
 
-.btn {
-  display: inline-block;
-  padding: 0.75rem 1.75rem;
-  font-size: 0.875rem;
-  font-weight: 500;
-  border-radius: var(--r-lg);
-  border: none;
-  cursor: pointer;
-  transition: all 0.2s;
-  font-family: var(--font-sans);
-}
-
-.btn-primary {
-  background: var(--accent);
-  color: var(--on-danger);
-}
-
-.btn-primary:hover {
-  background: var(--danger-hover);
-}
-
-.btn-outline {
-  background: transparent;
-  color: var(--ink);
-  border: 1px solid var(--line-strong);
-}
-
-.btn-outline:hover {
-  border-color: var(--line-hover);
-  background: var(--surface);
-  color: var(--ink);
+.btn--full {
+  width: 100%;
+  text-align: center;
 }
 
 /* ── Highlights (3-col under hero) ── */
@@ -941,11 +910,6 @@ fieldset.form-group legend {
   font-size: 0.9375rem;
   margin-bottom: 2.5rem;
   max-width: none;
-}
-
-.btn-full {
-  width: 100%;
-  text-align: center;
 }
 
 @media (max-width: 800px) {
