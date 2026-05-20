@@ -248,6 +248,10 @@ nav .container {
   .mk-hero .figure .stat {
     font-size: 48px;
   }
+  /* DS .mk-pricing ships no media query either; collapse 3-col grid below 768px. */
+  .mk-pricing .grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 .hero {
@@ -403,170 +407,40 @@ nav .container {
   line-height: 1.6;
 }
 
-/* ── Pricing ── */
+/* ── Pricing: now via DS .mk-pricing + .tier
+   (vendor/granid-ds/patterns/marketing.css). Site-specific overrides below. ── */
 
-.pricing {
-  background: var(--surface);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
+/* The pricing .head is content-heavy (heading + lede paragraph). The DS
+   2-col grid splits them awkwardly on desktop; render as a single column. */
+.mk-pricing .head {
+  grid-template-columns: 1fr;
 }
 
-.pricing .container {
-  text-align: center;
-}
-
-.pricing h2 {
-  margin-bottom: 0.75rem;
-}
-
-.pricing > .container > p {
-  margin: 0 auto 3rem;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  text-align: left;
-}
-
-.pricing-card {
-  background: var(--paper);
-  border: 1px solid var(--line);
-  border-radius: var(--r-xl);
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  transition: border-color 0.2s;
-}
-
-.pricing-card:hover {
-  border-color: var(--line-hover);
-}
-
-.pricing-card.featured {
-  border-color: var(--accent);
-  position: relative;
-  background: var(--danger-bg);
-}
-
-.pricing-card.featured::before {
-  content: attr(data-badge);
-  position: absolute;
-  top: -0.75rem;
-  left: 2rem;
-  background: var(--accent);
-  color: var(--on-danger);
-  font-size: 0.6875rem;
-  font-weight: 500;
-  padding: 0.25rem 0.75rem;
-  border-radius: 4px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-}
-
-.trial-banner {
-  background: var(--surface);
-  border: 1px solid var(--line-strong);
-  border-radius: var(--r-xl);
-  padding: 1rem 1.5rem;
-  margin: 0 auto 2.5rem;
+/* Trial-promotion alert above the grid: the DS .alert defaults to
+   --t-xs and opacity 0.85 (built for transient feedback). This is a
+   persistent CTA strip, so lift to body weight + drop the icon column. */
+.mk-pricing .alert {
+  grid-template-columns: 1fr;
+  margin: 0 auto;
   max-width: 720px;
   text-align: center;
 }
-
-.trial-banner p {
-  margin: 0;
-  font-size: 0.9375rem;
-  color: var(--ink);
-  max-width: none;
+.mk-pricing .alert .body {
+  font-size: var(--t-sm);
+  opacity: 1;
 }
-
-.trial-banner a {
+.mk-pricing .alert a {
   font-weight: 500;
 }
 
-.pricing-seats {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  margin: 0 0 1rem;
-  padding: 0;
-  max-width: none;
-}
-
-.pricing-price {
-  font-size: 1.875rem;
-  font-weight: 600;
-  color: var(--ink);
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--line);
-  line-height: 1.25;
-}
-
-.pricing-price strong {
-  font-weight: 600;
-}
-
-.pricing-price span {
-  display: inline-block;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--muted);
-}
-
-.pricing-tier {
-  font-size: 0.75rem;
+/* Enterprise / inquiry-style tier: no fixed price, so shrink .price
+   from the DS 40px down to a body-level prompt. Avoids the locale
+   asymmetry of "Auf Anfrage" / "Sur devis" / "Su richiesta" ballooning. */
+.mk-pricing .tier--inquiry .price {
+  font-size: var(--t-xl);
   font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--accent);
-  margin-bottom: 0.5rem;
-}
-
-.pricing-card h3 {
-  font-size: 1.125rem;
-  margin-bottom: 0.75rem;
-}
-
-.pricing-subtitle {
-  font-size: 0.8125rem;
-  color: var(--muted);
-  margin-bottom: 1.5rem;
-  padding-bottom: 1.5rem;
-  border-bottom: 1px solid var(--line);
-  max-width: none;
-}
-
-.pricing-features {
-  list-style: none;
-  margin-bottom: 2rem;
-}
-
-.pricing-features li {
-  font-size: 0.875rem;
-  color: var(--muted);
-  padding: 0.375rem 0;
-  padding-left: 1.5rem;
-  position: relative;
-}
-
-.pricing-features li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.7rem;
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--accent);
-  opacity: 0.6;
-}
-
-.pricing-card .btn {
-  width: 100%;
-  text-align: center;
-  margin-top: auto;
+  letter-spacing: 0;
+  line-height: 1.3;
 }
 
 /* ── Contact ── */
@@ -1021,12 +895,6 @@ fieldset.field legend {
   .features-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
-    max-width: 400px;
-    margin: 0 auto;
   }
 
   footer .container {
