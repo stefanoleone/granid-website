@@ -77,65 +77,65 @@
         <input type="hidden" name="locale" value="fr">
 
         <div class="form-row">
-          <div class="form-group">
+          <div class="field">
             <label for="first_name">Prénom</label>
-            <input type="text" id="first_name" name="first_name" required>
+            <input class="input" type="text" id="first_name" name="first_name" required>
             <div class="form-error" data-error-for="first_name"></div>
           </div>
-          <div class="form-group">
+          <div class="field">
             <label for="last_name">Nom</label>
-            <input type="text" id="last_name" name="last_name" required>
+            <input class="input" type="text" id="last_name" name="last_name" required>
             <div class="form-error" data-error-for="last_name"></div>
           </div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="firm_name">Nom de l'étude</label>
-          <input type="text" id="firm_name" name="firm_name" maxlength="200" required>
+          <input class="input" type="text" id="firm_name" name="firm_name" maxlength="200" required>
           <div class="form-error" data-error-for="firm_name"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="email">E-mail professionnel</label>
-          <input type="email" id="email" name="email" required>
+          <input class="input" type="email" id="email" name="email" required>
           <div class="form-hint">Utilisez l'e-mail de votre étude. Les adresses personnelles (gmail.com, hotmail.com, etc.) ne sont pas éligibles.</div>
           <div class="form-error" data-error-for="email"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="website">Site web de l'étude</label>
-          <input type="text" id="website" name="website" placeholder="example.ch" required>
+          <input class="input" type="text" id="website" name="website" placeholder="example.ch" required>
           <div class="form-error" data-error-for="website"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="firm_address">Adresse de l'étude</label>
-          <input type="text" id="firm_address" name="firm_address" required>
+          <input class="input" type="text" id="firm_address" name="firm_address" required>
           <div class="form-error" data-error-for="firm_address"></div>
         </div>
 
-        <fieldset class="form-group">
+        <fieldset class="field">
           <legend>Taille de l'étude</legend>
           <div class="form-radio-group">
-            <label><input type="radio" name="company_size" value="1" required>1</label>
-            <label><input type="radio" name="company_size" value="2-4">2–4</label>
-            <label><input type="radio" name="company_size" value="5-15">5–15</label>
-            <label><input type="radio" name="company_size" value="16+">16+</label>
+            <label class="radio"><input type="radio" name="company_size" value="1" required>1</label>
+            <label class="radio"><input type="radio" name="company_size" value="2-4">2–4</label>
+            <label class="radio"><input type="radio" name="company_size" value="5-15">5–15</label>
+            <label class="radio"><input type="radio" name="company_size" value="16+">16+</label>
           </div>
           <div class="form-error" data-error-for="company_size"></div>
         </fieldset>
 
-        <fieldset class="form-group">
+        <fieldset class="field">
           <legend>Support IT interne</legend>
           <div class="form-radio-group">
-            <label><input type="radio" name="has_it_support" value="true" required>Oui</label>
-            <label><input type="radio" name="has_it_support" value="false">Non</label>
+            <label class="radio"><input type="radio" name="has_it_support" value="true" required>Oui</label>
+            <label class="radio"><input type="radio" name="has_it_support" value="false">Non</label>
           </div>
           <div class="form-error" data-error-for="has_it_support"></div>
         </fieldset>
 
-        <div class="form-group form-checkbox">
-          <label>
+        <div class="field">
+          <label class="check">
             <input type="checkbox" name="data_privacy_acknowledged" required>
             <span>Je comprends que pendant la période d'essai de 2 semaines, mon étude utilisera uniquement des <strong>données non sensibles ou anonymisées</strong>, et que les documents et requêtes seront traités par des services distants hébergés par Granid. <a href="/fr/hardware/trial/">En savoir plus sur la confidentialité de l'essai</a>.</span>
           </label>
