@@ -77,62 +77,62 @@
         <input type="hidden" name="locale" value="en">
 
         <div class="form-row">
-          <div class="form-group">
+          <div class="field">
             <label for="first_name">First name</label>
-            <input type="text" id="first_name" name="first_name" required>
+            <input class="input" type="text" id="first_name" name="first_name" required>
             <div class="form-error" data-error-for="first_name"></div>
           </div>
-          <div class="form-group">
+          <div class="field">
             <label for="last_name">Last name</label>
-            <input type="text" id="last_name" name="last_name" required>
+            <input class="input" type="text" id="last_name" name="last_name" required>
             <div class="form-error" data-error-for="last_name"></div>
           </div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+          <input class="input" type="email" id="email" name="email" required>
           <div class="form-error" data-error-for="email"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="firm_name">Firm name</label>
-          <input type="text" id="firm_name" name="firm_name" required>
+          <input class="input" type="text" id="firm_name" name="firm_name" required>
           <div class="form-error" data-error-for="firm_name"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="firm_address">Firm address</label>
-          <input type="text" id="firm_address" name="firm_address" required>
+          <input class="input" type="text" id="firm_address" name="firm_address" required>
           <div class="form-error" data-error-for="firm_address"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="firm_website">Firm website</label>
-          <input type="url" id="firm_website" name="firm_website" placeholder="https://..." required>
+          <input class="input" type="url" id="firm_website" name="firm_website" placeholder="https://..." required>
           <div class="form-hint">HTTPS only.</div>
           <div class="form-error" data-error-for="firm_website"></div>
         </div>
 
-        <fieldset class="form-group">
+        <fieldset class="field">
           <legend>Firm size</legend>
           <div class="form-radio-group">
-            <label><input type="radio" name="company_size" value="5-15" required>5–15</label>
-            <label><input type="radio" name="company_size" value="16+">16+</label>
+            <label class="radio"><input type="radio" name="company_size" value="5-15" required>5–15</label>
+            <label class="radio"><input type="radio" name="company_size" value="16+">16+</label>
           </div>
           <div class="form-error" data-error-for="company_size"></div>
         </fieldset>
 
-        <div class="form-group">
+        <div class="field">
           <label for="estimated_seats">Estimated seats</label>
-          <input type="number" id="estimated_seats" name="estimated_seats" min="1" step="1" required>
+          <input class="input" type="number" id="estimated_seats" name="estimated_seats" min="1" step="1" required>
           <div class="form-hint">How many lawyers and secretaries will use Legal Intelligence.</div>
           <div class="form-error" data-error-for="estimated_seats"></div>
         </div>
 
-        <div class="form-group">
+        <div class="field">
           <label for="message">Your message <span class="optional">(optional)</span></label>
-          <textarea id="message" name="message" rows="4"></textarea>
+          <textarea class="input" id="message" name="message" rows="4"></textarea>
           <div class="form-error" data-error-for="message"></div>
         </div>
 
