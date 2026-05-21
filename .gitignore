@@ -1,0 +1,5 @@
+# macOS Finder metadata
+.DS_Store
+
+# Claude Code local IDE config (per-user, not for the repo)
+.claude/launch.json
