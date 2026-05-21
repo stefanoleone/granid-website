@@ -130,21 +130,7 @@ nav .container {
   background: var(--surface);
 }
 
-/* Coming-soon badge (next to hero-tagline) */
-.coming-soon-badge {
-  display: inline-block;
-  margin-left: 0.5rem;
-  padding: 0.15rem 0.5rem;
-  font-size: 0.625rem;
-  font-weight: 500;
-  color: var(--accent);
-  background: var(--danger-bg);
-  border: 1px solid color-mix(in oklch, var(--accent) 30%, transparent);
-  border-radius: 999px;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  vertical-align: middle;
-}
+/* Coming-soon badges now use DS .badge (vendor/granid-ds/components/feedback.css). */
 
 /* Nav submenu */
 .has-submenu {
@@ -224,11 +210,12 @@ nav .container {
   transition: all 0.3s;
 }
 
-/* ── Hero: the homepage uses DS .mk-hero (vendor/granid-ds/patterns/marketing.css).
-   The .hero / .hero h1 / .hero p / .hero .btn rules below remain because
-   /hardware/* pages use class="hero hero-compact" — they will migrate in
-   GWEB-44. Same for .hero-tagline which is used as the page eyebrow on
-   ~50 non-homepage pages (hardware, terms, trial, contact, products, buy). ── */
+/* ── Hero: every hero on the site uses DS .mk-hero
+   (vendor/granid-ds/patterns/marketing.css). The .mk-hero--compact
+   variant below is a website-specific single-column variant used
+   on /hardware/* and /products/* (no right-column .figure). The
+   .hero-tagline rule remains because ~50 non-homepage pages still
+   use it as the page eyebrow (terms, trial, contact, products, buy). ── */
 
 /* Mobile collapse for the DS .mk-hero (DS pattern ships no media query). */
 @media (max-width: 768px) {
@@ -256,6 +243,15 @@ nav .container {
   .mk-features {
     grid-template-columns: 1fr 1fr;
   }
+  /* The .mk-hero--compact rule below has higher specificity than the
+     global .mk-hero h1 media rule, so override its padding + h1 size
+     explicitly here. */
+  .mk-hero--compact {
+    padding: 5rem 1.5rem 3rem;
+  }
+  .mk-hero--compact h1 {
+    font-size: 2.25rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -264,24 +260,25 @@ nav .container {
   }
 }
 
-.hero {
-  padding: 10rem 0 4rem;
+/* Single-column compact hero variant (no .figure column).
+   Used by /hardware/* and /products/*. */
+.mk-hero--compact {
+  grid-template-columns: 1fr;
+  padding: 6rem 32px 3rem;
 }
-
-.hero h1 {
-  margin-bottom: 1.5rem;
-  max-width: 640px;
+.mk-hero--compact::before {
+  display: none;
 }
-
-.hero p {
-  margin-bottom: 2.5rem;
-  font-size: 1.125rem;
-  max-width: 520px;
-  line-height: 1.7;
+.mk-hero--compact h1 {
+  font-size: 48px;
+  margin: 12px 0 20px;
+  max-width: 24ch;
 }
-
-.hero .btn {
-  font-size: 1rem;
+/* When the eyebrow holds both a product name and a status badge
+   (e.g. "Voice Intelligence by Granid · Coming soon"), wrap on
+   narrow viewports so the badge drops below instead of overflowing. */
+.mk-hero--compact .eyebrow {
+  flex-wrap: wrap;
 }
 
 .hero-tagline {
@@ -774,12 +771,12 @@ fieldset.field legend {
   }
 }
 
-/* ── Hardware spec pages ── */
+/* ── Hardware spec pages: website-specific section shells consuming
+   DS tokens. DS has no exact equivalents for full-bleed coloured
+   bands or the cross-link CTA strip. ── */
 
-.hero-compact {
-  padding: 8rem 0 3rem;
-}
-
+/* .disclaimer — full-bleed warning band (used on /hardware/trial to
+   warn that trial data leaves the office). Danger-bg + danger borders. */
 .disclaimer {
   background: var(--danger-bg);
   border-top: 1px solid color-mix(in oklch, var(--danger) 30%, transparent);
@@ -810,10 +807,13 @@ fieldset.field legend {
   font-weight: 600;
 }
 
+/* .selling-point — full-bleed positive-emphasis band (used on
+   /hardware/production to reinforce data sovereignty). Success-bg +
+   success borders and heading. */
 .selling-point {
-  background: var(--surface-2);
-  border-top: 1px solid var(--line-strong);
-  border-bottom: 1px solid var(--line-strong);
+  background: var(--success-bg);
+  border-top: 1px solid color-mix(in oklch, var(--success) 30%, transparent);
+  border-bottom: 1px solid color-mix(in oklch, var(--success) 30%, transparent);
 }
 
 .selling-point .container {
@@ -822,7 +822,7 @@ fieldset.field legend {
 }
 
 .selling-point h2 {
-  color: var(--accent);
+  color: var(--success-text);
   margin-bottom: 1.25rem;
 }
 
@@ -840,6 +840,7 @@ fieldset.field legend {
   font-weight: 600;
 }
 
+/* .cross-link — centred CTA strip at the bottom of hardware pages. */
 .cross-link {
   text-align: center;
 }
@@ -858,8 +859,6 @@ fieldset.field legend {
   h1 { font-size: 2.25rem; }
   h2 { font-size: 1.5rem; }
   section { padding: 3.5rem 0; }
-
-  .hero { padding: 7rem 0 3rem; }
 
   .highlights-grid {
     grid-template-columns: 1fr;
