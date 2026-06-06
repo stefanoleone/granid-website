@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Why 64 GB of unified memory is the floor for local legal AI | Granid</title>
+  <meta name="description" content="Running a capable model, a document index, and macOS at once has a hard memory floor. Here is why we recommend 64 GB.">
+  <link rel="canonical" href="https://granid.ch/blog/unified-memory-floor/">
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Granid">
+  <meta property="og:title" content="Why 64 GB of unified memory is the floor for local legal AI">
+  <meta property="og:description" content="Running a capable model, a document index, and macOS at once has a hard memory floor. Here is why we recommend 64 GB.">
+  <meta property="og:url" content="https://granid.ch/blog/unified-memory-floor/">
+  <meta property="og:locale" content="en_CH">
+  <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Granid Edge Intelligence">
+  <meta property="article:published_time" content="2026-05-05">
+  <meta property="article:author" content="Granid">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Why 64 GB of unified memory is the floor for local legal AI">
+  <meta name="twitter:description" content="Running a capable model, a document index, and macOS at once has a hard memory floor. Here is why we recommend 64 GB.">
+  <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Why 64 GB of unified memory is the floor for local legal AI",
+  "description": "Running a capable model, a document index, and macOS at once has a hard memory floor. Here is why we recommend 64 GB.",
+  "datePublished": "2026-05-05",
+  "url": "https://granid.ch/blog/unified-memory-floor/",
+  "image": "https://granid.ch/og_image_1200x630.png",
+  "author": {
+    "@type": "Organization",
+    "name": "Granid"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Granid",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://granid.ch/assets/images/granid_logo_black.png"
+    }
+  },
+  "inLanguage": "en",
+  "isPartOf": {
+    "@type": "Blog",
+    "name": "Granid Blog",
+    "url": "https://granid.ch/blog/"
+  }
+}
+  </script>
+
+  <!-- Analytics: GoatCounter snippet (LEGALINT-216) to be wired here once the
+       self-hosted instance is live. Intentionally omitted until then. -->
+
+  <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist-latin.woff2" crossorigin>
+  <link rel="stylesheet" href="/css/fonts.css">
+  <link rel="stylesheet" href="/css/granid-imports.css">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo"><img src="/assets/images/granid_logo_black_transparent.svg" alt="Granid"></a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li class="has-submenu">
+          <button class="submenu-trigger" type="button" aria-expanded="false" aria-haspopup="true">Products</button>
+          <ul class="submenu">
+            <li><a href="/">Legal Intelligence</a></li>
+            <li><a href="/products/voice-intelligence/">Voice Intelligence</a></li>
+            <li><a href="/products/meeting-intelligence/">Meeting Intelligence</a></li>
+          </ul>
+        </li>
+        <li><a href="/#problem">Security</a></li>
+        <li><a href="/#products">Plans</a></li>
+        <li><a href="/hardware/production/">Hardware</a></li>
+        <li><a href="/blog/" class="active">Blog</a></li>
+        <li><a href="/contact-us/">Contact</a></li>
+        <li class="nav-lang">
+          <a href="/blog/" class="active">EN</a>
+          <span class="lang-off" title="Available in English only">DE<span class="visually-hidden"> (available in English only)</span></span>
+          <span class="lang-off" title="Available in English only">FR<span class="visually-hidden"> (available in English only)</span></span>
+          <span class="lang-off" title="Available in English only">IT<span class="visually-hidden"> (available in English only)</span></span>
+        </li>
+        <li><a href="/trial/" class="btn btn--sm">Start your trial</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <article class="article">
+    <div class="article-inner">
+      <header class="article-header">
+        <span class="eyebrow">Granid Blog</span>
+        <h1>Why 64 GB of unified memory is the floor for local legal AI</h1>
+        <div class="article-meta">
+          <span>5 May 2026</span>
+          <span>Granid</span>
+          <span>1 min read</span>
+        </div>
+      <div class="article-tags">
+        <span class="article-tag">Hardware</span>
+      </div>
+      </header>
+      <figure class="article-hero">
+        <img src="/assets/blog/unified-memory-floor/hero.svg" alt="" loading="eager">
+      </figure>
+
+      <div class="article-body">
+    <p class="lede">The recommended specs for Granid are not arbitrary. They are the point below which a fully local legal AI stops being comfortable to use.</p>
+  <p>On a paid tier, every part of Granid runs on your Mac: the AI model that reads your documents, the searchable record of those documents, and the work of reading them in. All of it shares Apple Silicon&#x27;s unified memory.</p>
+  <h2>Where the memory goes</h2>
+  <ul>
+    <li>The model that reads and reasons over Swiss legal text.</li>
+    <li>Your firm&#x27;s documents, kept ready in memory so answers come back instantly.</li>
+    <li>macOS, your browser, and document reading running alongside.</li>
+  </ul>
+  <blockquote class="article-callout">
+    <p>64 GB is the floor that lets all of it run together without the system slowing down. More memory makes it faster; less makes every question noticeably slower.</p>
+  </blockquote>
+  <h2>Mac Mini for most firms, Mac Studio for larger teams</h2>
+  <p>A <strong>Mac Mini</strong> with 64 GB handles Essential and Professional comfortably. A <strong>Mac Studio</strong> is the recommendation once more than four professionals share one instance. In every case the hardware is yours. Granid is installed on a Mac you own and keep in the office.</p>
+  <p><a href="/hardware/production/">See the full recommended specs</a>.</p>
+      </div>
+
+      <aside class="article-cta">
+        <p>Granid runs entirely on a Mac in your office. Your client data never leaves the building.</p>
+        <div class="actions">
+          <a href="/trial/" class="btn">Try free for 2 weeks</a>
+          <a href="/hardware/production/" class="btn btn--sec">See recommended hardware</a>
+        </div>
+      </aside>
+
+      <div class="article-back">
+        <a href="/blog/">&larr; All articles</a>
+      </div>
+    </div>
+  </article>
+
+  <footer>
+    <div class="container">
+      <div class="footer-left">Granid, Edge Intelligence. Switzerland.</div>
+      <div class="footer-right">
+        <a href="/blog/">Blog</a>
+        <a href="/terms/">Terms &amp; Conditions</a>
+        <a href="https://www.linkedin.com/company/granid" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
