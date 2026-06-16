@@ -754,46 +754,6 @@ fieldset.field legend {
   margin: 0 auto 2rem;
 }
 
-/* ── Granid suite (coming soon strip) ── */
-
-.suite {
-  padding: 3rem 0;
-  border-top: 1px solid var(--line);
-}
-
-.suite .container {
-  text-align: center;
-}
-
-.suite-label {
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 auto 1rem;
-}
-
-.suite ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-  flex-wrap: wrap;
-}
-
-.suite li {
-  font-size: 0.9375rem;
-  color: var(--muted);
-}
-
-@media (max-width: 480px) {
-  .suite ul {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-}
-
 /* ── Hardware spec pages: website-specific section shells consuming
    DS tokens. DS has no exact equivalents for full-bleed coloured
    bands or the cross-link CTA strip. ── */
