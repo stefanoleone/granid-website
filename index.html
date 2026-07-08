@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Legal Intelligence by Granid | Swiss legal AI on-premise</title>
-  <meta name="description" content="Cross-document Q&A, deadline extraction, and verified citations across Swiss legal corpora, running locally on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta name="description" content="Cross-document Q&A, deadline extraction, and verified citations across Swiss legal corpora, running locally on hardware you own. nDSG and Art. 321 StGB compliant by design.">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -16,7 +16,7 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Granid">
   <meta property="og:title" content="Legal Intelligence by Granid">
-  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on hardware you own. nDSG and Art. 321 StGB compliant by design.">
   <meta property="og:url" content="https://granid.ch/">
   <meta property="og:locale" content="en_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
@@ -27,7 +27,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Legal Intelligence by Granid">
-  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.">
+  <meta name="twitter:description" content="Swiss legal AI, on-premise. Cross-document Q&A, deadline extraction, and verified citations on hardware you own. nDSG and Art. 321 StGB compliant by design.">
   <meta name="twitter:image" content="https://granid.ch/og_image_1200x630.png">
   <link rel="preload" as="font" type="font/woff2" href="/assets/fonts/geist-latin.woff2" crossorigin>
   <link rel="stylesheet" href="/css/fonts.css">
@@ -73,7 +73,7 @@
     <div>
       <span class="eyebrow">Legal Intelligence by Granid</span>
       <h1>The AI that <em>never</em> leaves your office.</h1>
-      <p>Cross-document Q&amp;A, deadline extraction, and verified citations across the Swiss legal corpus. Running locally on a Mac in your firm. nDSG and Art. 321 StGB compliant by design.</p>
+      <p>Cross-document Q&amp;A, deadline extraction and source-verified citations across Swiss legislation, case law and commentary. Runs entirely on hardware you own. nDSG and Art. 321 StGB compliant by design.</p>
       <div class="actions">
         <a href="/trial/" class="btn">Try free for 2 weeks</a>
       </div>
@@ -90,7 +90,7 @@
           </div>
           <div>
             <span class="title">Total Privacy</span>
-            <p>Full privacy and data protection guaranteed at all times.</p>
+            <p>Client data never leaves your office. Privacy guaranteed by architecture, not by a policy you have to trust.</p>
           </div>
         </div>
         <div class="highlight-card">
@@ -99,7 +99,7 @@
           </div>
           <div>
             <span class="title">Data Sovereignty</span>
-            <p>nDSG and Art. 321 StGB compliant by design.</p>
+            <p>You own the hardware, the data and the model. nDSG and Art. 321 StGB compliant by design.</p>
           </div>
         </div>
         <div class="highlight-card">
@@ -108,7 +108,7 @@
           </div>
           <div>
             <span class="title">On-Premise AI</span>
-            <p>AI stays in your office, guaranteed.</p>
+            <p>Open-weight AI running on hardware you own. No cloud, no third-party APIs, no per-token costs.</p>
           </div>
         </div>
       </div>
@@ -119,7 +119,17 @@
   <section class="problem" id="problem">
     <div class="container">
       <h2>The problem with cloud AI</h2>
-      <p>Every time you use cloud AI tools with client documents, you risk violating attorney-client privilege under Art. 321 StGB and the revised Federal Act on Data Protection (nDSG, in force since 1 September 2023). Your clients trust you with their most sensitive information. That trust should not travel to external servers.</p>
+      <p class="problem-lead">Every time you paste a client document into a cloud AI tool, it leaves your office. For a Swiss law firm, that is not a convenience trade-off but exposure on three fronts: professional secrecy, data protection and cost.</p>
+      <ul class="problem-points">
+        <li><strong>Professional secrecy (Art. 321 StGB).</strong> Sending client material to a third-party processor can breach attorney-client privilege. A data-processing agreement does not remove the criminal-law exposure.</li>
+        <li><strong>Revised FADP (nDSG, in force since 1 September 2023).</strong> Cloud processing of personal data triggers consent, transparency and cross-border-transfer duties you can no longer fully control once the data sits on someone else's servers.</li>
+        <li><strong>Foreign jurisdiction.</strong> Most "enterprise" AI runs on US hyperscalers, where data can be compelled by foreign authorities (e.g. the CLOUD Act) regardless of where you signed the contract.</li>
+        <li><strong>Privacy you cannot verify.</strong> Cloud privacy is a promise in a contract, a policy rather than a guarantee. You cannot inspect what happens to your files after they leave. Granid's guarantee is architectural: the data physically cannot leave.</li>
+        <li><strong>Your work as training data.</strong> Even with a "no-training" clause you are trusting a policy. The only way to be certain your files never train a model is for them never to leave the building.</li>
+        <li><strong>Per-token, unpredictable cost.</strong> Metered cloud pricing means your bill scales with how much you use the tool, and the vendor sets the meter.</li>
+        <li><strong>No control over the model.</strong> The provider can deprecate the model, change its behaviour, or raise the price. Your workflow depends on decisions made outside your firm.</li>
+      </ul>
+      <p class="problem-close">Granid removes the exposure at the root. Legal Intelligence is <strong>Edge Intelligence</strong>: the model, the search index and your documents all run on hardware you own, in your office. No cloud, no third-party APIs, no per-token costs, and nothing to trust but the architecture.</p>
     </div>
   </section>
 
@@ -127,7 +137,7 @@
   <section class="solution" id="solution">
     <div class="container">
       <h2>How Legal Intelligence works</h2>
-      <p>Legal Intelligence by Granid installs on a Mac Mini in your office. The system understands Swiss law in all four national languages, extracts Fristen and deadlines from your matters, and verifies every legal citation against source material. Your data stays in your building. Always.</p>
+      <p>Legal Intelligence by Granid installs on hardware you own, in your office. It understands Swiss law in German, French and Italian, Switzerland's three languages of legal force, and works through an English interface. It extracts Fristen and deadlines from your matters and verifies every legal citation against source material. Your data stays in your building. Always.</p>
     </div>
   </section>
 
@@ -135,22 +145,32 @@
     <div class="feat">
       <span class="num">01</span>
       <h3>On-premise</h3>
-      <p>Data never leaves your office. Full compliance with Art. 321 StGB and nDSG.</p>
+      <p>Everything runs on hardware you own, in your office: the language model, the search index, your documents. No cloud, no third-party APIs, nothing leaving the building. Art. 321 StGB and nDSG compliant by architecture, not by policy.</p>
     </div>
     <div class="feat">
       <span class="num">02</span>
       <h3>Multilingual</h3>
-      <p>German, French, Italian, English. Swiss legal corpus in all four national languages.</p>
+      <p>Works natively in German, French and Italian, Switzerland's three languages of legal force, with an English interface. Ask in one language; get answers grounded in sources across all three.</p>
     </div>
     <div class="feat">
       <span class="num">03</span>
       <h3>Verified citations</h3>
-      <p>Every legal reference is checked against source material. No hallucinated law.</p>
+      <p>Every citation the AI produces is checked, deterministically, against the actual source text. Anything it cannot verify is flagged, never hidden. No hallucinated articles, no invented case numbers.</p>
     </div>
     <div class="feat">
       <span class="num">04</span>
       <h3>Human in the Loop</h3>
-      <p>AI assists, humans decide. Full transparency over every recommendation.</p>
+      <p>The AI drafts, retrieves and cross-references; you decide. Every answer shows its sources and its reasoning, so you can check the work before you rely on it.</p>
+    </div>
+    <div class="feat">
+      <span class="num">05</span>
+      <h3>Swiss legal corpus</h3>
+      <p>Federal and cantonal legislation (Fedlex), court decisions and legal commentary, searched together and kept current. When an answer cites an article, it can surface the decisions that cite it.</p>
+    </div>
+    <div class="feat">
+      <span class="num">06</span>
+      <h3>No per-token costs</h3>
+      <p>One flat annual licence. No per-token metering, no usage surprises, no vendor raising the price of the model you depend on. The hardware is yours; the cost is known.</p>
     </div>
   </section>
 
