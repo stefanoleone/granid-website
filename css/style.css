@@ -902,10 +902,11 @@ fieldset.field legend {
 
 }
 
-/* Nav collapses to the burger at ≤1024px: with six items + the language
-   switcher + CTA, the single row overflows on tablets and small laptops
-   (worse on DE/FR where labels are longer). The typography/grid breakpoints
-   above stay at 768px — only the nav moves up. (GWEB-55) */
+/* Nav collapses to the burger at ≤1024px. The pre-launch teaser nav is five
+   items + the language switcher, no CTA (GWEB-64 removed Plans + the trial
+   button); the 1024px breakpoint predates that and can be revisited when the
+   commercial nav returns. The typography/grid breakpoints above stay at 768px
+   — only the nav moves up. (GWEB-55, GWEB-64) */
 @media (max-width: 1024px) {
   .nav-links {
     display: none;
