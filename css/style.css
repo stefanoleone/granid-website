@@ -391,8 +391,54 @@ nav .container {
   font-size: 1.0625rem;
 }
 
+/* Expanded "problem with cloud AI" block: centered lead + close, with a
+   left-aligned 2-col grid of exposure points capped for readability. */
+/* Scoped under .problem so these beat the `.problem p { margin: 0 auto }`
+   rule above (which would otherwise shadow the close paragraph's margin). */
+.problem .problem-lead,
+.problem .problem-close {
+  max-width: 720px;
+}
+.problem .problem-close {
+  margin-top: 2rem;
+}
+.problem-points {
+  list-style: none;
+  text-align: left;
+  max-width: 720px;
+  margin: 2rem auto;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem 2rem;
+}
+.problem-points li {
+  font-size: 0.9375rem;
+  line-height: 1.55;
+}
+/* Seven points in two columns leave a lone tail item; let it span the
+   full width so the grid closes cleanly. */
+.problem-points li:last-child {
+  grid-column: 1 / -1;
+}
+.problem-points strong {
+  color: var(--ink);
+}
+@media (max-width: 768px) {
+  .problem-points {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* ── Features: now via DS .mk-features + .feat
    (vendor/granid-ds/patterns/marketing.css). ── */
+
+/* Site override: DS ships .mk-features as a 4-col grid; the homepage now
+   carries six feature cards, so render a balanced 3-col grid (2×3). The
+   768px / 480px breakpoints above still collapse it to 2-col / 1-col. */
+.mk-features {
+  grid-template-columns: repeat(3, 1fr);
+}
 
 /* DS styles .feat h4; the website uses <h3> to keep the heading
    hierarchy under the section <h2> contiguous (no h2→h4 skip). */
