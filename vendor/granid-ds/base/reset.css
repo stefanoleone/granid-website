@@ -1,0 +1,36 @@
+/* ─────────────────────────────────────────────────────────────────────
+   GRANID — BASE
+   Reset + element defaults. Consumes semantic tokens only.
+   ───────────────────────────────────────────────────────────────────── */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: var(--t-base);
+  font-feature-settings: "ss01", "cv11";
+  line-height: 1.55;
+  letter-spacing: -0.005em;
+}
+
+::selection { background: var(--stone-900); color: var(--stone-50); }
+
+a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; text-decoration-color: var(--line-strong); }
+a:hover { text-decoration-color: currentColor; }
+
+img, svg { display: block; max-width: 100%; }
+
+button { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+
+hr { border: 0; border-top: 1px solid var(--line); margin: 0; }

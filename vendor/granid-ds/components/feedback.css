@@ -1,0 +1,37 @@
+/* ─────────────────────────────────────────────────────────────────────
+   GRANID — COMPONENT: Feedback
+   Badges, tags, alerts. State / status indicators.
+   ───────────────────────────────────────────────────────────────────── */
+
+/* Badges */
+.badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: var(--font-mono); font-size: 10px;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  padding: 3px 8px;
+  background: var(--surface); color: var(--ink-soft);
+  border-radius: var(--r-xs); border: 1px solid var(--line);
+}
+.badge--solid { background: var(--ink); color: var(--on-ink); border-color: var(--ink); }
+.badge--success { background: var(--success-bg); color: var(--success-text); border-color: color-mix(in oklch, var(--success) 30%, transparent); }
+.badge--warning { background: var(--warning-bg); color: var(--warning-text); border-color: color-mix(in oklch, var(--warning) 30%, transparent); }
+.badge--danger { background: var(--danger-bg); color: var(--danger-text); border-color: color-mix(in oklch, var(--danger) 30%, transparent); }
+.badge .dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; opacity: 0.85; }
+
+/* Tag (label-like, sentence-cased) */
+.tag {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: var(--t-xs); padding: 4px 10px;
+  border-radius: var(--r-full); background: var(--surface);
+  color: var(--ink); border: 1px solid var(--line);
+}
+.tag .x { color: var(--muted); cursor: pointer; }
+
+/* Alert */
+.alert { display: grid; grid-template-columns: 24px 1fr; gap: 12px; padding: 14px 16px; border-radius: var(--r-md); border: 1px solid var(--line); background: var(--surface); }
+.alert.danger { background: var(--danger-bg); border-color: color-mix(in oklch, var(--danger) 30%, transparent); color: var(--danger-text); }
+.alert.success { background: var(--success-bg); border-color: color-mix(in oklch, var(--success) 30%, transparent); color: var(--success-text); }
+.alert.warning { background: var(--warning-bg); border-color: color-mix(in oklch, var(--warning) 30%, transparent); color: var(--warning-text); }
+.alert .icon { font-family: var(--font-mono); }
+.alert .title { font-weight: 500; font-size: var(--t-sm); }
+.alert .body { font-size: var(--t-xs); opacity: 0.85; margin-top: 2px; }
