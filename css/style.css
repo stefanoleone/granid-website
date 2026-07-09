@@ -538,10 +538,18 @@ footer .container {
 .footer-right a {
   color: var(--muted);
   transition: color 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
 
 .footer-right a:hover {
   color: var(--ink);
+}
+
+.footer-right svg {
+  width: 15px;
+  height: 15px;
 }
 
 /* ── Trial form page ── */
