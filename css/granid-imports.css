@@ -1,6 +1,8 @@
 /* Granid Design System — canonical cascade for the marketing site.
-   Pinned via the submodule at vendor/granid-ds. See:
-   vendor/granid-ds/docs/integration-guides/granid-website.md
+   Vendored snapshot of the DS CSS (pinned commit f6ad3fc) committed into this
+   repo: GitHub Pages cannot fetch the private DS submodule, so the files are
+   copied in as-is. Interim mitigation GWEB-71; a public DS distribution to
+   consume instead is tracked in GDS-15. Re-sync these files if the pin moves.
    Do NOT import patterns/product.css or the assets/granid-ds.css aggregator. */
 
 /* Layer 1+2 — tokens (load first) */
