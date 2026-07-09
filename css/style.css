@@ -1084,16 +1084,18 @@ fieldset.field legend {
   padding-top: 0;
 }
 
-/* Layout: topics sidebar + main column */
+/* Layout: single main column (topics sidebar removed pre-launch, GWEB-68). */
 .blog-layout {
   display: grid;
-  grid-template-columns: 200px 1fr;
+  grid-template-columns: 1fr;
   gap: 3rem;
   padding-top: 1rem;
   padding-bottom: 6rem;
   align-items: start;
 }
 
+/* Blog topics sidebar: markup removed pre-launch (GWEB-68, single-post blog);
+   rules retained for when the topic filter returns. */
 .blog-sidebar {
   position: sticky;
   top: 6rem;
