@@ -1,5 +1,5 @@
 /* ── Granid — style.css — website-specific layer on top of granid-designsystem ──
-   Tokens (colors, type, spacing, radii) come from vendor/granid-ds via
+   Tokens (colors, type, spacing, radii) come from granid-ds via
    css/granid-imports.css. This file only contains website-specific layout,
    nav/footer chrome, and page shells. See GWEB-37 audit and GWEB-38. */
 
@@ -153,7 +153,7 @@ nav .container {
   white-space: nowrap;
 }
 
-/* Coming-soon badges now use DS .badge (vendor/granid-ds/components/feedback.css). */
+/* Coming-soon badges now use DS .badge (granid-ds components/feedback.css). */
 
 /* Nav submenu */
 .has-submenu {
@@ -234,7 +234,7 @@ nav .container {
 }
 
 /* ── Hero: every hero on the site uses DS .mk-hero
-   (vendor/granid-ds/patterns/marketing.css). The website doesn't use
+   (granid-ds patterns/marketing.css). The website doesn't use
    the right-column .figure pattern (the trust strip below the hero
    serves that role), so override the DS 2-col grid to single-column
    on every .mk-hero. The .mk-hero--compact variant below is used on
@@ -311,7 +311,7 @@ nav .container {
   margin-bottom: 1rem;
 }
 
-/* ── Buttons: see vendor/granid-ds/components/buttons.css for .btn .btn--sec
+/* ── Buttons: see granid-ds components/buttons.css for .btn .btn--sec
    .btn--ghost .btn--danger .btn--sm .btn--lg. The .btn--full modifier below
    is a website-specific full-width extension (used on form submits and
    pricing-card CTAs) — not part of the DS. ── */
@@ -431,7 +431,7 @@ nav .container {
 }
 
 /* ── Features: now via DS .mk-features + .feat
-   (vendor/granid-ds/patterns/marketing.css). ── */
+   (granid-ds patterns/marketing.css). ── */
 
 /* Site override: DS ships .mk-features as a 4-col grid; the homepage now
    carries six feature cards, so render a balanced 3-col grid (2×3). The
@@ -448,7 +448,7 @@ nav .container {
 }
 
 /* ── Pricing: now via DS .mk-pricing + .tier
-   (vendor/granid-ds/patterns/marketing.css). Site-specific overrides below. ── */
+   (granid-ds patterns/marketing.css). Site-specific overrides below. ── */
 
 /* The pricing .head is content-heavy (heading + lede paragraph). The DS
    2-col grid splits them awkwardly on desktop; render as a single column. */
@@ -498,7 +498,7 @@ nav .container {
   margin: 0 auto 2.5rem;
 }
 
-/* ── Form layout: see vendor/granid-ds/components/forms.css for .field
+/* ── Form layout: see granid-ds components/forms.css for .field
    .input .check .radio (DS owns the atoms). The rules below are
    website-specific extensions: 2-col field row, inline error chrome,
    global error banner, "(optional)" label hint, fieldset reset. ── */
@@ -1066,7 +1066,7 @@ fieldset.field legend {
    .article (single post). Both index and posts are emitted by tools/ scripts:
    render_blog.py builds the index, render_post.py builds each post.
    Topic filtering + pagination are client-side in js/blog.js (no build step).
-   Tokens come from vendor/granid-ds. */
+   Tokens come from granid-ds. */
 
 /* Index header */
 .blog-index-head {
