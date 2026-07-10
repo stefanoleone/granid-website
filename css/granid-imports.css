@@ -1,6 +1,6 @@
 /* ─────────────────────────────────────────────────────────────────────
    GRANID DESIGN SYSTEM — granid-website consumer bundle (marketing, light theme)
-   v1.0.0 · GENERATED — DO NOT EDIT
+   v1.1.0 · GENERATED — DO NOT EDIT
 
    Compiled by scripts/build-dist.mjs from the cascade layers below, in
    order. Edit the source layers in granid-designsystem, never this file.
@@ -42,6 +42,7 @@
   --stone-600: oklch(0.42  0.013 55);
   --stone-700: oklch(0.32  0.012 55);
   --stone-800: oklch(0.22  0.010 55);
+  --stone-850: oklch(0.185 0.010 55);
   --stone-900: oklch(0.145 0.015 55);
   --stone-950: oklch(0.09  0.012 55);
 
@@ -62,6 +63,8 @@
   --moss-100:  oklch(0.94 0.025 145);
   --ochre-500: oklch(0.68 0.13 75);
   --ochre-100: oklch(0.94 0.035 75);
+  --iris-500:  oklch(0.58 0.18 300);
+  --iris-100:  oklch(0.95 0.03  300);
 
   /* Type scale — modular, anchored at 16px body */
   --t-xs:   12px;
@@ -115,14 +118,18 @@
    ───────────────────────────────────────────────────────────────────── */
 
 :root {
-  /* Surfaces & ink — light theme only */
+  color-scheme: light;
+
+  /* Surfaces & ink — light theme. Dark overrides live in
+     tokens/02-semantic-dark.css (opt-in import, ADR 0002). */
   --bg:          var(--stone-50);
   --paper:       #ffffff;
   --surface:     var(--stone-100);
   --surface-2:   var(--stone-150);
   --ink:         var(--stone-900);
   --ink-soft:    var(--stone-700);
-  --muted:       var(--stone-500);
+  --ink-muted:   var(--stone-500);
+  --muted:       var(--ink-muted); /* legacy alias — shadcn consumers see a different --muted (ADR 0003); override --ink-muted, not this */
   --quiet:       var(--stone-400);
   --line:        var(--stone-200);
   --line-strong: var(--stone-300);
@@ -136,6 +143,7 @@
   --warning:    var(--ochre-500);
   --warning-bg: var(--ochre-100);
   --focus-ring: color-mix(in oklch, var(--stone-900) 18%, transparent);
+  --scrim:      rgb(0 0 0 / 0.40);
 
   /* On-surface text — foreground when sitting on a dark / saturated surface */
   --on-ink:     var(--stone-50);
@@ -150,8 +158,42 @@
   --line-hover:   var(--stone-400);
   --line-focus:   var(--stone-700);
 
+  /* Neutral states — the system has no info / selected / in-progress blue.
+     These name the meanings product surfaces reach for, mapped onto the
+     neutral ramp so consumer code binds to a token instead of Tailwind's
+     stock sky/blue (the brand forbids it — red is the only signal hue).
+     "In progress" is intentionally NOT named here: it collapses onto
+     --warning (ochre), the same mapping patterns/product.css uses for
+     pending file rows. See docs/integration-guides/legalintelligence.md
+     §"Expressing states without blue" and ADR 0004. */
+  --info:        var(--ink-soft);    /* informational accent — neutral, never blue */
+  --info-bg:     var(--surface);     /* informational notice surface */
+  --info-text:   var(--ink-soft);    /* informational body text */
+  --selected:    var(--ink);         /* selected / active item — ink emphasis (border, text) */
+  --selected-bg: var(--surface-2);   /* selected / active item tint */
+
   /* Form control surface */
   --switch-track: var(--stone-300);
+
+  /* Document review — tracked changes, pending format revisions, and the
+     jump-to-change flash. Owned here so the "legal document" look is one
+     definition, not per-product hex. Used by Legal Intelligence's draft
+     studio (docx-preview renders <ins>/<del>; pending formatting uses the
+     CSS Custom Highlight API). */
+  --rev-ins-ink:    oklch(0.53 0.15 150);                                    /* inserted text */
+  --rev-ins-bg:     oklch(0.63 0.17 149 / 0.14);                             /* inserted text tint */
+  --rev-del-ink:    var(--danger);                                           /* deleted text, struck through */
+  --rev-pending-bg: color-mix(in oklch, var(--iris-500) 18%, transparent);   /* pending format revision tint */
+  --rev-flash-ring: var(--warning);                                          /* jump-to-change outline */
+  --rev-flash-bg:   color-mix(in oklch, var(--warning) 40%, transparent);    /* jump-to-change highlight */
+
+  /* Charts — categorical palette, in distinguishability order. The only
+     place the system speaks blue; reserved for data visualisation. */
+  --chart-1: var(--moss-500);
+  --chart-2: oklch(0.58 0.10 250);   /* slate blue — charts only */
+  --chart-3: oklch(0.55 0.12 30);    /* brick — muted red family */
+  --chart-4: var(--iris-500);
+  --chart-5: var(--ochre-500);
 
   /* Type families */
   --font-sans:  "Geist", "Söhne", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
@@ -199,7 +241,7 @@ body {
   letter-spacing: -0.005em;
 }
 
-::selection { background: var(--stone-900); color: var(--stone-50); }
+::selection { background: var(--ink); color: var(--on-ink); }
 
 a { color: inherit; text-decoration: underline; text-underline-offset: 3px; text-decoration-thickness: 1px; text-decoration-color: var(--line-strong); }
 a:hover { text-decoration-color: currentColor; }
@@ -404,6 +446,34 @@ textarea.input { min-height: 96px; resize: vertical; line-height: 1.55; }
 .alert .title { font-weight: 500; font-size: var(--t-sm); }
 .alert .body { font-size: var(--t-xs); opacity: 0.85; margin-top: 2px; }
 
+/* Toast — transient confirmation. Paper surface, floats above content. */
+.toast {
+  display: grid; grid-template-columns: 24px 1fr auto; gap: 12px; align-items: start;
+  width: 360px; max-width: 100%;
+  padding: 14px 16px;
+  background: var(--paper); border: 1px solid var(--line);
+  border-radius: var(--r-md); box-shadow: var(--shadow-3);
+}
+.toast .icon { font-family: var(--font-mono); }
+.toast .title { font-weight: 500; font-size: var(--t-sm); }
+.toast .body { font-size: var(--t-xs); color: var(--muted); margin-top: 2px; }
+.toast .x { color: var(--quiet); cursor: pointer; }
+.toast.success .icon { color: var(--success); }
+.toast.warning .icon { color: var(--warning); }
+.toast.danger .icon { color: var(--danger); }
+
+/* Progress */
+.progress { width: 100%; height: 4px; background: var(--surface-2); border-radius: var(--r-full); overflow: hidden; }
+.progress .bar { height: 100%; background: var(--ink); border-radius: var(--r-full); transition: width 0.3s ease; }
+
+/* Spinner */
+.spinner { width: 16px; height: 16px; border: 2px solid var(--line-strong); border-top-color: var(--ink); border-radius: 50%; animation: gds-spin 0.7s linear infinite; }
+@keyframes gds-spin { to { transform: rotate(360deg); } }
+
+/* Skeleton — quiet pulse, no shimmer */
+.skeleton { background: var(--surface-2); border-radius: var(--r-sm); animation: gds-pulse 1.6s ease-in-out infinite; }
+@keyframes gds-pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.55; } }
+
 /* ─────────────────────────────────────────────────────────────────────
    components/surfaces.css
    ───────────────────────────────────────────────────────────────────── */
@@ -431,6 +501,18 @@ textarea.input { min-height: 96px; resize: vertical; line-height: 1.55; }
 .table tbody tr { border-bottom: 1px solid var(--line); }
 .table tbody tr:hover { background: var(--surface); }
 .table .num { font-variant-numeric: tabular-nums; text-align: right; }
+
+/* Avatar */
+.avatar {
+  width: 28px; height: 28px; border-radius: 50%;
+  background: var(--line-strong); color: var(--ink);
+  display: inline-grid; place-items: center;
+  font-family: var(--font-mono); font-size: 10px;
+  overflow: hidden;
+}
+.avatar img { width: 100%; height: 100%; object-fit: cover; }
+.avatar--sm { width: 24px; height: 24px; font-size: 9px; }
+.avatar--lg { width: 40px; height: 40px; font-size: 12px; }
 
 /* Dialog */
 .dialog {
