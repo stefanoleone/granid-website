@@ -11,7 +11,7 @@ cards look distinct. The art is PURELY decorative — no title text is baked in,
 because the card/article already renders the title and an image cropped with
 object-fit:cover would clip any embedded words. Motifs are full-bleed so they
 crop gracefully at any aspect ratio. Granite palette (see
-vendor/granid-ds/tokens/01-primitives.css): ink #1C1917, stone #E7E5E4 /
+granid-ds tokens/01-primitives.css): ink #1C1917, stone #E7E5E4 /
 #F5F5F4 / #D6D3D1, accent red #DA281C.
 
 The `title` argument is kept for the SVG aria-label only.
