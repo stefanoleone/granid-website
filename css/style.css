@@ -1084,18 +1084,16 @@ fieldset.field legend {
   padding-top: 0;
 }
 
-/* Layout: single main column (topics sidebar removed pre-launch, GWEB-68). */
+/* Layout: topics sidebar + main column */
 .blog-layout {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 200px 1fr;
   gap: 3rem;
   padding-top: 1rem;
   padding-bottom: 6rem;
   align-items: start;
 }
 
-/* Blog topics sidebar: markup removed pre-launch (GWEB-68, single-post blog);
-   rules retained for when the topic filter returns. */
 .blog-sidebar {
   position: sticky;
   top: 6rem;
@@ -1141,11 +1139,12 @@ fieldset.field legend {
   color: var(--on-ink);
 }
 
-/* Card grid */
+/* Card grid — auto-fit so a lone or filtered card fills the row instead of
+   stranding empty tracks; collapses gracefully as the blog grows. */
 .blog-grid {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
 }
 
@@ -1282,6 +1281,13 @@ fieldset.field legend {
   cursor: default;
 }
 
+/* DS buttons set appearance:none; add explicit focus rings (Safari drops them). */
+.blog-topics button:focus-visible,
+.blog-pager button:focus-visible {
+  outline: 2px solid var(--line-focus);
+  outline-offset: 2px;
+}
+
 @media (max-width: 900px) {
   .blog-layout {
     grid-template-columns: 1fr;
@@ -1297,6 +1303,10 @@ fieldset.field legend {
   .blog-topics button {
     width: auto;
     border: 1px solid var(--line);
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.9rem;
   }
 }
 
