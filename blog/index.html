@@ -72,13 +72,22 @@
   <section class="blog-index-head">
     <div class="container">
       <span class="eyebrow">Granid Blog</span>
-      <h1>Notes from the office that never leaves.</h1>
-      <p class="lede">On-premise AI, data sovereignty, and Swiss legal technology, written for the people responsible for keeping client data confidential.</p>
+      <h1>Notes from the edge.</h1>
+      <p class="lede">On-premise AI, data sovereignty, and Swiss legal technology, for the professionals responsible for keeping client data confidential.</p>
     </div>
   </section>
 
   <section class="blog-list">
     <div class="container blog-layout">
+      <aside class="blog-sidebar">
+        <h2>Topics</h2>
+        <ul class="blog-topics">
+          <li><button type="button" data-topic="all" class="active" aria-pressed="true">All</button></li>
+          <li><button type="button" data-topic="Early Access" aria-pressed="false">Early Access</button></li>
+          <li><button type="button" data-topic="Legal Intelligence" aria-pressed="false">Legal Intelligence</button></li>
+        </ul>
+      </aside>
+
       <section class="blog-main" aria-labelledby="latest-heading">
         <h2 id="latest-heading" class="visually-hidden">Latest articles</h2>
         <ol class="blog-grid" data-blog-grid>
@@ -102,7 +111,7 @@
             </div>
           </a>
         </li>
-        <li class="blog-empty" hidden>No articles yet.</li>
+        <li class="blog-empty" hidden>No articles in this topic yet.</li>
         </ol>
         <div class="blog-pager" data-blog-pager role="navigation" aria-label="Blog pagination"></div>
       </section>
