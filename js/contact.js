@@ -1,10 +1,9 @@
 // Granid — generic contact-us submit handler.
 //
 // POSTs to the shared CRM leads endpoint with `tier_interest: "contact"`
-// as the discriminator, per ECOSYSTEM.md (LEGALINT-194 update). The CRM
-// endpoint contract is tracked in GCRM-N (follow-up). Until the CRM is
-// wired up, this form ships in "blocked-by-crm" mode: the network call
-// fails and the user sees the generic error message.
+// as the discriminator, per ECOSYSTEM.md § Contact form. The CRM went
+// live in phase 1 (GWEB-82), so submissions reach production; the
+// generic error path still covers network failures and non-2xx responses.
 
 (function () {
   'use strict';
