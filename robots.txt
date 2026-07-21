@@ -1,0 +1,5 @@
+# granid.ch - allow all crawlers.
+User-agent: *
+Allow: /
+
+Sitemap: https://granid.ch/sitemap.xml

@@ -1,6 +1,12 @@
 # macOS Finder metadata
 .DS_Store
 
-# Internal project docs & Claude Code config — never in the public repo
+# Internal project docs & Claude Code config - never in the public repo
 /CLAUDE.md
 .claude/
+
+# Authoring-side sources & dev tooling: run locally, only the generated output is committed
+content/
+tools/
+__pycache__/
+*.pyc
