@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="A ladder leaning against a wall, stopping short of the top.">
+  <rect width="1200" height="630" fill="#F5F5F4"/>
+  <!-- Wall -->
+  <rect x="850" y="70" width="170" height="480" rx="14" fill="#E7E5E4"/>
+  <!-- Ladder -->
+  <g fill="none" stroke="#D6D3D1" stroke-width="14" stroke-linecap="round" stroke-linejoin="round">
+    <line x1="430" y1="560" x2="748" y2="210"/>
+    <line x1="520" y1="560" x2="838" y2="210"/>
+    <line x1="468" y1="518" x2="558" y2="518"/>
+    <line x1="532" y1="448" x2="622" y2="448"/>
+    <line x1="595" y1="378" x2="685" y2="378"/>
+    <line x1="659" y1="308" x2="749" y2="308"/>
+    <line x1="716" y1="245" x2="806" y2="245"/>
+  </g>
+  <!-- The stretch the ladder cannot reach: the ceiling -->
+  <g stroke="#DA281C" stroke-width="6" stroke-linecap="round">
+    <line x1="850" y1="90" x2="850" y2="190" stroke-dasharray="2 16"/>
+    <line x1="834" y1="90" x2="866" y2="90"/>
+    <line x1="834" y1="190" x2="866" y2="190"/>
+  </g>
+</svg>
