@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="A signpost with two arrows, cloud and local, in front of a road that continues straight ahead.">
+  <rect width="1200" height="630" fill="#F5F5F4"/>
+  <!-- Road continuing straight to the horizon -->
+  <polygon points="470,630 730,630 640,150 560,150" fill="#E7E5E4"/>
+  <!-- Centre line: the road ahead -->
+  <g stroke="#DA281C" stroke-width="10" stroke-linecap="round">
+    <line x1="600" y1="600" x2="600" y2="560"/>
+    <line x1="600" y1="510" x2="600" y2="474"/>
+    <line x1="600" y1="428" x2="600" y2="396"/>
+    <line x1="600" y1="354" x2="600" y2="326"/>
+    <line x1="600" y1="288" x2="600" y2="264"/>
+    <line x1="600" y1="230" x2="600" y2="210"/>
+  </g>
+  <!-- Signpost -->
+  <line x1="255" y1="560" x2="255" y2="240" stroke="#D6D3D1" stroke-width="16" stroke-linecap="round"/>
+  <!-- Arrow sign pointing left: cloud -->
+  <polygon points="130,215 390,215 390,295 130,295 85,255" fill="#D6D3D1"/>
+  <g fill="none" stroke="#F5F5F4" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M196 284 h74 a16 16 0 0 0 3 -32 a24 24 0 0 0 -47 -8 a16 16 0 0 0 -19 27"/>
+  </g>
+  <!-- Arrow sign pointing right: local (office) -->
+  <polygon points="380,330 120,330 120,410 380,410 425,370" fill="#D6D3D1"/>
+  <g fill="none" stroke="#F5F5F4" stroke-width="11" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M218 400 v-38 l37 -24 37 24 v38 z"/>
+    <line x1="255" y1="400" x2="255" y2="381"/>
+  </g>
+</svg>
