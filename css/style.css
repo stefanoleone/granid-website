@@ -391,6 +391,12 @@ nav .container {
   font-size: 1.0625rem;
 }
 
+/* The global reset zeroes p margins, so a second paragraph in these centered
+   prose blocks would butt against the first. Restore the paragraph break. */
+.solution p + p {
+  margin-top: 1.25rem;
+}
+
 /* Expanded "problem with cloud AI" block: centered lead + close, with a
    left-aligned 2-col grid of exposure points capped for readability. */
 /* Scoped under .problem so these beat the `.problem p { margin: 0 auto }`
