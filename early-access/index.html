@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex">
-  <title>Start your 2-week trial | Legal Intelligence by Granid</title>
-  <meta name="description" content="Free 2-week trial of Legal Intelligence by Granid. Runs on any Apple Silicon Mac with 8 GB RAM. Compliant with nDSG and Art. 321 StGB.">
+  <title>Join the Early Access Program | Legal Intelligence by Granid</title>
+  <meta name="description" content="Early Access to Legal Intelligence by Granid: 2 months free, on your own Mac or Windows machine. Places are limited.">
   <!-- Favicon -->
   <link rel="icon" type="image/svg+xml" href="/favicon_dark.svg">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -18,7 +18,7 @@
   <meta property="og:site_name" content="Granid">
   <meta property="og:title" content="Legal Intelligence by Granid">
   <meta property="og:description" content="Swiss legal AI, on-premise. Cross-document Q&A, tabular document review, and verified citations on hardware you own. nDSG and Art. 321 StGB compliant by design.">
-  <meta property="og:url" content="https://granid.ch/trial/">
+  <meta property="og:url" content="https://granid.ch/early-access/">
   <meta property="og:locale" content="en_CH">
   <meta property="og:image" content="https://granid.ch/og_image_1200x630.png">
   <meta property="og:image:width" content="1200">
@@ -60,10 +60,10 @@
         <li><a href="/blog/">Blog</a></li>
         <li><a href="/contact-us/">Contact</a></li>
         <li class="nav-lang">
-          <a href="/trial/" class="active">EN</a>
-          <a href="/de/trial/">DE</a>
-          <a href="/fr/trial/">FR</a>
-          <a href="/it/trial/">IT</a>
+          <a href="/early-access/" class="active">EN</a>
+          <a href="/de/early-access/">DE</a>
+          <a href="/fr/early-access/">FR</a>
+          <a href="/it/early-access/">IT</a>
         </li>
       </ul>
     </div>
@@ -71,11 +71,32 @@
 
   <section class="trial-page">
     <div class="container">
-      <span class="hero-tagline">Trial signup</span>
-      <h1>Start your 2-week trial</h1>
-      <p class="trial-intro">Free for 2 weeks. Runs on any Apple Silicon Mac with 8 GB RAM. <a href="/hardware/trial/">See hardware details</a>.</p>
+      <span class="hero-tagline">Early Access signup</span>
+      <h1>Join the Early Access Program</h1>
+      <p class="trial-intro">Legal Intelligence, before general availability. Free for 2 months, on hardware you already own (Mac or Windows). Places are limited. <strong>Once you register and confirm your email, you receive the download links for the installer and a license valid for 2 months.</strong></p>
 
-      <form id="trial-form" class="trial-form" novalidate>
+      <div class="ea-block">
+        <h2>What to expect</h2>
+        <ul>
+          <li><strong>Pre-production software.</strong> The core works; the polish is in progress. Expect rough edges and the occasional bug.</li>
+          <li><strong>A direct line to us.</strong> Your feedback goes straight to the people building the product, and participants' feature proposals can make it into the product.</li>
+          <li><strong>Two months, free.</strong> The Early Access license runs for 2 months: enough time to work with it, not just look at it.</li>
+          <li><strong>A preferential price afterwards.</strong> Participants receive a discount on the Essential license when Legal Intelligence becomes commercially available.</li>
+          <li><strong>One program per firm.</strong> Early Access replaces the regular trial for your firm. Think of it as a longer one.</li>
+        </ul>
+      </div>
+
+      <div class="ea-block">
+        <h2>What you need</h2>
+        <ul>
+          <li><strong>Mac.</strong> Apple Silicon (M1 or later), 8 GB of RAM or more, 150–200 GB of free disk. The AI runs remotely by default; on Macs with enough memory you can choose to run it locally during onboarding.</li>
+          <li><strong>Windows.</strong> Windows 10 or later, 8 GB of RAM or more, 150–200 GB of free disk. The AI runs remotely.</li>
+          <li><strong>Patience on day one.</strong> Legal Intelligence downloads the complete Swiss legal corpus on first run. Working with your own documents starts immediately; legal research is ready once the download completes.</li>
+        </ul>
+      </div>
+
+      <h2 class="ea-register">Register</h2>
+      <form id="early-access-form" class="trial-form" novalidate>
         <input type="hidden" name="locale" value="en">
 
         <div class="form-row">
@@ -139,13 +160,13 @@
         <div class="field">
           <label class="check">
             <input type="checkbox" name="data_privacy_acknowledged" required>
-            <span>I understand that during the 2-week trial period my firm will use only <strong>non-sensitive or anonymized data</strong>, and that documents and queries will be processed by Granid-hosted remote services. <a href="/hardware/trial/">More on trial data privacy</a>.</span>
+            <span>I understand that during the Early Access Program my firm will use only <strong>non-sensitive or anonymized data</strong>. Depending on setup, documents and queries may be processed by Granid-hosted remote services.</span>
           </label>
           <div class="form-error" data-error-for="data_privacy_acknowledged"></div>
         </div>
 
-        <div class="form-error-global" id="trial-error-global"></div>
-        <button type="submit" class="btn btn--full">Start your trial</button>
+        <div class="form-error-global" id="early-access-error-global"></div>
+        <button type="submit" class="btn btn--full">Join the program</button>
       </form>
     </div>
   </section>
@@ -160,6 +181,6 @@
   </footer>
 
   <script src="/js/main.js"></script>
-  <script src="/js/trial.js"></script>
+  <script src="/js/early-access.js"></script>
 </body>
 </html>
