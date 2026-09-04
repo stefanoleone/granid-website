@@ -126,7 +126,7 @@
 
   <p>Welcome to the Early Access Program. This post walks you through everything from installing Legal Intelligence to doing real work with it. It is written for the lawyer who will actually use the product day to day, not for an IT department. If you have half an hour and a coffee, you can be running your first legal research query by the end of it.</p>
 
-  <p>Along the way we show real screenshots of the application, so even colleagues who have not installed anything yet can see exactly how it looks and works.</p>
+  <p>Along the way we show real screenshots of the application, so even colleagues who have not installed anything yet can see exactly how it looks and works. And when you are ready to try it yourself, <a href="#test-kit">a test kit at the end of the post</a> has the fictional documents and the exact prompts from this walkthrough.</p>
 
   <h2>What Legal Intelligence is</h2>
   <p>Legal Intelligence is an AI assistant for Swiss law firms that runs entirely inside your own office. It ingests your documents and answers questions about Swiss law with verifiable citations, drafts contracts, and reviews stacks of agreements at once. The important part: <strong>no data ever leaves your premises.</strong> The language model, the search, the legal corpus, and your client files all live on one machine in your office. Nothing is sent to a cloud provider, which is what makes it a fit for the confidentiality duties every Swiss lawyer already carries.</p>
@@ -269,6 +269,31 @@
   <p>From a blank Mac you now have a running installation, your clients and matters, researched answers with verifiable citations, a reviewed stack of contracts, and a drafted agreement, all without a single byte leaving your office.</p>
   <p>You are on the Early Access Program because we want your judgement. Tell us what felt slow, what you wish it did, and where an answer fell short. The simplest way to reach us is to reply to your onboarding email, and you can also use the in-app <strong>Report</strong> tab next to Help. What you tell us in the coming weeks is what the product becomes.</p>
   <p><em>Legal Intelligence uses AI and can make mistakes. It is built to help you work faster and check its own sources, but the lawyer always stays in the loop. Please double-check what matters.</em></p>
+
+  <h2 id="test-kit">A test kit for your own first hour</h2>
+  <p>You do not need client files to try any of this. Below are the test documents we used for this walkthrough, with entirely fictional companies, people, and terms. They are safe to upload anywhere, including a trial that runs in the secure cloud mode.</p>
+
+  <h3>Ten NDAs for a review stack</h3>
+  <p>The NDA set from the walkthrough itself: you can spot AlpineTech, TicinoFarma, and LuganoTech in the Tabular Review figures above. Ten agreements in Italian, in one-way, mutual, three-party, and multilateral structures, with varying terms and penalty clauses. Upload a few into a matter and build the grid from section 8. The assistant works across languages, so ask about them in German, French, or English.</p>
+  <p><a href="/assets/blog/first-hour-with-legal-intelligence/nda-test-set.zip" download>Download the NDA test set</a> (ZIP, ten PDFs, 45&nbsp;KB)</p>
+  <p>Column ideas to start from: structure (one-way or mutual), definition of confidential information, obligations of the receiving party, standard carve-outs, penalty clause, term, and governing law.</p>
+
+  <h3>Four scanned pages for the OCR path</h3>
+  <p>Confidentiality agreements as they actually reach a firm: scanned, slightly skewed, and noisy. Upload them into a matter and Legal Intelligence runs OCR and indexes them like any born-digital document. The German and French pages each contain a contractual penalty clause, if you want to pair the OCR test with the research question below. The two Italian scans are the TicinoFarma agreement from the set above at two scan qualities, so you can compare the born-digital file, a clean scan, and a rough scan of the same document.</p>
+  <ul>
+    <li><a href="/assets/blog/first-hour-with-legal-intelligence/scans/scan-DE-harsh.pdf" download>Confidentiality agreement, German, rough scan</a> (PDF, 0.4&nbsp;MB)</li>
+    <li><a href="/assets/blog/first-hour-with-legal-intelligence/scans/scan-FR-harsh.pdf" download>Confidentiality agreement, French, rough scan</a> (PDF, 0.4&nbsp;MB)</li>
+    <li><a href="/assets/blog/first-hour-with-legal-intelligence/scans/scan-IT-harsh.pdf" download>Mutual NDA, Italian, rough scan</a> (PDF, 0.9&nbsp;MB)</li>
+    <li><a href="/assets/blog/first-hour-with-legal-intelligence/scans/scan-IT-mild.pdf" download>Mutual NDA, Italian, cleaner scan</a> (PDF, 1&nbsp;MB)</li>
+  </ul>
+
+  <h3>The prompts we used</h3>
+  <p>Copy them as they are, or adapt them. The research question from section 6:</p>
+  <pre class="wrap"><code>Under Swiss law, is a contractual penalty clause (Konventionalstrafe) in an NDA enforceable, and can a court reduce it? Which OR articles apply?</code></pre>
+  <p>The Draft Studio brief from section 9:</p>
+  <pre class="wrap"><code>Draft a one-way non-disclosure agreement under Swiss law between AlpineTech SA (Via Nassa 21, 6900 Lugano) as Disclosing Party and a prospective supplier as Receiving Party. Include a contractual penalty (Konventionalstrafe) of CHF 20,000 per breach, a confidentiality term of 3 years, standard carve-outs, and Swiss governing law with jurisdiction in Lugano.</code></pre>
+  <p>And the plain-language edit that came back as tracked changes:</p>
+  <pre class="wrap"><code>Change the confidentiality term from 3 years to 5 years, and increase the contractual penalty from CHF 20,000 to CHF 50,000 per breach.</code></pre>
       </div>
 
       <aside class="article-cta">

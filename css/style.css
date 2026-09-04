@@ -12,6 +12,8 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  /* Keep anchor targets clear of the fixed nav (GWEB-101 ux review) */
+  scroll-padding-top: 5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1627,6 +1629,13 @@ body.lightbox-open {
   font-family: var(--font-mono);
   font-size: var(--t-sm);
   line-height: 1.6;
+}
+
+/* Prose blocks meant to be read and copied whole (e.g. example prompts,
+   GWEB-101) wrap instead of scrolling sideways. */
+.article-body pre.wrap {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
 }
 
 .article-body :not(pre) > code {
