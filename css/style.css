@@ -12,6 +12,8 @@
 html {
   font-size: 16px;
   scroll-behavior: smooth;
+  /* Keep anchor targets clear of the fixed nav (GWEB-101 ux review) */
+  scroll-padding-top: 5rem;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -1512,6 +1514,81 @@ fieldset.field legend {
   text-align: center;
 }
 
+/* Figure click-to-zoom (GWEB-101). The .figure-zoom anchor works without JS
+   (it opens the full-size file); js/lightbox.js upgrades the click to an
+   in-page overlay on larger screens. Overlay colors are literal granite
+   values because the surface is dark regardless of theme tokens. */
+.figure-zoom {
+  display: block;
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300; /* above nav (100) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2.5rem;
+  background: rgba(28, 25, 23, 0.94);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 9rem);
+  width: auto;
+  height: auto;
+  border-radius: var(--r-lg);
+  cursor: zoom-out;
+}
+
+.lightbox-caption {
+  margin: 0;
+  color: #D6D3D1;
+  font-size: var(--t-sm);
+  text-align: center;
+  max-width: 70ch;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: #F5F5F4;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  border-color: #F5F5F4;
+}
+
+.lightbox-close:focus-visible {
+  outline: 2px solid #F5F5F4;
+  outline-offset: 2px;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
 /* Responsive 16:9 video — self-hosted only, no third-party iframe */
 .article-video {
   margin: 2.5rem 0;
@@ -1552,6 +1629,98 @@ fieldset.field legend {
   font-family: var(--font-mono);
   font-size: var(--t-sm);
   line-height: 1.6;
+}
+
+/* Prose blocks meant to be read and copied whole (e.g. example prompts,
+   GWEB-101) wrap instead of scrolling sideways. */
+.article-body pre.wrap {
+  position: relative;
+  margin: 1.25rem 0;
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+}
+
+/* Room for the Copy button injected by js/copy.js */
+.article-body pre.has-copy {
+  padding-right: 5.25rem;
+}
+
+.pre-copy {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.35rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: 0.04em;
+  color: var(--on-ink);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.pre-copy:hover {
+  border-color: #F5F5F4;
+}
+
+.pre-copy:focus-visible {
+  outline: 2px solid #F5F5F4;
+  outline-offset: 2px;
+}
+
+.pre-copy.is-done {
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* In-article table of contents (GWEB-101) */
+.article-toc {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+
+.article-toc__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.article-toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.article-toc li {
+  margin: 0 0 0.4rem;
+  break-inside: avoid;
+}
+
+.article-body .article-toc a {
+  color: var(--ink-soft);
+  font-size: var(--t-sm);
+  text-decoration: none;
+}
+
+.article-body .article-toc a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .article-toc ol {
+    columns: 1;
+  }
 }
 
 .article-body :not(pre) > code {
