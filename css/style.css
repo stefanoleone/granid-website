@@ -1634,8 +1634,93 @@ body.lightbox-open {
 /* Prose blocks meant to be read and copied whole (e.g. example prompts,
    GWEB-101) wrap instead of scrolling sideways. */
 .article-body pre.wrap {
+  position: relative;
+  margin: 1.25rem 0;
   white-space: pre-wrap;
   overflow-wrap: break-word;
+}
+
+/* Room for the Copy button injected by js/copy.js */
+.article-body pre.has-copy {
+  padding-right: 5.25rem;
+}
+
+.pre-copy {
+  position: absolute;
+  top: 0.7rem;
+  right: 0.7rem;
+  padding: 0.35rem 0.8rem;
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: 0.04em;
+  color: var(--on-ink);
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.pre-copy:hover {
+  border-color: #F5F5F4;
+}
+
+.pre-copy:focus-visible {
+  outline: 2px solid #F5F5F4;
+  outline-offset: 2px;
+}
+
+.pre-copy.is-done {
+  border-color: transparent;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+/* In-article table of contents (GWEB-101) */
+.article-toc {
+  margin: 2.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  background: var(--surface);
+}
+
+.article-toc__title {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.article-toc ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  columns: 2;
+  column-gap: 2rem;
+}
+
+.article-toc li {
+  margin: 0 0 0.4rem;
+  break-inside: avoid;
+}
+
+.article-body .article-toc a {
+  color: var(--ink-soft);
+  font-size: var(--t-sm);
+  text-decoration: none;
+}
+
+.article-body .article-toc a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+@media (max-width: 600px) {
+  .article-toc ol {
+    columns: 1;
+  }
 }
 
 .article-body :not(pre) > code {

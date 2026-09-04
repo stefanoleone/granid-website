@@ -111,7 +111,7 @@
         <div class="article-meta">
           <span>4 September 2026</span>
           <span>Granid</span>
-          <span>14 min read</span>
+          <span>13 min read</span>
         </div>
       <div class="article-tags">
         <span class="article-tag">Early Access</span>
@@ -126,12 +126,34 @@
 
   <p>Welcome to the Early Access Program. This post walks you through everything from installing Legal Intelligence to doing real work with it. It is written for the lawyer who will actually use the product day to day, not for an IT department. If you have half an hour and a coffee, you can be running your first legal research query by the end of it.</p>
 
-  <p>Along the way we show real screenshots of the application, so even colleagues who have not installed anything yet can see exactly how it looks and works. And when you are ready to try it yourself, <a href="#test-kit">a test kit at the end of the post</a> has the fictional documents and the exact prompts from this walkthrough.</p>
+  <p>Along the way we show real screenshots of the application, so even colleagues who have not installed anything yet can see exactly how it looks and works. And when you are ready to try it yourself, <a href="#test-kit">a test kit at the end of the post</a> has fictional test documents and ready-to-copy prompts.</p>
 
-  <h2>What Legal Intelligence is</h2>
+
+  <div class="article-toc" role="navigation" aria-label="Contents">
+    <p class="article-toc__title">In this post</p>
+    <ol>
+      <li><a href="#what-legal-intelligence-is">What Legal Intelligence is</a></li>
+      <li><a href="#one-server-every-browser">The shape of it: one server, every browser</a></li>
+      <li><a href="#installation">1. Installation</a></li>
+      <li><a href="#first-run-setup">2. First-run setup</a></li>
+      <li><a href="#logging-in">3. Logging in</a></li>
+      <li><a href="#home-dashboard">4. The home dashboard</a></li>
+      <li><a href="#clients-and-matters">5. Clients and matters</a></li>
+      <li><a href="#legal-research">6. Legal research</a></li>
+      <li><a href="#your-own-documents">7. Bringing in your own documents</a></li>
+      <li><a href="#tabular-review">8. Reviewing a stack of contracts at once</a></li>
+      <li><a href="#drafting-a-contract">9. Drafting a contract</a></li>
+      <li><a href="#getting-help">10. Getting help</a></li>
+      <li><a href="#four-languages">One product, four languages</a></li>
+      <li><a href="#your-first-hour">That is your first hour</a></li>
+      <li><a href="#test-kit">A test kit for your own first hour</a></li>
+    </ol>
+  </div>
+
+  <h2 id="what-legal-intelligence-is">What Legal Intelligence is</h2>
   <p>Legal Intelligence is an AI assistant for Swiss law firms that runs entirely inside your own office. It ingests your documents and answers questions about Swiss law with verifiable citations, drafts contracts, and reviews stacks of agreements at once. The important part: <strong>no data ever leaves your premises.</strong> The language model, the search, the legal corpus, and your client files all live on one machine in your office. Nothing is sent to a cloud provider, which is what makes it a fit for the confidentiality duties every Swiss lawyer already carries.</p>
 
-  <h2>The shape of it: one server, every browser</h2>
+  <h2 id="one-server-every-browser">The shape of it: one server, every browser</h2>
   <p>Legal Intelligence is a <strong>client-server application</strong>, and understanding that makes everything else easy.</p>
   <p>You install it once, on a single Apple Silicon Mac that sits in your office (a Mac mini is the typical choice, provisioned with enough unified memory to run the AI locally). That Mac is the <strong>server</strong>. It holds the AI models, the Swiss legal database, and all your firm's data.</p>
   <p>Everyone else just opens a <strong>web browser</strong>. Each lawyer and assistant works from their own device, at their own desk, by visiting the address of the office Mac on the local network. There is nothing to install on those machines, and nothing to keep updated.</p>
@@ -140,7 +162,7 @@
     <p><strong>In one line:</strong> the Mac is the brain and the vault; the browsers are the screens.</p>
   </blockquote>
 
-  <h2>1. Installation</h2>
+  <h2 id="installation">1. Installation</h2>
   <p>Installation happens once, on the office Mac. You download the Granid installer and run it. It first checks that the machine is ready (a recent macOS, Apple Silicon, enough memory, and enough free disk for the models and the legal database), then downloads the application and prepares everything. Every step reports as it goes, so you can watch it work.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/00-install.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/00-install.png" alt="The installer running its system check and setup on the office Mac." loading="lazy" width="1120" height="1280"></a>
@@ -151,7 +173,7 @@
     <a href="/assets/blog/first-hour-with-legal-intelligence/00b-install-maintenance.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/00b-install-maintenance.png" alt="Running the installer again offers reinstall or uninstall, and keeps your data." loading="lazy" width="1120" height="1280"></a>
   </figure>
 
-  <h2>2. First-run setup</h2>
+  <h2 id="first-run-setup">2. First-run setup</h2>
   <p>The very first time you open Legal Intelligence in a browser, a short setup wizard runs. It has a handful of steps and takes a few minutes.</p>
   <p><strong>License.</strong> You paste the license token Granid sent you by email. The wizard reads it and confirms your firm's name, plan, and validity. This is the only key the product needs.</p>
   <figure class="article-figure">
@@ -174,19 +196,19 @@
     <a href="/assets/blog/first-hour-with-legal-intelligence/05-onboarding-admin.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/05-onboarding-admin.png" alt="Onboarding administrator step creating the first account." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>3. Logging in</h2>
+  <h2 id="logging-in">3. Logging in</h2>
   <p>Legal Intelligence uses <strong>passwordless magic-link login.</strong> You enter your email, and a one-time login link is sent to you. There are no passwords to set, forget, or leak. Every user signs in the same way from their own browser.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/01-login.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/01-login.png" alt="The Legal Intelligence magic-link login screen with the firm logo." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>4. The home dashboard</h2>
+  <h2 id="home-dashboard">4. The home dashboard</h2>
   <p>Once you are in, the home screen is built around your actual work. It greets you, shows the <strong>matters you opened most recently</strong>, lists <strong>your upcoming and overdue deadlines</strong> across every matter, and gives you a searchable table of the matters you are responsible for. The left sidebar is your firm's client list and workspace; the footer carries your plan and the language switcher.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/06-dashboard.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/06-dashboard.png" alt="The home dashboard: recently opened matters, deadlines, and matters you own." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>5. Clients and matters</h2>
+  <h2 id="clients-and-matters">5. Clients and matters</h2>
   <p>Your work is organised the way a firm already thinks: <strong>clients</strong>, and <strong>matters</strong> within each client.</p>
   <p>The Clients workspace gives you a firm-wide overview: how many clients and matters you have, deadline load, a twelve-month acquisition trend, a breakdown by city, and outcomes, followed by the full client directory.</p>
   <figure class="article-figure">
@@ -205,7 +227,7 @@
     <a href="/assets/blog/first-hour-with-legal-intelligence/10-matter-workbench.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/10-matter-workbench.png" alt="The matter workbench: assistant in the centre, deadlines/reviews/files rail." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>6. Legal research</h2>
+  <h2 id="legal-research">6. Legal research</h2>
   <p>This is the heart of the product. Ask a question about Swiss law in plain language, in German, French, Italian, or English.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/11-research-question.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/11-research-question.png" alt="Asking a Swiss-law question in the matter assistant." loading="lazy" width="2880" height="1800"></a>
@@ -219,13 +241,13 @@
     <a href="/assets/blog/first-hour-with-legal-intelligence/13-research-answer.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/13-research-answer.png" alt="A researched answer with verified citations, court decisions, and commentary." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>7. Bringing in your own documents</h2>
+  <h2 id="your-own-documents">7. Bringing in your own documents</h2>
   <p>Research over Swiss law is only half the story. You also want answers about <strong>your</strong> files. Upload documents into a matter (PDF, Word, scans) and Legal Intelligence reads them, runs OCR where needed, and indexes them locally so the assistant can search and cite them. As with everything else, the files never leave the Mac.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/14-matter-files.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/14-matter-files.png" alt="Uploaded documents indexed in a matter's file panel." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>8. Reviewing a stack of contracts at once</h2>
+  <h2 id="tabular-review">8. Reviewing a stack of contracts at once</h2>
   <p>When you have several contracts to compare (a pile of NDAs, a set of leases, a batch of employment agreements), <strong>Tabular Review</strong> turns them into a spreadsheet. You define the columns you care about (the parties, the term, the penalty clause, the governing law), and Legal Intelligence fills in a row for every document at once.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/15-tabular-grid.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/15-tabular-grid.png" alt="A tabular review grid across several NDAs with verification badges." loading="lazy" width="2880" height="1800"></a>
@@ -235,7 +257,7 @@
     <a href="/assets/blog/first-hour-with-legal-intelligence/16-tabular-citation.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/16-tabular-citation.png" alt="A cell's source panel showing the exact quote and page." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>9. Drafting a contract</h2>
+  <h2 id="drafting-a-contract">9. Drafting a contract</h2>
   <p>The <strong>drafting workspace</strong> turns a plain-language brief into a working document. Describe what you need (here, a one-way NDA under Swiss law with a specific penalty clause and term) and choose the language.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/17-draft-prompt.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/17-draft-prompt.png" alt="Briefing the drafting workspace to generate an NDA." loading="lazy" width="2880" height="1800"></a>
@@ -249,7 +271,7 @@
     <a href="/assets/blog/first-hour-with-legal-intelligence/19-draft-redline.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/19-draft-redline.png" alt="An edit returned as tracked changes in the draft." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>10. Getting help</h2>
+  <h2 id="getting-help">10. Getting help</h2>
   <p>There is an in-app <strong>Help assistant</strong> on every screen (the button in the bottom-right corner). Ask it how to do something and it answers from the product manual. It is the fastest way to learn a feature without leaving your work.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/20-help.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/20-help.png" alt="The in-app Help assistant answering a product question." loading="lazy" width="2880" height="1800"></a>
@@ -259,27 +281,27 @@
     <a href="/assets/blog/first-hour-with-legal-intelligence/21-product-tips.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/21-product-tips.png" alt="The product-tips spotlight." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>One product, four languages</h2>
+  <h2 id="four-languages">One product, four languages</h2>
   <p>Switzerland is trilingual, and so is Legal Intelligence. The entire interface, and the assistant, speak <strong>German, French, Italian, and English.</strong> Each person picks their own language from the footer; the same firm, the same data, in whichever language each lawyer prefers.</p>
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/22-multilingual.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/22-multilingual.png" alt="The interface shown in French." loading="lazy" width="2880" height="1800"></a>
   </figure>
 
-  <h2>That is your first hour</h2>
+  <h2 id="your-first-hour">That is your first hour</h2>
   <p>From a blank Mac you now have a running installation, your clients and matters, researched answers with verifiable citations, a reviewed stack of contracts, and a drafted agreement, all without a single byte leaving your office.</p>
   <p>You are on the Early Access Program because we want your judgement. Tell us what felt slow, what you wish it did, and where an answer fell short. The simplest way to reach us is to reply to your onboarding email, and you can also use the in-app <strong>Report</strong> tab next to Help. What you tell us in the coming weeks is what the product becomes.</p>
   <p><em>Legal Intelligence uses AI and can make mistakes. It is built to help you work faster and check its own sources, but the lawyer always stays in the loop. Please double-check what matters.</em></p>
 
   <h2 id="test-kit">A test kit for your own first hour</h2>
-  <p>You do not need client files to try any of this. Below are the test documents we used for this walkthrough, with entirely fictional companies, people, and terms. They are safe to upload anywhere, including a trial that runs in the secure cloud mode.</p>
+  <p>You do not need client files. The documents below are entirely fictional, and safe to upload anywhere, including a trial in the secure cloud mode.</p>
 
   <h3>Ten NDAs for a review stack</h3>
-  <p>The NDA set from the walkthrough itself: you can spot AlpineTech, TicinoFarma, and LuganoTech in the Tabular Review figures above. Ten agreements in Italian, in one-way, mutual, three-party, and multilateral structures, with varying terms and penalty clauses. Upload a few into a matter and build the grid from section 8. The assistant works across languages, so ask about them in German, French, or English.</p>
+  <p>The set from the walkthrough itself: AlpineTech, TicinoFarma, and LuganoTech from the Tabular Review figures. Ten Italian agreements in one-way, mutual, three-party, and multilateral structures. Upload a few into a matter, build the grid from section 8, and ask about them in any language.</p>
   <p><a href="/assets/blog/first-hour-with-legal-intelligence/nda-test-set.zip" download>Download the NDA test set</a> (ZIP, ten PDFs, 45&nbsp;KB)</p>
-  <p>Column ideas to start from: structure (one-way or mutual), definition of confidential information, obligations of the receiving party, standard carve-outs, penalty clause, term, and governing law.</p>
+  <p>Column ideas: structure, definition of confidential information, obligations of the receiving party, carve-outs, penalty clause, term, governing law.</p>
 
   <h3>Four scanned pages for the OCR path</h3>
-  <p>Confidentiality agreements as they actually reach a firm: scanned, slightly skewed, and noisy. Upload them into a matter and Legal Intelligence runs OCR and indexes them like any born-digital document. The German and French pages each contain a contractual penalty clause, if you want to pair the OCR test with the research question below. The two Italian scans are the TicinoFarma agreement from the set above at two scan qualities, so you can compare the born-digital file, a clean scan, and a rough scan of the same document.</p>
+  <p>Contracts as they actually reach a firm: skewed, noisy scans. Upload them and Legal Intelligence runs OCR and indexes them like any other document. The German and French pages each contain a penalty clause; the two Italian scans are the TicinoFarma NDA from the set, one cleaner and one rough, so you can compare them with the born-digital file.</p>
   <ul>
     <li><a href="/assets/blog/first-hour-with-legal-intelligence/scans/scan-DE-harsh.pdf" download>Confidentiality agreement, German, rough scan</a> (PDF, 0.4&nbsp;MB)</li>
     <li><a href="/assets/blog/first-hour-with-legal-intelligence/scans/scan-FR-harsh.pdf" download>Confidentiality agreement, French, rough scan</a> (PDF, 0.4&nbsp;MB)</li>
@@ -296,37 +318,25 @@
   <pre class="wrap"><code>In the term clause, replace "three (3) years" with "five (5) years". In the contractual penalty clause, replace "CHF 20,000 (twenty thousand Swiss Francs)" with "CHF 50,000 (fifty thousand Swiss Francs)".</code></pre>
 
   <h3>More research questions to try</h3>
-  <p>A dozen questions from our own demo script, each showing a different part of the research engine. They are in English here, but the assistant answers in the language you ask, so German, French, or Italian work just as well.</p>
-  <p><strong>Multi-source research: statute, case law, and commentary in one cited answer.</strong></p>
-  <ul>
-    <li>"What does the Swiss Code of Obligations say about defects in consent, and how has the Federal Supreme Court ruled on them?" Articles 23 to 31 CO quoted, the leading decisions, and the commentary, everything cited and verified.</li>
-    <li>"What does Art. 265a SchKG provide on the debtor's objection of no return to better fortune, and how have the courts applied it?" The full three-source answer: the statute, federal and cantonal decisions that cite it, and commentary with author attribution.</li>
-    <li>"To what extent is a clause excluding liability valid under Art. 100 CO?" Statute, cantonal case law, and a two-author commentary.</li>
-  </ul>
-  <p><strong>Exact citations, never paraphrased.</strong></p>
-  <ul>
-    <li>"What does Art. 67 SchKG provide?" The verbatim article text with its official Fedlex link.</li>
-    <li>"Summarize BGE 121 III 358." Regeste, full text, and the official court link.</li>
-    <li>"Quote the exact text of Art. 23 CO." The quote is checked word for word against the source, and the citation carries a verified mark.</li>
-  </ul>
-  <p><strong>Case-law research: the links between articles and the decisions that cite them.</strong></p>
-  <ul>
-    <li>"What does Art. 82 SchKG provide on the provisional dismissal of the objection, and how has the Federal Supreme Court interpreted it?" Watch the assistant plan its research, look up the statute, and pull in the decisions that cite it.</li>
-    <li>"When is an attachment (Arrest) permitted under the SchKG?" Art. 271 SchKG verbatim, plus the leading Federal Supreme Court decision.</li>
-    <li>"How have courts decided on the termination of a residential lease for the landlord's own use?" Federal and cantonal decisions side by side, each under its proper court name.</li>
-  </ul>
-  <p><strong>Doctrine.</strong></p>
-  <ul>
-    <li>"What does legal commentary say about Art. 41 CO?" Commentary with author attribution.</li>
-  </ul>
-  <p><strong>The trust demo.</strong></p>
-  <ul>
-    <li>"Is BGE 999 IV 999 relevant to tenant protection in case of defects of the rented apartment?" The invented citation is flagged in red as not found in the consulted sources, while the genuine Art. 258 and 259 CO and the real decisions get their verified marks. One screen shows why the answers can be trusted.</li>
-  </ul>
-  <p><strong>Ask your own documents.</strong></p>
-  <ul>
-    <li>"What does the contract provide on duration and termination?" Works on any matter with at least one document uploaded. Try it on the NDAs from the set above.</li>
-  </ul>
+  <p>Twelve questions from our demo script. Ask them in English, German, French, or Italian; the assistant answers in the language of the question.</p>
+  <p><strong>Multi-source research.</strong> Statute, case law, and commentary in one cited and verified answer:</p>
+  <pre class="wrap"><code>What does the Swiss Code of Obligations say about defects in consent, and how has the Federal Supreme Court ruled on them?</code></pre>
+  <pre class="wrap"><code>What does Art. 265a SchKG provide on the debtor's objection of no return to better fortune, and how have the courts applied it?</code></pre>
+  <pre class="wrap"><code>To what extent is a clause excluding liability valid under Art. 100 CO?</code></pre>
+  <p><strong>Exact citations, never paraphrased.</strong> Verbatim text with the official links:</p>
+  <pre class="wrap"><code>What does Art. 67 SchKG provide?</code></pre>
+  <pre class="wrap"><code>Summarize BGE 121 III 358.</code></pre>
+  <pre class="wrap"><code>Quote the exact text of Art. 23 CO.</code></pre>
+  <p><strong>Case-law research.</strong> The statute, plus the decisions that cite it:</p>
+  <pre class="wrap"><code>What does Art. 82 SchKG provide on the provisional dismissal of the objection, and how has the Federal Supreme Court interpreted it?</code></pre>
+  <pre class="wrap"><code>When is an attachment (Arrest) permitted under the SchKG?</code></pre>
+  <pre class="wrap"><code>How have courts decided on the termination of a residential lease for the landlord's own use?</code></pre>
+  <p><strong>Doctrine.</strong> Commentary with author attribution:</p>
+  <pre class="wrap"><code>What does legal commentary say about Art. 41 CO?</code></pre>
+  <p><strong>The trust demo.</strong> The invented decision below is flagged in red as not found in the sources; the genuine citations keep their verified marks:</p>
+  <pre class="wrap"><code>Is BGE 999 IV 999 relevant to tenant protection in case of defects of the rented apartment?</code></pre>
+  <p><strong>Ask your own documents.</strong> Needs a document in the matter; try it on the NDAs from the set above:</p>
+  <pre class="wrap"><code>What does the contract provide on duration and termination?</code></pre>
       </div>
 
       <aside class="article-cta">
@@ -354,5 +364,6 @@
 
   <script src="/js/main.js"></script>
   <script src="/js/lightbox.js"></script>
+  <script src="/js/copy.js"></script>
 </body>
 </html>
