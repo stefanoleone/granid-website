@@ -111,7 +111,7 @@
         <div class="article-meta">
           <span>4 September 2026</span>
           <span>Granid</span>
-          <span>13 min read</span>
+          <span>14 min read</span>
         </div>
       <div class="article-tags">
         <span class="article-tag">Early Access</span>
@@ -240,6 +240,15 @@
   <figure class="article-figure">
     <a href="/assets/blog/first-hour-with-legal-intelligence/13-research-answer.png" class="figure-zoom"><img src="/assets/blog/first-hour-with-legal-intelligence/13-research-answer.png" alt="A researched answer with verified citations, court decisions, and commentary." loading="lazy" width="2880" height="1800"></a>
   </figure>
+
+  <p>The sources panel under the answer is worth decoding, because every symbol in it means something specific:</p>
+  <ul>
+    <li>Sources arrive in four groups: federal law, case law, commentary, and your own documents. Each entry is a chip: click it and the source viewer opens on the exact passage the assistant used; the small arrow next to it opens the official source instead, Fedlex for statutes, the court's own website for decisions.</li>
+    <li>The green shield's verification is deterministic, not another AI pass, so the check itself cannot hallucinate.</li>
+    <li>A dimmed chip was consulted but not relied on. It stays visible and clickable, so you see everything that was read, not just what was used.</li>
+    <li>A "cites Art. 163 OR" marker explains why a decision was pulled in: it cites the provision under discussion, the way a lawyer follows citations.</li>
+    <li>And if the answer names a citation that no consulted source contains, a red banner flags it as not found in the consulted sources, and the passage is marked in the text. The wording is deliberate: the system flags, the lawyer judges. Red marks come only from the verifier; the AI cannot award itself one.</li>
+  </ul>
 
   <h2 id="your-own-documents">7. Bringing in your own documents</h2>
   <p>Research over Swiss law is only half the story. You also want answers about <strong>your</strong> files. Upload documents into a matter (PDF, Word, scans) and Legal Intelligence reads them, runs OCR where needed, and indexes them locally so the assistant can search and cite them. As with everything else, the files never leave the Mac.</p>
