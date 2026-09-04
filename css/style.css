@@ -1512,6 +1512,81 @@ fieldset.field legend {
   text-align: center;
 }
 
+/* Figure click-to-zoom (GWEB-101). The .figure-zoom anchor works without JS
+   (it opens the full-size file); js/lightbox.js upgrades the click to an
+   in-page overlay on larger screens. Overlay colors are literal granite
+   values because the surface is dark regardless of theme tokens. */
+.figure-zoom {
+  display: block;
+  cursor: zoom-in;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 300; /* above nav (100) */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2.5rem;
+  background: rgba(28, 25, 23, 0.94);
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+.lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: calc(100vh - 9rem);
+  width: auto;
+  height: auto;
+  border-radius: var(--r-lg);
+  cursor: zoom-out;
+}
+
+.lightbox-caption {
+  margin: 0;
+  color: #D6D3D1;
+  font-size: var(--t-sm);
+  text-align: center;
+  max-width: 70ch;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 999px;
+  color: #F5F5F4;
+  font-size: 1.25rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.lightbox-close:hover {
+  border-color: #F5F5F4;
+}
+
+.lightbox-close:focus-visible {
+  outline: 2px solid #F5F5F4;
+  outline-offset: 2px;
+}
+
+body.lightbox-open {
+  overflow: hidden;
+}
+
 /* Responsive 16:9 video — self-hosted only, no third-party iframe */
 .article-video {
   margin: 2.5rem 0;

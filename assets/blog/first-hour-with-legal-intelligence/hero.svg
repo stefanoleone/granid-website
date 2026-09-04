@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" role="img" aria-label="A minimal clock face with the first hour, from twelve to one, marked in red.">
+  <rect width="1200" height="630" fill="#F5F5F4"/>
+  <!-- Clock face -->
+  <circle cx="600" cy="315" r="240" fill="none" stroke="#E7E5E4" stroke-width="40"/>
+  <!-- The first hour, swept from twelve to one -->
+  <path d="M 600 75 A 240 240 0 0 1 720 107.2" fill="none" stroke="#DA281C" stroke-width="22" stroke-linecap="round"/>
+  <!-- Hands at one o'clock -->
+  <line x1="600" y1="315" x2="600" y2="120" stroke="#D6D3D1" stroke-width="16" stroke-linecap="round"/>
+  <line x1="600" y1="315" x2="675" y2="185" stroke="#D6D3D1" stroke-width="20" stroke-linecap="round"/>
+  <circle cx="600" cy="315" r="16" fill="#DA281C"/>
+</svg>
